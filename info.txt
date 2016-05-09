@@ -1,0 +1,8 @@
+Design resource
+http://www.templatemonster.com/demo/58004.html
+http://www.templatemonster.com/demo/57838.html
+http://www.templatemonster.com/demo/57803.html
+
+JS
+https://css-tricks.com/gulp-for-beginners/
+https://www.airpair.com/angularjs/building-angularjs-app-tutorial
