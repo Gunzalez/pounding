@@ -1,3 +1,55 @@
+@font-face {
+  font-family: 'poundedYam';
+  src: url("../fonts/pacifico-webfont.woff2") format("woff2"), url("../fonts/pacifico-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@media (max-width: 992px) {
+  .container {
+    width: 100%; } }
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%; } }
+
+h1 {
+  font-family: 'poundedYam';
+  font-size: 4.5rem;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  line-height: 100%; }
+  @media (max-width: 400px) {
+    h1 {
+      font-size: 4rem;
+      text-align: center; } }
+
+.top-bar {
+  padding: 25px 0 35px 0;
+  border-bottom: 1px solid #a3a3a3; }
+
+.meal-hero {
+  background: url("../images/pepper-soup.jpg");
+  background-size: cover; }
+
+.form-box {
+  height: 500px;
+  position: relative; }
+
+.meal-picker {
+  position: absolute;
+  bottom: 40px;
+  left: 15px;
+  padding: 30px;
+  background-color: #ffffff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px; }
+  .meal-picker .btn {
+    text-transform: uppercase; }
+  .meal-picker .buttons .btn {
+    font-weight: normal; }
+
 .testing {
   width: 25%;
   height: 29px; }

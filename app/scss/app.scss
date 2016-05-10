@@ -1,4 +1,57 @@
 
+@import "mixins";
+@import "fonts";
+@import "overrides";
+
+h1 {
+    font-family: 'poundedYam';
+    font-size: 4.5rem;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    line-height: 100%;
+
+	@media (max-width: 400px) {
+    	font-size: 4rem;
+		text-align: center;
+	}
+}
+
+.top-bar {
+    padding: 25px 0 35px 0;
+    border-bottom: 1px solid #a3a3a3;
+}
+
+.meal-hero {
+    background: url("../images/pepper-soup.jpg");
+    background-size: cover;
+}
+
+.form-box {
+    height: 500px;
+    position: relative;
+}
+
+.meal-picker {
+    position: absolute;
+    bottom: 40px;
+    left: 15px;
+    padding: 30px;
+    background-color: #ffffff;
+    @include border-radius(3px);
+
+    .btn {
+        text-transform: uppercase;
+    }
+
+    .buttons {
+        .btn {
+            font-weight: normal;
+        }
+    }
+}
+
+
 // app.scss
 .testing {
     width: percentage(2/8);
