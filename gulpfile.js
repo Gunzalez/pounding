@@ -32,7 +32,12 @@ gulp.task('useref', function(){
 gulp.task('watch', ['browserSync', 'sass'], function (){
     gulp.watch('app/scss/**/*.scss', ['sass']);
     gulp.watch('app/*.html', browserSync.reload);
+    gulp.watch('app/views/*.html', browserSync.reload);
     gulp.watch('app/js/**/*.js', browserSync.reload);
+    gulp.watch('app/controllers/*.js', browserSync.reload);
+    gulp.watch('app/directives/*.js', browserSync.reload);
+    gulp.watch('app/data/*.js', browserSync.reload);
+    gulp.watch('app/*.js', browserSync.reload);
     // Other watchers
 });
 

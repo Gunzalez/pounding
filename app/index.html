@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html ng-app="poundedYamApp">
 <head>
     <title>Test</title>
     <meta charset="utf-8">
@@ -9,6 +9,8 @@
 	<!--<link rel="icon" href="images/favicon.ico" type="image/x-icon"> -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/app.css" type="text/css">
+    <script src="js/angular/angular.min.js" type="text/javascript"></script>
+    <script src="controllers/homeController.js" type="text/javascript"></script>
 </head>
 <body>
 
@@ -46,74 +48,16 @@
         </div>
     </div>
 
-    <div class="most-cooked-meals">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-10 col-xs-push-1 no-padding">
-                    <h2 class="title">Most cooked meals</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="meal col-xs-6 col-sm-4 no-padding">
-                    <div class="item">
-                        <a href="#">
-                            <img src="images/meal-2.jpg" alt="" />
-                        </a>
-                    </div>
-                </div>
-                <div class="meal col-xs-6 col-sm-4 no-padding">
-                    <div class="item">
-                        <a href="#">
-                            <img src="images/pepper-soup.jpg" alt="" />
-                        </a>
-                    </div>
-                </div>
-                <div class="meal col-xs-6 col-sm-4 no-padding">
-                    <div class="item">
-                        <a href="#">
-                            <img src="images/meal-3.jpg" alt="" />
-                        </a>
-                    </div>
-                </div>
-                <div class="meal col-xs-6 col-sm-4 no-padding">
-                    <div class="item">
-                        <a href="#">
-                            <img src="images/meal-4.jpg" alt="" />
-                        </a>
-                    </div>
-                </div>
-                <div class="meal col-xs-6 col-sm-4 no-padding">
-                    <div class="item">
-                        <a href="#">
-                            <img src="images/meal-3.jpg" alt="" />
-                        </a>
-                    </div>
-                </div>
-                <div class="meal col-xs-6 col-sm-4 no-padding">
-                    <div class="item">
-                        <a href="#">
-                            <img src="images/pepper-soup.jpg" alt="" />
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container meals-footer">
-            <div class="row">
-                <div class="col-xs-12">
-                    <p>Donec et leo rhoncus, aliquam tornsectetur tectetur teltor ansecteteltor aectetur teltor ansectetnsectetur telc, coectetur teltor ansectetnsectetur tellus. Suspendisse pretium ex non faucibus condimentum.</p>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div id="wrap" ng-view></div>
+
 
     <div class="footer">
 
     </div>
 
     <!--build:js js/app.min.js -->
-    <script src="js/angular/angular.js" type="text/javascript"></script>
-    <script src="js/app.js" type="text/javascript"></script>
+    <script src="js/angular/angular-route.min.js" type="text/javascript"></script>
+    <script src="app.js" type="text/javascript"></script>
     <!-- endbuild -->
 </body>
 </html>
