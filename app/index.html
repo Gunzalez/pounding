@@ -8,7 +8,6 @@
 	<!--<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"> -->
 	<!--<link rel="icon" href="images/favicon.ico" type="image/x-icon"> -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="js/jquery/css/bootstrap-select.min.css" type="text/css">
     <link rel="stylesheet" href="css/app.css" type="text/css">
 </head>
 <body>
@@ -26,17 +25,20 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 form-box">
+                    <div class="pounded-yam-introduction">
+                        <p>Pick a meal, cook a meal, or just be lazy and buy a meal.</p>
+                    </div>
                     <form name="mealPicker" class="meal-picker">
                         <div class="form-group">
-                            <select class="selectpicker">
+                            <select>
                                 <option>Please select a meal</option>
                                 <option>Ketchup</option>
                                 <option>Relish</option>
                             </select>
                         </div>
                         <div class="buttons">
-                            <input class="btn btn-primary" type="button" title="Cook" value="Cook" />
-                            <input class="btn btn-primary" type="button" title="Buy" value="Buy" />
+                            <input class="button" type="button" title="Cook" value="Cook" />
+                            <input class="button" type="button" title="Buy" value="Buy" />
                         </div>
                     </form>
                 </div>
@@ -44,9 +46,72 @@
         </div>
     </div>
 
+    <div class="most-cooked-meals">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-10 col-xs-push-1 no-padding">
+                    <h2 class="title">Most cooked meals</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="meal col-xs-6 col-sm-4 no-padding">
+                    <div class="item">
+                        <a href="#">
+                            <img src="images/meal-2.jpg" alt="" />
+                        </a>
+                    </div>
+                </div>
+                <div class="meal col-xs-6 col-sm-4 no-padding">
+                    <div class="item">
+                        <a href="#">
+                            <img src="images/pepper-soup.jpg" alt="" />
+                        </a>
+                    </div>
+                </div>
+                <div class="meal col-xs-6 col-sm-4 no-padding">
+                    <div class="item">
+                        <a href="#">
+                            <img src="images/meal-3.jpg" alt="" />
+                        </a>
+                    </div>
+                </div>
+                <div class="meal col-xs-6 col-sm-4 no-padding">
+                    <div class="item">
+                        <a href="#">
+                            <img src="images/meal-4.jpg" alt="" />
+                        </a>
+                    </div>
+                </div>
+                <div class="meal col-xs-6 col-sm-4 no-padding">
+                    <div class="item">
+                        <a href="#">
+                            <img src="images/meal-3.jpg" alt="" />
+                        </a>
+                    </div>
+                </div>
+                <div class="meal col-xs-6 col-sm-4 no-padding">
+                    <div class="item">
+                        <a href="#">
+                            <img src="images/pepper-soup.jpg" alt="" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container meals-footer">
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Donec et leo rhoncus, aliquam tornsectetur tectetur teltor ansecteteltor aectetur teltor ansectetnsectetur telc, coectetur teltor ansectetnsectetur tellus. Suspendisse pretium ex non faucibus condimentum.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+
+    </div>
+
     <!--build:js js/app.min.js -->
-    <script src="js/jquery/jquery-1.9.1.min.js" type="text/javascript"></script>
-    <script src="js/jquery/bootstrap-select.min.js"></script>
     <script src="js/angular/angular.js" type="text/javascript"></script>
     <script src="js/app.js" type="text/javascript"></script>
     <!-- endbuild -->
