@@ -1,11 +1,9 @@
-var poundedYamApp = angular.module('poundedYamApp', [
-    'poundedYamAppControllers',
+angular.module('poundedYamApp', [
     'ngRoute'
-]);
-
+])
 
 // Routing
-poundedYamApp.config(['$routeProvider', function($routeProvider) {
+.config(['$routeProvider', function($routeProvider) {
     $routeProvider
         .when('/', {
             templateUrl: 'views/home.html',

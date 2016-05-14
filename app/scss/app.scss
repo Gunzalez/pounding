@@ -19,14 +19,34 @@ h1 {
 	}
 }
 
+.hero-image {
+    background: url("../images/pepper-soup.jpg");
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+}
+
+.hero-video {
+    background-color: #cccccc;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+}
+
 .top-bar {
     padding: 25px 0 35px 0;
     border-bottom: 1px solid #a3a3a3;
 }
 
 .meal-hero {
-    background: url("../images/pepper-soup.jpg");
-    background-size: cover;
+    position: relative;
 }
 
 .form-box {

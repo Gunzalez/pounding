@@ -6,20 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> 
 	<!--<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"> -->
-	<!--<link rel="icon" href="images/favicon.ico" type="image/x-icon"> -->
+	<!--<link rel="icon" href="images/favicon.ico" type="image/x-icon">  -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/app.css" type="text/css">
-    <script src="js/angular/angular.min.js" type="text/javascript"></script>
-    <script src="controllers/homeController.js" type="text/javascript"></script>
 </head>
 <body>
 
-    <div class="meal-hero">
+    <div class="meal-hero" ng-controller="mainController as main">
+        <div class="hero-video" ng-if="main.selectedMeal == null"><span style="font-size: 4.5rem">Video</span></div>
+        <div class="hero-image" ng-if="main.selectedMeal != null" ng-style="{'background-image': 'url(images/' + main.selectedMeal.image + ')'}"></div>
         <div class="top-bar">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
-                        <h1>Pounded Yam</h1>
+                        <h1>Pounded-yam</h1>
                     </div>
                 </div>
             </div>
@@ -32,15 +32,25 @@
                     </div>
                     <form name="mealPicker" class="meal-picker">
                         <div class="form-group">
-                            <select>
-                                <option>Please select a meal</option>
-                                <option>Ketchup</option>
-                                <option>Relish</option>
+                            <select ng-model="main.selectedMeal" ng-options="meal.title for meal in main.meals">
+                                <option value="" selected="selected">Select a meal</option>
                             </select>
                         </div>
                         <div class="buttons">
-                            <input class="button" type="button" title="Cook" value="Cook" />
-                            <input class="button" type="button" title="Buy" value="Buy" />
+                            <input class="button"
+                                   type="button"
+                                   title="Cook"
+                                   value="Cook"
+                                   ng-class="{'disabled':main.selectedMeal == null}"
+                                   ng-disabled="main.selectedMeal == null"
+                                   ng-click="main.cookThisMeal()" />
+                            <input class="button"
+                                   type="button"
+                                   ng-class="{'disabled':main.selectedMeal == null}"
+                                   ng-disabled="main.selectedMeal == null"
+                                   title="Buy"
+                                   value="Buy"
+                                   ng-click="main.askForPosCode()"/>
                         </div>
                     </form>
                 </div>
@@ -56,8 +66,11 @@
     </div>
 
     <!--build:js js/app.min.js -->
-    <script src="js/angular/angular-route.min.js" type="text/javascript"></script>
-    <script src="app.js" type="text/javascript"></script>
+    <script src="js/angular/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="controllers/homeController.js"></script>
+    <script src="controllers/mainController.js"></script>
+    <script src="js/angular/angular-route.min.js"></script>
     <!-- endbuild -->
 </body>
 </html>

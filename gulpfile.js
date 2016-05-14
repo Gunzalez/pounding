@@ -4,6 +4,8 @@ var browserSync = require('browser-sync').create();
 var useref = require('gulp-useref');
 var uglify = require('gulp-uglify');
 var gulpIf = require('gulp-if');
+var del = require('del');
+var runSequence = require('run-sequence');
 
 gulp.task('sass', function() {
     return gulp.src('app/scss/**/*.scss')
@@ -11,7 +13,7 @@ gulp.task('sass', function() {
         .pipe(gulp.dest('app/css'))
         .pipe(browserSync.reload({
             stream: true
-    }))
+        }))
 });
 
 gulp.task('browserSync', function() {
@@ -22,14 +24,47 @@ gulp.task('browserSync', function() {
     })
 });
 
-gulp.task('useref', function(){
-    return gulp.src('app/*.html')
-        .pipe(useref())
-        .pipe(gulpIf('*.js', uglify()))
-        .pipe(gulp.dest('dist'))
+
+// Copying and building files for production
+gulp.task('clean:dist', function() {
+    return del.sync('dist');
 });
 
-gulp.task('watch', ['browserSync', 'sass'], function (){
+gulp.task('copyImages', function() {
+    return gulp.src('app/images/*')
+            .pipe(gulp.dest('dist/images'))
+});
+
+gulp.task('copyCSS', function() {
+    return gulp.src('app/css/**/*')
+            .pipe(gulp.dest('dist/css'))
+});
+
+gulp.task('copyViews', function() {
+    return gulp.src('app/views/*')
+            .pipe(gulp.dest('dist/views'))
+});
+
+gulp.task('useref', function(){
+    return gulp.src('app/*.html')
+            .pipe(useref())
+            .pipe(gulpIf('*.js', uglify()))
+            .pipe(gulp.dest('dist'))
+});
+
+gulp.task('launchSync', function() {
+    browserSync.init({
+        server: {
+            baseDir: 'dist'
+        }
+    })
+});
+
+gulp.task('build', function(callback) {
+    runSequence('clean:dist', ['copyCSS', 'copyImages', 'copyViews', 'useref'], 'launchSync', callback);
+});
+
+gulp.task('watch', function (){
     gulp.watch('app/scss/**/*.scss', ['sass']);
     gulp.watch('app/*.html', browserSync.reload);
     gulp.watch('app/views/*.html', browserSync.reload);
@@ -39,6 +74,10 @@ gulp.task('watch', ['browserSync', 'sass'], function (){
     gulp.watch('app/data/*.js', browserSync.reload);
     gulp.watch('app/*.js', browserSync.reload);
     // Other watchers
+});
+
+gulp.task('default', function (callback) {
+    runSequence(['sass','browserSync', 'watch'], callback)
 });
 
 
