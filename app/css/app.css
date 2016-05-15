@@ -4,22 +4,32 @@
   font-weight: normal;
   font-style: normal; }
 
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   .container {
     width: 100%; } }
 
-@media (max-width: 768px) {
-  .container {
-    width: 100%; } }
+h1, h2, h3, h4, h5 {
+  margin: 10px 0 0 0;
+  line-height: 100%; }
+
+h1, h2, h3 {
+  font-family: 'poundedYam'; }
+
+p {
+  padding: 0;
+  margin: 0;
+  line-height: 150%; }
+
+.container {
+  padding-right: 30px;
+  padding-left: 30px; }
 
 h1 {
-  font-family: 'poundedYam';
   font-size: 4.5rem;
   margin: 0;
   padding: 0;
-  color: #fff;
-  line-height: 100%; }
-  @media (max-width: 400px) {
+  color: #fff; }
+  @media (max-width: 480px) {
     h1 {
       font-size: 4rem;
       text-align: center; } }
@@ -71,34 +81,51 @@ h1 {
   font-size: 3.0rem;
   width: 300px; }
 
-.most-cooked-meals {
-  background-color: #dbdbdb;
-  border-bottom: 1px solid #ffffff;
-  border-top: 1px solid #ffffff;
-  box-sizing: border-box; }
-  .most-cooked-meals .container {
-    padding-right: 30px;
-    padding-left: 30px; }
-  .most-cooked-meals .meal {
-    padding-bottom: 30px; }
-    .most-cooked-meals .meal .item a {
-      color: inherit;
-      text-decoration: none;
-      font: inherit;
-      transition: 0.3s; }
-      .most-cooked-meals .meal .item a img {
-        width: 100%; }
-  .most-cooked-meals .title {
-    font-family: 'poundedYam';
-    font-size: 3.8rem;
-    margin: 0 0 40px 0;
-    padding: 30px;
-    color: #444;
-    line-height: 100%;
-    text-align: center;
-    border-bottom: 1px solid #b7b7b7; }
+.introduction {
+  background-color: #f0f0f0;
+  padding: 30px;
+  text-align: center; }
 
-.meals-footer p {
+.most-cooked-meals .container {
+  padding-right: 40px;
+  padding-left: 40px; }
+
+.most-cooked-meals .meal {
+  padding-bottom: 30px; }
+  .most-cooked-meals .meal .item a {
+    position: relative;
+    text-decoration: none;
+    transition: 0.3s;
+    display: block; }
+    .most-cooked-meals .meal .item a img {
+      width: 100%; }
+    .most-cooked-meals .meal .item a span {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      color: #ffffff;
+      padding: 20px;
+      font-family: 'poundedYam'; }
+
+.most-cooked-meals .title {
+  font-size: 4.2rem;
+  padding: 20px;
+  color: #444;
+  text-align: center; }
+  @media (max-width: 480px) {
+    .most-cooked-meals .title {
+      font-size: 2.8rem; } }
+
+.most-cooked-meals .sub-title {
+  font-size: 2.6rem;
+  padding: 10px;
+  color: #444;
+  text-align: center; }
+  @media (max-width: 480px) {
+    .most-cooked-meals .sub-title {
+      font-size: 1.8rem; } }
+
+.meals-footer {
   text-align: center;
   padding: 30px 60px; }
 

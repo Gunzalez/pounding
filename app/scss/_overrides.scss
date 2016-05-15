@@ -1,10 +1,25 @@
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
     .container {
         width: 100%;
     }
 }
-@media (max-width: 768px) {
-    .container {
-        width: 100%;
-    }
+
+h1, h2, h3, h4, h5 {
+    margin: 10px 0 0 0;
+    line-height: 100%;
+}
+
+h1, h2, h3 {
+    font-family: 'poundedYam';
+}
+
+p {
+    padding: 0;
+    margin: 0;
+    line-height: 150%;
+}
+
+.container {
+    padding-right: 30px;
+    padding-left: 30px;
 }

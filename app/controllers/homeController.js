@@ -31,13 +31,13 @@ angular
             {
                 "id":"meal-2",
                 "title":"Meal 2",
-                "image":"meal-2.jpg",
+                "image":"meal-5.jpg",
                 "description":"This is meal 2"
             },
             {
                 "id":"meal-3",
                 "title":"Meal 3",
-                "image":"meal-3.jpg",
+                "image":"meal-6.jpg",
                 "description":"This is meal 3"
             }
         ];

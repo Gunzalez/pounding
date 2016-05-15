@@ -13,7 +13,7 @@
 <body>
 
     <div class="meal-hero" ng-controller="mainController as main">
-        <div class="hero-video" ng-if="main.selectedMeal == null"><span style="font-size: 4.5rem">Video</span></div>
+        <div class="hero-video" ng-if="main.selectedMeal == null"></div>
         <div class="hero-image" ng-if="main.selectedMeal != null" ng-style="{'background-image': 'url(images/' + main.selectedMeal.image + ')'}"></div>
         <div class="top-bar">
             <div class="container">

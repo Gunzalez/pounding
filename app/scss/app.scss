@@ -1,19 +1,18 @@
 
 $clr-dark-gray:     #444;
 
+@import "variables";
 @import "mixins";
 @import "fonts";
 @import "overrides";
 
 h1 {
-    font-family: 'poundedYam';
     font-size: 4.5rem;
     margin: 0;
     padding: 0;
     color: #fff;
-    line-height: 100%;
 
-	@media (max-width: 400px) {
+	@media (max-width: $width-xs) {
     	font-size: 4rem;
 		text-align: center;
 	}
@@ -73,16 +72,17 @@ h1 {
     width: 300px;
 }
 
+.introduction {
+    background-color: #f0f0f0;
+    padding: 30px;
+    text-align: center;
+}
+
 .most-cooked-meals {
 
-    background-color: #dbdbdb;
-    border-bottom: 1px solid #ffffff;
-    border-top: 1px solid #ffffff;
-    box-sizing: border-box;
-
     .container {
-        padding-right: 30px;
-        padding-left: 30px;
+        padding-right: 40px;
+        padding-left: 40px;
     }
 
     .meal {
@@ -92,37 +92,54 @@ h1 {
         .item {
 
             a {
-                color: inherit;
+                position: relative;
                 text-decoration: none;
-                font: inherit;
                 transition: 0.3s;
+                display: block;
 
                 img {
                     width: 100%;
+                }
+
+                span {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    color: #ffffff;
+                    padding: 20px;
+                    font-family: 'poundedYam';
                 }
             }
         }
     }
 
     .title {
-        font-family: 'poundedYam';
-        font-size: 3.8rem;
-        margin: 0 0 40px 0;
-        padding: 30px;
+        font-size: 4.2rem;
+        padding: 20px;
         color: $clr-dark-gray;
-        line-height: 100%;
         text-align: center;
-        border-bottom: 1px solid #b7b7b7;
+
+        @media (max-width: $width-xs){
+            font-size: 2.8rem;
+        }
+    }
+
+    .sub-title {
+        font-size: 2.6rem;
+        padding: 10px;
+        color: $clr-dark-gray;
+        text-align: center;
+
+        @media (max-width: $width-xs){
+            font-size: 1.8rem;
+        }
     }
 }
 
 
 .meals-footer {
-
-    p {
-        text-align: center;
-        padding: 30px 60px;
-    }
+    text-align: center;
+    padding: 30px 60px;
 }
 
 .no-padding {
