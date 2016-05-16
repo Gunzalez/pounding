@@ -1,15 +1,23 @@
 
 angular
-    .module('poundedYamApp')
+    .module('yamApp')
     .controller('mainController', function ($scope) {
 
         var vm = this;
         vm.selectedMeal = null;
         vm.cookThisMeal = function(){
-            alert(vm.selectedMeal.title);
+            alert('Show cooking details for ' +vm.selectedMeal.title);
         };
         vm.askForPosCode = function(){
+            alert('Ask for post code');
 
+        };
+        vm.doesSelectImageExist = function(){
+            if(vm.selectedMeal){
+                return vm.selectedMeal.image;
+            } else {
+                return 'meal-1.jpg'
+            }
         };
         vm.meals = [
             {

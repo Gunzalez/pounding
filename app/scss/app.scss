@@ -7,10 +7,11 @@ $clr-dark-gray:     #444;
 @import "overrides";
 
 h1 {
-    font-size: 4.5rem;
+    font-size: 3.6rem;
     margin: 0;
     padding: 0;
     color: #fff;
+    line-height: 70px;
 
 	@media (max-width: $width-xs) {
     	font-size: 4rem;
@@ -18,67 +19,86 @@ h1 {
 	}
 }
 
-.hero-image {
-    background: url("../images/pepper-soup.jpg");
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    right: 0;
-    bottom: 0;
-}
+$heroHeight:   600px;
 
-.hero-video {
-    background-color: #cccccc;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    right: 0;
-    bottom: 0;
-}
-
-.top-bar {
-    padding: 25px 0 35px 0;
-    border-bottom: 1px solid #a3a3a3;
-}
 
 .meal-hero {
-    position: relative;
-}
 
-.form-box {
-    height: 500px;
-    position: relative;
-}
+    .hero-image,
+    .hero-video {
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: $heroHeight;
+        @include transitions(0.25s);
+    }
 
-.meal-picker {
-    position: absolute;
-    bottom: 40px;
-    left: 15px;
-    padding: 30px;
-    background-color: #ffffff;
-    @include border-radius(3px);
+    .hero-video {
+        background-color: #323232;
+        border-bottom: 1px solid #000000;
+        &.off-screen {
+            top: -$heroHeight;;
+        }
+    }
 
-    .btn {
-        text-transform: uppercase;
+    .top-bar {
+        height: 70px;
+        border-bottom: 1px solid #a3a3a3;
+    }
+
+    .meal-hero {
+        position: relative;
+        overflow: hidden;
+        height: $heroHeight;
+    }
+
+    .form-box {
+        height: $heroHeight - 70px;
+        position: relative;
+    }
+
+    .meal-picker {
+        position: absolute;
+        bottom: 40px;
+        left: 15px;
+        padding: 30px;
+        background-color: #ffffff;
+        @include border-radius(3px);
+
+        .btn {
+            text-transform: uppercase;
+        }
+    }
+
+    .cook-button {
+        display: block;
+        text-indent: -9999px;
+        width: 50px;
+        height: 50px;
+        background: url('../images/cook-it.svg') #006600;
+        background-size: 50px 50px;
+        border: none;
+        color: #006600;
+    }
+
+    .introduction {
+        color: #ffffff;
+        font-size: 3.0rem;
+        width: 300px;
     }
 }
 
-.pounded-yam-introduction {
-    color: #ffffff;
-    font-size: 3.0rem;
-    width: 300px;
-}
 
-.introduction {
-    background-color: #f0f0f0;
-    padding: 30px;
-    text-align: center;
-}
 
 .most-cooked-meals {
+
+    .introduction {
+        background-color: #f0f0f0;
+        padding: 30px;
+        text-align: center;
+    }
 
     .container {
         padding-right: 40px;

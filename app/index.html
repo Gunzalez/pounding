@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="poundedYamApp">
+<html ng-app="yamApp">
 <head>
     <title>Test</title>
     <meta charset="utf-8">
@@ -13,13 +13,15 @@
 <body>
 
     <div class="meal-hero" ng-controller="mainController as main">
-        <div class="hero-video" ng-if="main.selectedMeal == null"></div>
-        <div class="hero-image" ng-if="main.selectedMeal != null" ng-style="{'background-image': 'url(images/' + main.selectedMeal.image + ')'}"></div>
+
+        <div class="hero-image" ng-style="{'background-image': 'url(images/' + main.doesSelectImageExist() + ')'}"></div>
+        <div class="hero-video" ng-class="{'off-screen':main.selectedMeal != null}"></div>
+
         <div class="top-bar">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
-                        <h1>Pounded-yam</h1>
+                        <h1>Pound That Yam!</h1>
                     </div>
                 </div>
             </div>
@@ -27,30 +29,31 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 form-box">
-                    <div class="pounded-yam-introduction">
+                    <div class="introduction">
                         <p>Pick a meal, cook a meal, or just be lazy and buy a meal.</p>
                     </div>
                     <form name="mealPicker" class="meal-picker">
                         <div class="form-group">
-                            <select ng-model="main.selectedMeal" ng-options="meal.title for meal in main.meals">
+                            <select ng-model="main.selectedMeal"
+                                    ng-options="meal.title for meal in main.meals">
                                 <option value="" selected="selected">Select a meal</option>
                             </select>
                         </div>
                         <div class="buttons">
+                            <input class="button cook-button"
+                                type="button"
+                                title="Cook"
+                                value="Cook"
+                                ng-class="{'disabled':main.selectedMeal == null}"
+                                ng-disabled="main.selectedMeal == null"
+                                ng-click="main.cookThisMeal()" />
                             <input class="button"
-                                   type="button"
-                                   title="Cook"
-                                   value="Cook"
-                                   ng-class="{'disabled':main.selectedMeal == null}"
-                                   ng-disabled="main.selectedMeal == null"
-                                   ng-click="main.cookThisMeal()" />
-                            <input class="button"
-                                   type="button"
-                                   ng-class="{'disabled':main.selectedMeal == null}"
-                                   ng-disabled="main.selectedMeal == null"
-                                   title="Buy"
-                                   value="Buy"
-                                   ng-click="main.askForPosCode()"/>
+                                type="button"
+                                ng-class="{'disabled':main.selectedMeal == null}"
+                                ng-disabled="main.selectedMeal == null"
+                                title="Buy"
+                                value="Buy"
+                                ng-click="main.askForPosCode()"/>
                         </div>
                     </form>
                 </div>

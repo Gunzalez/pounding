@@ -1,6 +1,6 @@
 
 angular
-    .module('poundedYamApp')
+    .module('yamApp')
     .controller('homeController', function ($scope) {
 
         $scope.meals = [

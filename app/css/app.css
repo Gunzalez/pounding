@@ -25,46 +25,49 @@ p {
   padding-left: 30px; }
 
 h1 {
-  font-size: 4.5rem;
+  font-size: 3.6rem;
   margin: 0;
   padding: 0;
-  color: #fff; }
+  color: #fff;
+  line-height: 70px; }
   @media (max-width: 480px) {
     h1 {
       font-size: 4rem;
       text-align: center; } }
 
-.hero-image {
-  background: url("../images/pepper-soup.jpg");
+.meal-hero .hero-image,
+.meal-hero .hero-video {
   background-size: cover;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  right: 0;
-  bottom: 0; }
+  height: 600px;
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s; }
 
-.hero-video {
-  background-color: #cccccc;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  right: 0;
-  bottom: 0; }
+.meal-hero .hero-video {
+  background-color: #323232;
+  border-bottom: 1px solid #000000; }
+  .meal-hero .hero-video.off-screen {
+    top: -600px; }
 
-.top-bar {
-  padding: 25px 0 35px 0;
+.meal-hero .top-bar {
+  height: 70px;
   border-bottom: 1px solid #a3a3a3; }
 
-.meal-hero {
+.meal-hero .meal-hero {
+  position: relative;
+  overflow: hidden;
+  height: 600px; }
+
+.meal-hero .form-box {
+  height: 530px;
   position: relative; }
 
-.form-box {
-  height: 500px;
-  position: relative; }
-
-.meal-picker {
+.meal-hero .meal-picker {
   position: absolute;
   bottom: 40px;
   left: 15px;
@@ -73,15 +76,25 @@ h1 {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px; }
-  .meal-picker .btn {
+  .meal-hero .meal-picker .btn {
     text-transform: uppercase; }
 
-.pounded-yam-introduction {
+.meal-hero .cook-button {
+  display: block;
+  text-indent: -9999px;
+  width: 50px;
+  height: 50px;
+  background: url("../images/cook-it.svg") #006600;
+  background-size: 50px 50px;
+  border: none;
+  color: #006600; }
+
+.meal-hero .introduction {
   color: #ffffff;
   font-size: 3.0rem;
   width: 300px; }
 
-.introduction {
+.most-cooked-meals .introduction {
   background-color: #f0f0f0;
   padding: 30px;
   text-align: center; }

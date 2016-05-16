@@ -1,4 +1,4 @@
-angular.module('poundedYamApp', [
+angular.module('yamApp', [
     'ngRoute'
 ])
 
