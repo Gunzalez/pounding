@@ -1,48 +1,36 @@
 
 angular
     .module('yamApp')
-    .controller('mainController', function ($scope) {
+    .controller('mainController', function ($scope, mealsService, navigatorService, $rootScope) {
 
         var vm = this;
-        vm.selectedMeal = null;
+        vm.selectedMeal = mealsService.selectedMeal;
         vm.cookThisMeal = function(){
-            alert('Show cooking details for ' +vm.selectedMeal.title);
+            mealsService.selectedMeal = vm.selectedMeal;
+            navigatorService.goToLocation('/cook/'+vm.selectedMeal.id);
         };
-        vm.askForPosCode = function(){
-            alert('Ask for post code');
 
+        vm.askForPostCode = function(){
+            alert('Ask for post code');
         };
+
         vm.doesSelectImageExist = function(){
             if(vm.selectedMeal){
                 return vm.selectedMeal.image;
             } else {
-                return 'meal-1.jpg'
+                return 'pepper-soup.jpg'
             }
         };
-        vm.meals = [
-            {
-                "id":"meal-1",
-                "title":"Pounded Yam and Egusi stew",
-                "image":"meal-1.jpg",
-                "description":"This is meal 1"
-            },
-            {
-                "id":"meal-2",
-                "title":"Rice and Plantain",
-                "image":"meal-2.jpg",
-                "description":"This is meal 2"
-            },
-            {
-                "id":"meal-3",
-                "title":"Eba with Okra stew",
-                "image":"meal-3.jpg",
-                "description":"This is meal 3"
-            },
-            {
-                "id":"meal-4",
-                "title":"Yam porridge",
-                "image":"meal-4.jpg",
-                "description":"This is meal 4"
-            }
-        ];
+
+        $rootScope.$on('mealFetched', function() {
+            vm.selectedMeal = mealsService.selectedMeal;
+        });
+
+        mealsService.getMeals()
+            .success(function (data) {
+                vm.meals = data;
+            })
+            .error(function (error) {
+                vm.status = 'Unable to load meals data: ' + error.message;
+        });
     });

@@ -1,26 +1,38 @@
 [
     {
-        "id":"meal-1",
-        "title":"Meal 1",
-        "image":"meal-1.jpg",
-        "description":"This has is meal 1"
+        "id":"1",
+        "title":"Pounded Yam and Stew",
+        "image":"pounded-yam.jpg",
+        "description":"Pounded Yam and Stew"
     },
     {
-        "id":"meal-2",
-        "title":"Meal 2",
-        "image":"meal-2.jpg",
-        "description":"This is meal 2"
+        "id":"2",
+        "title":"Rice and Plantain",
+        "image":"rice-and-plantain.jpg",
+        "description":"Ric and Plantain"
     },
     {
-        "id":"meal-3",
-        "title":"Meal 3",
-        "image":"meal-3.jpg",
-        "description":"This is meal 3"
+        "id":"3",
+        "title":"Eba with Okra stew",
+        "image":"eba-and-okra.jpg",
+        "description":"Eba with Okra stew"
     },
     {
-        "id":"meal-4",
-        "title":"Meal 4",
-        "image":"meal-4.jpg",
-        "description":"This is meal 4"
+        "id":"4",
+        "title":"Yam porridge",
+        "image":"yam-porridge.jpg",
+        "description":"Yam porridge"
+    },
+    {
+        "id":"5",
+        "title":"Beans and Dodo",
+        "image":"beans-and-dodo.jpg",
+        "description":"Bean and Dodo"
+    },
+    {
+        "id":"6",
+        "title":"Jollof Rice",
+        "image":"jollof.jpg",
+        "description":"Jollof Rice is amazing"
     }
 ]

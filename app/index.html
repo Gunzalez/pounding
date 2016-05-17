@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/app.css" type="text/css">
 </head>
-<body>
+<body ng-controller="mainController as main">
 
-    <div class="meal-hero" ng-controller="mainController as main">
+    <div class="meal-hero">
 
         <div class="hero-image" ng-style="{'background-image': 'url(images/' + main.doesSelectImageExist() + ')'}"></div>
         <div class="hero-video" ng-class="{'off-screen':main.selectedMeal != null}"></div>
@@ -53,7 +53,8 @@
                                 ng-disabled="main.selectedMeal == null"
                                 title="Buy"
                                 value="Buy"
-                                ng-click="main.askForPosCode()"/>
+                                ng-click="main.askForPostCode()"/>
+                            <a href="" ng-click="main.askForPostCode();">When</a>
                         </div>
                     </form>
                 </div>
@@ -71,6 +72,8 @@
     <!--build:js js/app.min.js -->
     <script src="js/angular/angular.min.js"></script>
     <script src="app.js"></script>
+    <script src="controllers/detailController.js"></script>
+    <script src="services/mealsService.js"></script>
     <script src="controllers/homeController.js"></script>
     <script src="controllers/mainController.js"></script>
     <script src="js/angular/angular-route.min.js"></script>
