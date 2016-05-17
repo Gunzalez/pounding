@@ -1,7 +1,7 @@
 
 angular
     .module('yamApp')
-    .controller('detailController', function ($scope, mealsService, $routeParams, $rootScope) {
+    .controller('detailController', ['$scope', 'mealsService', '$routeParams', '$rootScope', function ($scope, mealsService, $routeParams, $rootScope) {
 
         $scope.param = $routeParams.id;
         $scope.selectedMeal = {};
@@ -16,4 +16,4 @@ angular
                 $scope.status = 'Unable to load customer data: ' + error.message;
             });
 
-    });
+    }]);

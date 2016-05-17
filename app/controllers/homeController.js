@@ -1,7 +1,7 @@
 
 angular
     .module('yamApp')
-    .controller('homeController', function ($scope, mealsService) {
+    .controller('homeController', ['$scope', 'mealsService', function ($scope, mealsService) {
 
         $scope.meals = [];
         mealsService.getMeals()
@@ -11,6 +11,4 @@ angular
             .error(function (error) {
                 $scope.status = 'Unable to load meals data: ' + error.message;
             });
-
-
-    });
+    }]);
