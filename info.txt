@@ -3,6 +3,14 @@ http://www.templatemonster.com/demo/58004.html
 http://www.templatemonster.com/demo/57838.html
 http://www.templatemonster.com/demo/57803.html
 
+The one
+http://www.templatemonster.com/demo/58356.html
+
 JS
 https://css-tricks.com/gulp-for-beginners/
 https://www.airpair.com/angularjs/building-angularjs-app-tutorial
+
+
+Help
+http://jsfiddle.net/h2fzvyr5/
+http://tech.zumba.com/2014/08/02/angularjs-forget-jquery/
