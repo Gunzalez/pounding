@@ -22,6 +22,9 @@ h1 {
 $heroHeight:   500px;
 
 .meal-hero {
+    height: $heroHeight;
+    overflow: hidden;
+    position: relative;
 
     .hero-image,
     .hero-video {
@@ -47,51 +50,45 @@ $heroHeight:   500px;
         border-bottom: 1px solid #a3a3a3;
     }
 
-    .meal-hero {
-        position: relative;
-        overflow: hidden;
-        height: $heroHeight;
-    }
-
-    .form-box {
-        height: $heroHeight - 70px;
-        position: relative;
+    .form-box {position:absolute;
+        bottom: 40px;
+        left:50%;
+        margin-left:-50%;
     }
 
     .meal-picker {
-        position: absolute;
-        bottom: 40px;
-        left: 15px;
-        padding: 30px;
-        background-color: #ffffff;
-        @include border-radius(3px);
+        padding-top: 30px;
+        text-align: center;
 
-        .btn {
+        .btn, select  {
             text-transform: uppercase;
+            padding: 10px 14px;
+            margin: 0 5px;
+            outline: none;
+            border: none;
+            @include transitions(0.25s);
+            display: inline-block;
         }
-    }
 
-    .cook-button {
-        display: block;
-        text-indent: -9999px;
-        width: 50px;
-        height: 50px;
-        background: url('../images/cook-it.svg') #006600;
-        background-size: 50px 50px;
-        border: none;
-        color: #006600;
+        select {
+            cursor: pointer;
+            padding: 11px 14px;
+            @include border-radius(3px);
+
+            @media (max-width: $width-sm) {
+                display: inline-block;
+            }
+        }
     }
 
     .introduction {
         color: #ffffff;
-        font-size: 3.0rem;
-        width: 300px;
+        text-align: center;
     }
 }
 
 
-
-.most-cooked-meals {
+.list-view {
     min-height: 700px;
 
     .introduction {
@@ -156,15 +153,8 @@ $heroHeight:   500px;
     }
 }
 
-
-.meals-footer {
+.centered-copy {
     text-align: center;
-    padding: 30px 60px;
-}
-
-.no-padding {
-    padding: 0 !important;
-    margin: 0 !important;
 }
 
 .footer {
@@ -172,9 +162,10 @@ $heroHeight:   500px;
     background-color: $clr-dark-gray;
 }
 
-
-// app.scss
-.testing {
-    width: percentage(2/8);
-    height: 29px;
+.detail-view {
+    h2 {
+        text-align: center;
+        color: #444444;
+        margin: 0;
+    }
 }

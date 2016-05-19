@@ -5,6 +5,7 @@ angular
 
         var vm = this;
         vm.selectedMeal = null;
+        vm.cookMode = false;
         vm.cookThisMeal = function(){
             mealsService.selectedMeal = vm.selectedMeal;
             navigatorService.goToLocation('/cook/'+vm.selectedMeal.id);
@@ -22,13 +23,19 @@ angular
             }
         };
 
+        vm.isInCookMode = function(){
+            return vm.cookMode;
+        };
+
         $rootScope.$on('mealFetched', function() {
             vm.selectedMeal = mealsService.selectedMeal;
+            vm.cookMode = true;
         });
 
         vm.removeMeal = function(){
             vm.selectedMeal = null;
             navigatorService.goToLocation('/');
+            vm.cookMode = false;
         };
 
 
