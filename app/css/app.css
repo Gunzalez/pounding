@@ -1,4 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Ubuntu:400,300,500,700);
+h1, .meal-hero .introduction, .list-view .meal .item a .title {
+  text-shadow: 0px 0px 7px rgba(0, 0, 0, 0.75); }
+
+body {
+  font-family: 'Ubuntu';
+  font-size: 1.6rem; }
+
 @media (max-width: 1200px) {
   .container {
     width: 100%; } }
@@ -7,14 +14,10 @@ h1, h2, h3, h4, h5 {
   margin: 10px 0 0 0;
   line-height: 100%; }
 
-h1, h2, h3 {
-  font-family: 'Ubuntu'; }
-
 select, input {
   font-family: 'Ubuntu'; }
 
 .large-font {
-  font-family: 'Ubuntu';
   font-size: 4.8rem;
   font-weight: 600;
   line-height: 110%; }
@@ -32,19 +35,18 @@ p {
   padding: 0 !important;
   margin: 0 !important; }
 
-.container {
-  padding-right: 30px;
-  padding-left: 30px; }
+body {
+  font-size: 1.6rem; }
 
 h1 {
   font-size: 3.6rem;
   margin: 0;
   padding: 0;
-  color: #fff;
+  color: #ffffff;
   line-height: 70px; }
   @media (max-width: 480px) {
     h1 {
-      font-size: 4rem;
+      font-size: 3rem;
       text-align: center; } }
 
 .meal-hero {
@@ -64,13 +66,17 @@ h1 {
     -o-transition: all 0.25s;
     transition: all 0.25s; }
   .meal-hero .hero-video {
-    background-color: #323232;
-    border-bottom: 1px solid #000000; }
+    background: url("../images/pepper-soup.jpg") 0 0 no-repeat #323232;
+    background-size: cover; }
     .meal-hero .hero-video.off-screen {
       top: -500px; }
   .meal-hero .top-bar {
     height: 70px;
-    border-bottom: 1px solid #a3a3a3; }
+    border-bottom: 1px solid #e3e3e3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; }
   .meal-hero .form-box {
     position: absolute;
     bottom: 40px;
@@ -92,7 +98,7 @@ h1 {
       display: inline-block; }
     .meal-hero .meal-picker select {
       cursor: pointer;
-      padding: 11px 14px;
+      padding: 10px 14px;
       -webkit-border-radius: 3px;
       -moz-border-radius: 3px;
       border-radius: 3px; }
@@ -101,55 +107,95 @@ h1 {
           display: inline-block; } }
   .meal-hero .introduction {
     color: #ffffff;
-    text-align: center;
-    text-shadow: 0px 0px 7px rgba(0, 0, 0, 0.75); }
+    text-align: center; }
 
-.list-view {
-  min-height: 700px; }
-  .list-view .introduction {
-    background-color: #f0f0f0;
-    padding: 30px;
-    text-align: center; }
-  .list-view .container {
-    padding-right: 40px;
-    padding-left: 40px; }
-  .list-view .meal {
-    padding-bottom: 30px; }
-    .list-view .meal .item a {
-      position: relative;
-      text-decoration: none;
-      transition: 0.3s;
-      display: block; }
-      .list-view .meal .item a img {
-        width: 100%; }
-      .list-view .meal .item a span {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        color: #ffffff;
-        padding: 20px;
-        font-family: 'poundedYam'; }
-  .list-view .title {
-    font-size: 4.2rem;
-    padding: 20px;
+.list-view .introduction {
+  font-size: 1.8rem;
+  background-color: #f0f0f0;
+  padding: 30px;
+  text-align: center;
+  border-bottom: 1px solid #e3e3e3;
+  border-top: 1px solid #e3e3e3; }
+
+.list-view .meal .item {
+  margin-bottom: 25px; }
+  .list-view .meal .item a {
+    position: relative;
+    text-decoration: none;
+    display: block; }
+    .list-view .meal .item a img {
+      width: 100%; }
+    .list-view .meal .item a .title {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      color: #FFFFFF;
+      font-size: 2.7rem;
+      font-weight: bold;
+      width: 100%; }
+    .list-view .meal .item a .glyphicon {
+      display: none; }
+  .list-view .meal .item .quick-description {
     color: #444;
-    text-align: center; }
-    @media (max-width: 480px) {
-      .list-view .title {
-        font-size: 2.8rem; } }
-  .list-view .sub-title {
-    font-size: 2.6rem;
+    background-color: #f0f0f0;
+    border: 1px solid #e3e3e3; }
+  .list-view .meal .item span {
+    padding: 10px 15px;
+    display: block;
+    text-align: left; }
+  @media (max-width: 992px) {
+    .list-view .meal .item {
+      margin-bottom: 5px; }
+      .list-view .meal .item a .title {
+        position: static;
+        color: #444;
+        background-color: #f0f0f0;
+        border: 1px solid #e3e3e3;
+        text-shadow: none;
+        font-size: 1.8rem;
+        font-weight: 100;
+        padding: 8px 10px; }
+      .list-view .meal .item a .glyphicon {
+        display: block;
+        position: absolute;
+        right: -4px;
+        top: 0;
+        font-size: 2.5rem;
+        color: #444; }
+      .list-view .meal .item a img {
+        display: none; }
+      .list-view .meal .item .quick-description {
+        display: none; } }
+
+.list-view .title {
+  color: #444;
+  text-align: center;
+  padding: 30px; }
+  @media (max-width: 480px) {
+    .list-view .title {
+      font-size: 2.8rem;
+      padding: 15px; } }
+
+.list-view .sub-module {
+  padding-bottom: 35px; }
+  .list-view .sub-module .title {
+    font-size: 2.5rem;
     padding: 10px;
     color: #444;
-    text-align: center; }
-    @media (max-width: 480px) {
-      .list-view .sub-title {
-        font-size: 1.8rem; } }
+    text-align: center;
+    font-weight: bold; }
+  @media (max-width: 480px) {
+    .list-view .sub-module .title {
+      font-size: 1.8rem; }
+    .list-view .sub-module:first-child {
+      padding-bottom: 15px;
+      padding-top: 15px; } }
 
 .centered-copy {
   text-align: center; }
 
 .footer {
+  border-top: 10px solid greenyellow;
   height: 200px;
   background-color: #444; }
 

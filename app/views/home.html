@@ -3,24 +3,28 @@
     <div class="introduction">
         <div class="row">
             <div class="col-xs-12 no-padding">
-                <p>Anyone can cook Nigerian food.<br />These recipes are brought to you by non-nigerians.</p>
+                <p>Learn to cook a nigerian dish today, try something different, it's simpler than you might think.</p>
+                <p>Read through the recipes. Learn the ones you do not know. Add to what you know when you see a familiar recipe.</p>
+                <p>There are many more appetizing Nigerian meals on this website, enjoy and share your experiences.</p>
             </div>
         </div>
     </div>
     <div class="container">
         <div class="row">
             <div class="col-xs-12 no-padding">
-                <h2 class="title">Most cooked meals</h2>
+                <h2 class="title large-font">Most cooked meals</h2>
             </div>
         </div>
         <div class="row">
 
-            <div class="meal col-xs-12 col-sm-6 col-md-4 no-padding" ng-repeat="meal in meals">
+            <div class="meal col-xs-12 col-md-4" ng-repeat="meal in meals">
                 <div class="item">
-                    <a href="#">
+                    <a href="#/cook/{{ meal.id }}">
                         <img src="images/{{ meal.image }}" alt="" />
-                        <span>{{ meal.description }}</span>
+                        <span class="title">{{ meal.title }} ({{meal.count}})</span>
+                        <span class="glyphicon glyphicon-chevron-right"></span>
                     </a>
+                    <span class="quick-description">{{ meal.quote }}</span>
                 </div>
             </div>
 
@@ -28,15 +32,15 @@
     </div>
     <div class="container centered-copy">
         <div class="row">
-            <div class="col-xs-12 col-sm-6">
-                <h3 class="sub-title">Submit a meal</h3>
+            <div class="col-xs-12 col-sm-6 sub-module">
+                <h3 class="title">Submit a meal</h3>
                 <p>Donec et leo rhoncus, aliquam nsectetnsectetur telc,</p>
                 <p>Lnon faucibus condimentum.</p>
             </div>
-            <div class="col-xs-12 col-sm-6">
-                <h3 class="sub-title">Submit a restaurant</h3>
+            <div class="col-xs-12 col-sm-6 sub-module">
+                <h3 class="title">Submit a restaurant</h3>
                 <p>You'll need to be <a href="#">registered</a> to do this.</p>
-                <p>SOme more talk about submitting a restaurant.</p>
+                <p>Some more talk about submitting a restaurant.</p>
             </div>
         </div>
     </div>

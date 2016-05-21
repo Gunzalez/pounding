@@ -1,38 +1,50 @@
 [
     {
         "id":"1",
-        "title":"Pounded Yam and Stew",
+        "title":"Pounded Yam",
         "image":"pounded-yam.jpg",
-        "description":"Pounded Yam and Stew"
+        "description":"This is a recipe for Poundo yam and Pounded Yam, but not the stew.",
+        "quote":"30 min / light",
+        "count":"11"
     },
     {
         "id":"2",
-        "title":"Rice and Plantain",
+        "title":"Plantain",
         "image":"rice-and-plantain.jpg",
-        "description":"Ric and Plantain"
+        "description":"Ric and Plantain",
+        "quote":"20 min / light",
+        "count":"46"
     },
     {
         "id":"3",
-        "title":"Eba with Okra stew",
+        "title":"Eba (for stew)",
         "image":"eba-and-okra.jpg",
-        "description":"Eba with Okra stew"
+        "description":"Eba with Okra stew",
+        "quote":"30 min / heavy",
+        "count":"14"
     },
     {
         "id":"4",
         "title":"Yam porridge",
         "image":"yam-porridge.jpg",
-        "description":"Yam porridge"
+        "description":"Yam porridge",
+        "quote":"120 min / heavy",
+        "count":"2"
     },
     {
         "id":"5",
-        "title":"Beans and Dodo",
+        "title":"Beans",
         "image":"beans-and-dodo.jpg",
-        "description":"Bean and Dodo"
+        "description":"Bean and Dodo",
+        "quote":"120 min / light",
+        "count":"5"
     },
     {
         "id":"6",
         "title":"Jollof Rice",
         "image":"jollof.jpg",
-        "description":"Jollof Rice is amazing"
+        "description":"Jollof Rice is amazing",
+        "quote":"120 min / light",
+        "count":"6"
     }
 ]

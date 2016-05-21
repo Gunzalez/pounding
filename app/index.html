@@ -7,21 +7,21 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> 
 	<!--<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"> -->
 	<!--<link rel="icon" href="images/favicon.ico" type="image/x-icon">  -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/app.css" type="text/css">
 </head>
 <body ng-controller="mainController as main">
 
     <div class="meal-hero">
 
-        <div class="hero-image" ng-style="{'background-image': 'url(images/' + main.doesSelectImageExist() + ')'}">&nbsp;</div>
+        <div class="hero-image" data-default-image="blank.gif" ng-style="{'background-image': 'url(images/' + main.doesSelectImageExist($attrs) + ')'}">&nbsp;</div>
         <div class="hero-video" ng-class="{'off-screen':main.selectedMeal != null}">&nbsp;</div>
 
         <div class="top-bar">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
-                        <h1><a href="" ng-click="main.resetMeal();">Pound That Yam!</a></h1>
+                        <h1>Pound That Yam!</h1>
                     </div>
                 </div>
             </div>
@@ -34,8 +34,7 @@
                             <p class="large-font">Pick&nbsp;a&nbsp;meal, then cook&nbsp;a&nbsp;meal.<br />Or just be lazy and just buy&nbsp;a&nbsp;meal.</p>
                         </div>
                         <form name="mealPicker" class="meal-picker">
-                            <select ng-model="main.selectedMeal"
-                                    ng-options="meal.title for meal in main.meals">
+                            <select ng-model="main.selectedMeal" ng-options="meal.title for meal in main.meals">
                                 <option value="" selected="selected">Select a meal</option>
                             </select>
                             <input class="button btn"
@@ -57,6 +56,7 @@
                     <div class="cook-mode" ng-if="main.shouldShowCookHeader">
                         <div class="introduction">
                             <p class="large-font">Scroll down for<br />cooking instructions</p>
+                            <p><a href="" ng-click="main.resetMeal();">Back</a></p>
                         </div>
                     </div>
                 </div>

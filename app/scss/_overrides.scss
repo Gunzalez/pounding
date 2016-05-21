@@ -1,3 +1,11 @@
+
+
+body {
+    font-family: 'Ubuntu';
+    font-size: 1.6rem;
+}
+
+
 @media (max-width: $width-lg){
     .container {
         width: 100%;
@@ -9,16 +17,11 @@ h1, h2, h3, h4, h5 {
     line-height: 100%;
 }
 
-h1, h2, h3 {
-    font-family: 'Ubuntu';
-}
-
 select, input {
     font-family: 'Ubuntu';
 }
 
 .large-font {
-    font-family: 'Ubuntu';
     font-size: 4.8rem;
     font-weight: 600;
     line-height: 110%;
@@ -40,7 +43,3 @@ p {
     margin: 0 !important;
 }
 
-.container {
-    padding-right: 30px;
-    padding-left: 30px;
-}
