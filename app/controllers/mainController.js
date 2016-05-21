@@ -1,11 +1,28 @@
 
 angular
     .module('yamApp')
-    .controller('mainController', ['$scope', 'mealsService', 'navigatorService', '$rootScope', function ($scope, mealsService, navigatorService, $rootScope) {
+    .controller('mainController', ['$scope', 'mealsService', 'navigatorService', '$rootScope', '$route', '$location',
+            function ($scope, mealsService, navigatorService, $rootScope, $route, $location) {
+
+        $rootScope.$on('$locationChangeSuccess', function() {
+            $rootScope.actualLocation = $location.path();
+        });
+
+        $rootScope.$watch(function () {return $location.path()}, function (newLocation, oldLocation) {
+            if($rootScope.actualLocation === newLocation) {
+                if(newLocation = '/'){
+                    vm.selectedMeal = null;
+                    vm.shouldShowForm = true;
+                    vm.shouldShowCookHeader = false;
+                }
+            }
+        });
 
         var vm = this;
         vm.selectedMeal = null;
-        vm.cookMode = false;
+        vm.shouldShowForm = true;
+        vm.shouldShowCookHeader = false;
+
         vm.cookThisMeal = function(){
             mealsService.selectedMeal = vm.selectedMeal;
             navigatorService.goToLocation('/cook/'+vm.selectedMeal.id);
@@ -23,25 +40,18 @@ angular
             }
         };
 
-        vm.isInCookMode = function(){
-            return vm.cookMode;
-        };
-
         $rootScope.$on('mealFetched', function() {
             vm.selectedMeal = mealsService.selectedMeal;
-            vm.cookMode = true;
+            vm.shouldShowForm = false;
+            vm.shouldShowCookHeader = true;
         });
 
-        vm.removeMeal = function(){
-            vm.selectedMeal = null;
+        vm.resetMeal = function(){
             navigatorService.goToLocation('/');
-            vm.cookMode = false;
+            vm.selectedMeal = null;
+            vm.shouldShowForm = true;
+            vm.shouldShowCookHeader = false;
         };
-
-
-            $rootScope.$on('doneSelecting', function() {
-                vm.selectedMeal = mealsService.selectedMeal;
-            });
 
         mealsService.getMeals()
             .success(function (data) {

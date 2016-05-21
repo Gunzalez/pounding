@@ -21,7 +21,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
-                        <h1><a href="" ng-click="main.removeMeal();">Pound That Yam!</a></h1>
+                        <h1><a href="" ng-click="main.resetMeal();">Pound That Yam!</a></h1>
                     </div>
                 </div>
             </div>
@@ -29,7 +29,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 form-box">
-                    <div class="home-mode" ng-if="!main.isInCookMode()">
+                    <div class="home-mode" ng-if="main.shouldShowForm">
                         <div class="introduction">
                             <p class="large-font">Pick&nbsp;a&nbsp;meal, then cook&nbsp;a&nbsp;meal.<br />Or just be lazy and just buy&nbsp;a&nbsp;meal.</p>
                         </div>
@@ -54,7 +54,7 @@
                                    ng-click="main.askForPostCode()"/>
                         </form>
                     </div>
-                    <div class="cook-mode" ng-if="main.isInCookMode()">
+                    <div class="cook-mode" ng-if="main.shouldShowCookHeader">
                         <div class="introduction">
                             <p class="large-font">Scroll down for<br />cooking instructions</p>
                         </div>
