@@ -35,28 +35,27 @@
                         </div>
                         <form name="mealPicker" class="meal-picker">
                             <select ng-model="main.selectedMeal" ng-options="meal.title for meal in main.meals">
-                                <option value="" selected="selected">Select a meal</option>
+                                <option value="" selected="selected">List of meals</option>
                             </select>
                             <input class="button btn"
                                    type="button"
-                                   title="Cook"
-                                   value="Cook"
+                                   title="Select"
+                                   value="Select"
                                    ng-class="{'disabled btn-default':main.selectedMeal == null, 'btn-primary':main.selectedMeal != null}"
                                    ng-disabled="main.selectedMeal == null"
-                                   ng-click="main.cookThisMeal()" />
-                            <input class="button btn"
-                                   type="button"
-                                   ng-class="{'disabled btn-default':main.selectedMeal == null, 'btn-success':main.selectedMeal != null}"
-                                   ng-disabled="main.selectedMeal == null"
-                                   title="Buy"
-                                   value="Buy"
-                                   ng-click="main.askForPostCode()"/>
+                                   ng-click="main.selectThisMeal()" />
                         </form>
                     </div>
                     <div class="cook-mode" ng-if="main.shouldShowCookHeader">
                         <div class="introduction">
-                            <p class="large-font">Scroll down for<br />cooking instructions</p>
-                            <p><a href="" ng-click="main.resetMeal();">Back</a></p>
+                            <h2 class="title large-font">
+                                <span>{{ main.selectedMeal.title }}<a href="" ng-click="main.resetMeal();"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a></span>
+                            </h2>
+                            <!--<p class="large-font">-->
+                                <!--<a href="">-->
+                                    <!--<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>-->
+                                <!--</a>-->
+                            <!--</p>-->
                         </div>
                     </div>
                 </div>

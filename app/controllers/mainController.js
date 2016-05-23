@@ -14,7 +14,7 @@ angular
             vm.shouldShowCookHeader = false;
         };
 
-        vm.cookThisMeal = function(){
+        vm.selectThisMeal = function(){
             mealsService.selectedMeal = vm.selectedMeal;
             navigatorService.goToLocation('/cook/'+vm.selectedMeal.id);
         };

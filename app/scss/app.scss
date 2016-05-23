@@ -1,12 +1,10 @@
-
-$clr-dark-gray:     #444;
-
 @import "variables";
 @import "mixins";
 @import "fonts";
 @import "overrides";
 
 body {
+    font-family: 'Ubuntu';
     font-size: 1.6rem;
 }
 
@@ -22,6 +20,16 @@ h1 {
     	font-size: 3rem;
 		text-align: center;
 	}
+}
+
+a {
+    color: $clr-green-mid;
+    text-decoration: underline;
+
+    &:hover {
+        color: $clr-green-dark;
+        text-decoration: none;
+    }
 }
 
 $heroHeight:   500px;
@@ -52,7 +60,7 @@ $heroHeight:   500px;
 
     .top-bar {
         height: 70px;
-        border-bottom: 1px solid #e3e3e3;
+        border-bottom: 1px solid $border-clr;
         position: absolute;
         top: 0;
         left: 0;
@@ -95,6 +103,20 @@ $heroHeight:   500px;
         color: #ffffff;
         text-align: center;
         @extend %textshadow;
+
+        .title {
+
+            span {
+                position: relative;
+            }
+
+            a {
+                position: absolute;
+                right: -20px;
+                top: -20px;
+                font-size: 20px;
+            }
+        }
     }
 }
 
@@ -134,7 +156,7 @@ $heroHeight:   500px;
                     position: absolute;
                     bottom: 0;
                     left: 0;
-                    color: #FFFFFF;
+                    color: #ffffff;
                     font-size: 2.7rem;
                     font-weight: bold;
                     @extend %textshadow;
@@ -147,7 +169,8 @@ $heroHeight:   500px;
             }
 
             .quick-description {
-                color: $clr-dark-gray;
+                @include transitions(0.75s);
+                color: $clr-grey-dark;
                 background-color: #f0f0f0;
                 border: 1px solid #e3e3e3;
             }
@@ -167,7 +190,7 @@ $heroHeight:   500px;
 
                     .title {
                         position: static;
-                        color: $clr-dark-gray;
+                        color: $clr-grey-dark;
                         background-color: #f0f0f0;
                         border: 1px solid #e3e3e3;
                         text-shadow: none;
@@ -182,9 +205,8 @@ $heroHeight:   500px;
                         right: -4px;
                         top: 0;
                         font-size: 2.5rem;
-                        color: $clr-dark-gray;
+                        color: $clr-grey-dark;
                     }
-
 
                     img {
                         display: none;
@@ -194,13 +216,20 @@ $heroHeight:   500px;
                 .quick-description {
                     display: none;
                 }
+            }
 
+            &:hover {
+
+                .quick-description {
+                    background-color: #d8d8d8;
+                    color: #000000;
+                }
             }
         }
     }
 
     .title {
-        color: $clr-dark-gray;
+        color: $clr-green-dark;
         text-align: center;
         padding: 30px;
 
@@ -217,7 +246,6 @@ $heroHeight:   500px;
         .title {
             font-size: 2.5rem;
             padding: 10px;
-            color: $clr-dark-gray;
             text-align: center;
             font-weight: bold;
         }
@@ -242,15 +270,15 @@ $heroHeight:   500px;
 }
 
 .footer {
-    border-top: 10px solid greenyellow;
+    border-top: 10px solid $border-clr;
     height: 200px;
-    background-color: $clr-dark-gray;
+    background-color: $clr-grey-dark;
 }
 
 .detail-view {
     h2 {
         text-align: center;
-        color: #444444;
+        color: $clr-grey-dark;
         margin: 0;
     }
 }
