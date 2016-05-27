@@ -12,20 +12,20 @@
 </head>
 <body ng-controller="mainController as main">
 
-    <div class="meal-hero">
-
-        <div class="hero-image" data-default-image="blank.gif" ng-style="{'background-image': 'url(images/' + main.doesSelectImageExist($attrs) + ')'}">&nbsp;</div>
-        <div class="hero-video" ng-class="{'off-screen':main.selectedMeal != null}">&nbsp;</div>
-
-        <div class="top-bar">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <h1>Pound That Yam!</h1>
-                    </div>
-                </div>
+<div class="top-bar">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>PoundThatYam!</h1>
             </div>
         </div>
+    </div>
+</div>
+
+    <div class="meal-hero">
+
+        <div class="hero-image" data-default-image="blank.gif" ng-style="{'background-image': 'url(images/' + main.getHeroImageBackground($attrs) + ')'}">&nbsp;</div>
+        <div class="hero-video" ng-class="{'off-screen':main.selectedMeal != null}">&nbsp;</div>
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 form-box">
@@ -48,9 +48,8 @@
                     </div>
                     <div class="cook-mode" ng-if="main.shouldShowCookHeader">
                         <div class="introduction">
-                            <h2 class="title large-font">
-                                <span>{{ main.selectedMeal.title }}<a href="" ng-click="main.resetMeal();"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a></span>
-                            </h2>
+                            <h2 class="title large-font">{{ main.selectedMeal.title }}</h2>
+                            <p>{{ main.selectedMeal.strapline }}</p>
                             <!--<p class="large-font">-->
                                 <!--<a href="">-->
                                     <!--<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>-->

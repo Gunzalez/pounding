@@ -34,6 +34,16 @@ a {
 
 $heroHeight:   500px;
 
+.top-bar {
+    height: 70px;
+    border-bottom: 1px solid $border-clr;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+
 .meal-hero {
     height: $heroHeight;
     overflow: hidden;
@@ -58,20 +68,11 @@ $heroHeight:   500px;
         background-size: cover;
     }
 
-    .top-bar {
-        height: 70px;
-        border-bottom: 1px solid $border-clr;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-    }
-
     .form-box {
-        position:absolute;
+        position: absolute;
         bottom: 40px;
-        left:50%;
-        margin-left:-50%;
+        left: 50%;
+        margin-left: -50%;
     }
 
     .meal-picker {
@@ -110,17 +111,17 @@ $heroHeight:   500px;
                 position: relative;
             }
 
-            a {
-                position: absolute;
-                right: -20px;
-                top: -20px;
-                font-size: 20px;
-            }
+//            a {
+//                position: absolute;
+//                right: -20px;
+//                top: -20px;
+//                font-size: 20px;
+//            }
         }
     }
 }
 
-
+.detail-view,
 .list-view {
 
     .introduction {
@@ -229,7 +230,7 @@ $heroHeight:   500px;
     }
 
     .title {
-        color: $clr-green-dark;
+        color: $header-clr;
         text-align: center;
         padding: 30px;
 

@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Ubuntu:400,300,500,700);
-h1, .meal-hero .introduction, .list-view .meal .item a .title {
+h1, .meal-hero .introduction, .detail-view .meal .item a .title,
+.list-view .meal .item a .title {
   text-shadow: 0px 0px 7px rgba(0, 0, 0, 0.75); }
 
 @media (max-width: 1200px) {
@@ -53,6 +54,15 @@ a {
     color: #004358;
     text-decoration: none; }
 
+.top-bar {
+  height: 70px;
+  border-bottom: 1px solid #BEDB39;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2; }
+
 .meal-hero {
   height: 500px;
   overflow: hidden;
@@ -74,13 +84,6 @@ a {
     background-size: cover; }
     .meal-hero .hero-video.off-screen {
       top: -500px; }
-  .meal-hero .top-bar {
-    height: 70px;
-    border-bottom: 1px solid #BEDB39;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; }
   .meal-hero .form-box {
     position: absolute;
     bottom: 40px;
@@ -114,12 +117,8 @@ a {
     text-align: center; }
     .meal-hero .introduction .title span {
       position: relative; }
-    .meal-hero .introduction .title a {
-      position: absolute;
-      right: -20px;
-      top: -20px;
-      font-size: 20px; }
 
+.detail-view .introduction,
 .list-view .introduction {
   font-size: 1.8rem;
   background-color: #f0f0f0;
@@ -128,14 +127,18 @@ a {
   border-bottom: 1px solid #e3e3e3;
   border-top: 1px solid #e3e3e3; }
 
+.detail-view .meal .item,
 .list-view .meal .item {
   margin-bottom: 25px; }
+  .detail-view .meal .item a,
   .list-view .meal .item a {
     position: relative;
     text-decoration: none;
     display: block; }
+    .detail-view .meal .item a img,
     .list-view .meal .item a img {
       width: 100%; }
+    .detail-view .meal .item a .title,
     .list-view .meal .item a .title {
       position: absolute;
       bottom: 0;
@@ -144,8 +147,10 @@ a {
       font-size: 2.7rem;
       font-weight: bold;
       width: 100%; }
+    .detail-view .meal .item a .glyphicon,
     .list-view .meal .item a .glyphicon {
       display: none; }
+  .detail-view .meal .item .quick-description,
   .list-view .meal .item .quick-description {
     -webkit-transition: all 0.75s;
     -moz-transition: all 0.75s;
@@ -154,13 +159,16 @@ a {
     color: #444444;
     background-color: #f0f0f0;
     border: 1px solid #e3e3e3; }
+  .detail-view .meal .item span,
   .list-view .meal .item span {
     padding: 10px 15px;
     display: block;
     text-align: left; }
   @media (max-width: 992px) {
+    .detail-view .meal .item,
     .list-view .meal .item {
       margin-bottom: 5px; }
+      .detail-view .meal .item a .title,
       .list-view .meal .item a .title {
         position: static;
         color: #444444;
@@ -170,6 +178,7 @@ a {
         font-size: 1.8rem;
         font-weight: 100;
         padding: 8px 10px; }
+      .detail-view .meal .item a .glyphicon,
       .list-view .meal .item a .glyphicon {
         display: block;
         position: absolute;
@@ -177,33 +186,42 @@ a {
         top: 0;
         font-size: 2.5rem;
         color: #444444; }
+      .detail-view .meal .item a img,
       .list-view .meal .item a img {
         display: none; }
+      .detail-view .meal .item .quick-description,
       .list-view .meal .item .quick-description {
         display: none; } }
+  .detail-view .meal .item:hover .quick-description,
   .list-view .meal .item:hover .quick-description {
     background-color: #d8d8d8;
     color: #000000; }
 
+.detail-view .title,
 .list-view .title {
-  color: #004358;
+  color: #FD7400;
   text-align: center;
   padding: 30px; }
   @media (max-width: 480px) {
+    .detail-view .title,
     .list-view .title {
       font-size: 2.8rem;
       padding: 15px; } }
 
+.detail-view .sub-module,
 .list-view .sub-module {
   padding-bottom: 35px; }
+  .detail-view .sub-module .title,
   .list-view .sub-module .title {
     font-size: 2.5rem;
     padding: 10px;
     text-align: center;
     font-weight: bold; }
   @media (max-width: 480px) {
+    .detail-view .sub-module .title,
     .list-view .sub-module .title {
       font-size: 1.8rem; }
+    .detail-view .sub-module:first-child,
     .list-view .sub-module:first-child {
       padding-bottom: 15px;
       padding-top: 15px; } }

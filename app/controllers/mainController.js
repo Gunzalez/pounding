@@ -28,7 +28,7 @@ angular
             alert('Ask for post code');
         };
 
-        vm.doesSelectImageExist = function(){
+        vm.getHeroImageBackground = function(){
             var defaultBackground = document.querySelectorAll("div.hero-image")[0].getAttribute('data-default-image');
             if(vm.selectedMeal){
                 return vm.selectedMeal.image;
