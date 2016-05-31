@@ -22,11 +22,11 @@
             <div class="meal col-xs-12 col-md-4" ng-repeat="meal in meals">
                 <div class="item">
                     <a href="#/cook/{{ meal.id }}">
-                        <img src="images/{{ meal.image }}" alt="" />
+                        <img ng-src="images/{{ meal.image }}" alt="" />
                         <span class="title">{{ meal.title }} ({{meal.count}})</span>
                         <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="quick-description">{{ meal.quote }}</span>
                     </a>
-                    <span class="quick-description">{{ meal.quote }}</span>
                 </div>
             </div>
 

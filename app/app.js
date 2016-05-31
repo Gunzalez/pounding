@@ -1,6 +1,7 @@
 angular
     .module('yamApp', [
-        'ngRoute'
+        'ngRoute',
+        'ngSanitize'
     ])
 
     // Routing

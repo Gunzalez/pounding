@@ -1,7 +1,7 @@
 
 angular
     .module('yamApp')
-    .controller('detailController', ['$scope', 'mealsService', '$routeParams', '$rootScope', function ($scope, mealsService, $routeParams, $rootScope) {
+    .controller('detailController', ['$scope', 'mealsService', '$routeParams', '$rootScope', '$sce', function ($scope, mealsService, $routeParams, $rootScope, $sce) {
 
         $scope.param = $routeParams.id;
         $scope.selectedMeal = {};
@@ -10,6 +10,7 @@ angular
             .success(function (data) {
                 $scope.selectedMeal = data;
                 mealsService.selectedMeal = $scope.selectedMeal;
+                $scope.mealDescription = $sce.trustAsHtml($scope.selectedMeal.about);
                 $rootScope.$emit('mealFetched', {});
             })
             .error(function (error) {
