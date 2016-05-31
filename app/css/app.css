@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Ubuntu:400,300,500,700);
-h1, .meal-hero .introduction, .detail-view .meal .item a .title,
+.top-bar.top h1, .meal-hero .introduction, .detail-view .meal .item a .title,
 .list-view .meal .item a .title {
   text-shadow: 0 0 7px rgba(0, 0, 0, 0.75); }
 
@@ -37,17 +37,6 @@ body {
   font-family: 'Ubuntu';
   font-size: 1.6rem; }
 
-h1 {
-  font-size: 3.6rem;
-  margin: 0;
-  padding: 0;
-  color: #ffffff;
-  line-height: 70px; }
-  @media (max-width: 480px) {
-    h1 {
-      font-size: 3rem;
-      text-align: center; } }
-
 a {
   color: #1F8A70;
   text-decoration: underline; }
@@ -56,13 +45,37 @@ a {
     text-decoration: none; }
 
 .top-bar {
-  height: 70px;
-  border-bottom: 1px solid #BEDB39;
-  position: fixed;
   top: 0;
   left: 0;
+  z-index: 2;
   width: 100%;
-  z-index: 2; }
+  height: 70px;
+  position: fixed;
+  background: #ffffff;
+  border-bottom: none;
+  -webkit-box-shadow: 0 3px 11px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 3px 11px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 11px 0 rgba(0, 0, 0, 0.1); }
+  .top-bar h1 {
+    font-size: 3.6rem;
+    margin: 0;
+    padding: 0;
+    line-height: 70px;
+    color: #FD7400; }
+  .top-bar.top {
+    -webkit-transition: all 0.75s;
+    -moz-transition: all 0.75s;
+    -o-transition: all 0.75s;
+    transition: all 0.75s;
+    background: none;
+    border-bottom: 1px solid #BEDB39;
+    box-shadow: none; }
+    .top-bar.top h1 {
+      color: #ffffff;
+      -webkit-transition: all 0.75s;
+      -moz-transition: all 0.75s;
+      -o-transition: all 0.75s;
+      transition: all 0.75s; }
 
 .meal-hero {
   height: 500px;
