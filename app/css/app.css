@@ -24,6 +24,9 @@ select, input {
       font-size: 3.4rem;
       line-height: 120%; } }
 
+.strapline {
+  font-size: 1.8rem; }
+
 p {
   padding: 0;
   margin: 0;
@@ -52,30 +55,31 @@ a {
   height: 70px;
   position: fixed;
   background: #ffffff;
-  border-bottom: none;
+  border-bottom: 1px solid #ffffff;
   -webkit-box-shadow: 0 3px 11px 0 rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 3px 11px 0 rgba(0, 0, 0, 0.1);
-  box-shadow: 0 3px 11px 0 rgba(0, 0, 0, 0.1); }
+  box-shadow: 0 3px 11px 0 rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s; }
   .top-bar h1 {
-    font-size: 3.6rem;
+    font-weight: 600;
+    font-size: 3.8rem;
     margin: 0;
     padding: 0;
     line-height: 70px;
-    color: #FD7400; }
+    color: #FD7400;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s; }
   .top-bar.top {
-    -webkit-transition: all 0.75s;
-    -moz-transition: all 0.75s;
-    -o-transition: all 0.75s;
-    transition: all 0.75s;
     background: none;
     border-bottom: 1px solid #BEDB39;
     box-shadow: none; }
     .top-bar.top h1 {
-      color: #ffffff;
-      -webkit-transition: all 0.75s;
-      -moz-transition: all 0.75s;
-      -o-transition: all 0.75s;
-      transition: all 0.75s; }
+      color: #ffffff; }
 
 .meal-hero {
   height: 500px;
@@ -84,6 +88,7 @@ a {
   .meal-hero .hero-video {
     background-size: cover;
     position: absolute;
+    background-position: center;
     top: 0;
     left: 0;
     width: 100%;
@@ -145,19 +150,16 @@ a {
 .list-view h3 + h4 {
   margin-top: 0; }
 
-.detail-view .content-block,
-.list-view .content-block {
-  padding: 20px 0; }
-  .detail-view .content-block ul, .detail-view .content-block ol,
-  .list-view .content-block ul,
-  .list-view .content-block ol {
-    padding-bottom: 10px; }
+.detail-view .content-block ul, .detail-view .content-block ol,
+.list-view .content-block ul,
+.list-view .content-block ol {
+  padding-bottom: 10px; }
 
 .detail-view .introduction,
 .list-view .introduction {
   font-size: 1.8rem;
   background-color: #f0f0f0;
-  padding: 30px;
+  padding: 15px;
   text-align: center;
   border-bottom: 1px solid #e3e3e3;
   border-top: 1px solid #e3e3e3; }
@@ -261,9 +263,17 @@ a {
       padding-bottom: 15px;
       padding-top: 15px; } }
 
+.block {
+  float: left; }
+
+.aux-nav {
+  padding-top: 20px; }
+
 .content-controls {
   border-bottom: 1px solid #BEDB39;
-  margin-bottom: 15px; }
+  margin: 20px 0; }
+  .content-controls ul {
+    padding-bottom: 10px; }
 
 .centered-copy {
   text-align: center; }

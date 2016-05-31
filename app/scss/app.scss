@@ -29,29 +29,30 @@ $heroHeight:   500px;
     position: fixed;
 
     background: #ffffff;
-    border-bottom: none;
+    border-bottom: 1px solid #ffffff;
 
     -webkit-box-shadow: 0 3px 11px 0 rgba(0,0,0,0.10);
     -moz-box-shadow: 0 3px 11px 0 rgba(0,0,0,0.10);
     box-shadow: 0 3px 11px 0 rgba(0,0,0,0.10);
+    @include transitions(0.5s);
 
     h1 {
-        font-size: 3.6rem;
+        font-weight: 600;
+        font-size: 3.8rem;
         margin: 0;
         padding: 0;
         line-height: 70px;
         color: $header-clr;
+        @include transitions(0.5s);
     }
 
     &.top {
-        @include transitions(0.75s);
         background: none;
         border-bottom: 1px solid $border-clr;
 
         h1 {
             color: #ffffff;
             @extend %textshadow;
-            @include transitions(0.75s);
         }
 
         box-shadow: none;
@@ -67,6 +68,7 @@ $heroHeight:   500px;
     .hero-video {
         background-size: cover;
         position: absolute;
+        background-position: center;
         top: 0;
         left: 0;
         width: 100%;
@@ -151,7 +153,6 @@ $heroHeight:   500px;
     }
 
     .content-block {
-        padding: 20px 0;
 
         ul, ol {
             padding-bottom: 10px;
@@ -161,7 +162,7 @@ $heroHeight:   500px;
     .introduction {
         font-size: 1.8rem;
         background-color: #f0f0f0;
-        padding: 30px;
+        padding: 15px;
         text-align: center;
         border-bottom: 1px solid #e3e3e3;
         border-top: 1px solid #e3e3e3;
@@ -299,9 +300,21 @@ $heroHeight:   500px;
     }
 }
 
+.block {
+    float: left;
+}
+
+.aux-nav {
+    padding-top: 20px;
+}
+
 .content-controls {
     border-bottom: 1px solid $border-clr;
-    margin-bottom: 15px;
+    margin: 20px 0;
+
+    ul {
+        padding-bottom: 10px;
+    }
 }
 
 .centered-copy {

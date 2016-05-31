@@ -1,12 +1,13 @@
 <!doctype html>
 <html ng-app="yamApp">
 <head>
-    <title>Test</title>
+    <title>PoundThatYam!</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> 
 	<!--<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"> -->
 	<!--<link rel="icon" href="images/favicon.ico" type="image/x-icon">  -->
+    <!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/app.css" type="text/css">
 </head>
@@ -15,8 +16,13 @@
 <div class="top-bar top">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12">
+            <div class="col-xs-9">
                 <h1>PoundThatYam!</h1>
+            </div>
+            <div class="col-xs-3 text-right aux-nav" ng-if="!main.shouldShowForm">
+                <button type="button" class="button btn btn-primary text-uppercase" ng-click="main.resetMeal()">
+                    <span class="glyphicon glyphicon-align-left"></span> Menu
+                </button>
             </div>
         </div>
     </div>
@@ -49,12 +55,7 @@
                     <div class="cook-mode" ng-if="main.shouldShowCookHeader">
                         <div class="introduction">
                             <h2 class="title large-font">{{ main.selectedMeal.title }}</h2>
-                            <p>{{ main.selectedMeal.strapline }}</p>
-                            <!--<p class="large-font">-->
-                                <!--<a href="">-->
-                                    <!--<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>-->
-                                <!--</a>-->
-                            <!--</p>-->
+                            <p class="strapline">{{ main.selectedMeal.strapline }}</p>
                         </div>
                     </div>
                 </div>
