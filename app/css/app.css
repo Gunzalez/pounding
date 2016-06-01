@@ -98,10 +98,11 @@ a {
     -o-transition: all 0.25s;
     transition: all 0.25s; }
   .meal-hero .hero-video {
+    top: -500px;
     background: url("../images/pepper-soup.jpg") 0 0 no-repeat #323232;
     background-size: cover; }
-    .meal-hero .hero-video.off-screen {
-      top: -500px; }
+    .meal-hero .hero-video.on-screen {
+      top: 0; }
   .meal-hero .form-box {
     position: absolute;
     bottom: 40px;
@@ -135,6 +136,18 @@ a {
     text-align: center; }
     .meal-hero .introduction .title span {
       position: relative; }
+
+#wrap {
+  min-height: 300px; }
+
+.aux-nav,
+.cook-mode,
+.home-mode {
+  display: none; }
+  .aux-nav.show-me,
+  .cook-mode.show-me,
+  .home-mode.show-me {
+    display: block; }
 
 .detail-view h2, .detail-view h3,
 .list-view h2,

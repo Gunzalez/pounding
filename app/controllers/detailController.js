@@ -5,6 +5,9 @@ angular
 
         $scope.param = $routeParams.id;
         $scope.selectedMeal = {};
+        $scope.askForPostCode = function(){
+            alert('Ask for post code');
+        };
 
         mealsService.getAMeal($scope.param)
             .success(function (data) {

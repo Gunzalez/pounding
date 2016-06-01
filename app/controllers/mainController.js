@@ -5,13 +5,16 @@ angular
 
         var vm = this;
         vm.selectedMeal = null;
-        vm.shouldShowForm = true;
+        vm.shouldShowForm = false;
         vm.shouldShowCookHeader = false;
+        vm.shouldShowVideo = false;
 
         var clearMealSettings = function(){
             vm.selectedMeal = null;
             vm.shouldShowForm = true;
+            vm.shouldShowVideo = true;
             vm.shouldShowCookHeader = false;
+            vm.shouldShowAuxMenu = false;
         };
 
         vm.selectThisMeal = function(){
@@ -24,23 +27,12 @@ angular
             navigatorService.goToLocation('/');
         };
 
-        vm.askForPostCode = function(){
-            alert('Ask for post code');
-        };
-
-        vm.getHeroImageBackground = function(){
-            var defaultBackground = document.querySelectorAll("div.hero-image")[0].getAttribute('data-default-image');
-            if(vm.selectedMeal){
-                return vm.selectedMeal.image;
-            } else {
-                return defaultBackground;
-            }
-        };
-
         $rootScope.$on('mealFetched', function() {
             vm.selectedMeal = mealsService.selectedMeal;
             vm.shouldShowForm = false;
             vm.shouldShowCookHeader = true;
+            vm.shouldShowVideo = false;
+            vm.shouldShowAuxMenu = true;
         });
 
         mealsService.getMeals()
@@ -52,14 +44,33 @@ angular
 
         $rootScope.$on('$locationChangeSuccess', function() {
             $rootScope.actualLocation = $location.path();
+            if(($rootScope.actualLocation + '') == '/'){
+                clearMealSettings();
+            }
         });
 
-        $rootScope.$watch(function () {return $location.path()}, function (newLocation, oldLocation) {
+        $rootScope.$watch(function() {return $location.path()}, function (newLocation) {
             if($rootScope.actualLocation === newLocation) {
                 if((newLocation + '') == '/'){
                     clearMealSettings();
                 }
             }
         });
+
+        $scope.$watch(function() {return vm.selectedMeal}, function () {
+            if(vm.selectedMeal != null){
+                vm.getHeroImageBackground();
+                vm.shouldShowVideo = false;
+            }
+        });
+
+        vm.getHeroImageBackground = function(){
+            var defaultBackground = document.querySelectorAll("div.hero-image")[0].getAttribute('data-default-image');
+            if(vm.selectedMeal){
+                return vm.selectedMeal.image;
+            } else {
+                return defaultBackground;
+            }
+        };
 
     }]);
