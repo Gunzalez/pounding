@@ -87,13 +87,16 @@ $heroHeight:   500px;
 
     .form-box {
         position: absolute;
-        bottom: 40px;
+        bottom: 0;
+        padding: 20px;
         left: 50%;
         margin-left: -50%;
+        background: rgb(0, 0, 0); /* The Fallback */
+        background: rgba(0, 0, 0, 0.10);
     }
 
     .meal-picker {
-        padding-top: 30px;
+        padding-top: 20px;
         text-align: center;
 
         .btn, select  {
@@ -318,6 +321,14 @@ $heroHeight:   500px;
     float: left;
 }
 
+.button {
+    text-transform: uppercase;
+
+    .glyphicon {
+        margin-right: 12px;
+    }
+}
+
 .aux-nav {
     padding-top: 20px;
 }
@@ -325,9 +336,11 @@ $heroHeight:   500px;
 .content-controls {
     border-bottom: 1px solid $border-clr;
     margin: 20px 0;
+    overflow: auto;
 
     ul {
         padding-bottom: 10px;
+        @extend %cleanUl;
     }
 }
 

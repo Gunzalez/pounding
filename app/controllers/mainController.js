@@ -61,6 +61,8 @@ angular
             if(vm.selectedMeal != null){
                 vm.getHeroImageBackground();
                 vm.shouldShowVideo = false;
+            } else {
+                clearMealSettings();
             }
         });
 

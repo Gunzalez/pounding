@@ -1,4 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Ubuntu:400,300,500,700);
+.content-controls ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
 .top-bar.top h1, .meal-hero .introduction, .detail-view .meal .item a .title,
 .list-view .meal .item a .title {
   text-shadow: 0 0 7px rgba(0, 0, 0, 0.75); }
@@ -16,8 +21,8 @@ select, input {
   font-family: 'Ubuntu'; }
 
 .large-font {
-  font-size: 4.8rem;
-  font-weight: 600;
+  font-size: 4.2rem;
+  font-weight: 700;
   line-height: 110%; }
   @media (max-width: 480px) {
     .large-font {
@@ -25,7 +30,8 @@ select, input {
       line-height: 120%; } }
 
 .strapline {
-  font-size: 1.8rem; }
+  font-size: 2.2rem;
+  font-weight: 100; }
 
 p {
   padding: 0;
@@ -69,7 +75,7 @@ a {
     margin: 0;
     padding: 0;
     line-height: 70px;
-    color: #FD7400;
+    color: #1F8A70;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
     -o-transition: all 0.5s;
@@ -105,11 +111,15 @@ a {
       top: 0; }
   .meal-hero .form-box {
     position: absolute;
-    bottom: 40px;
+    bottom: 0;
+    padding: 20px;
     left: 50%;
-    margin-left: -50%; }
+    margin-left: -50%;
+    background: black;
+    /* The Fallback */
+    background: rgba(0, 0, 0, 0.1); }
   .meal-hero .meal-picker {
-    padding-top: 30px;
+    padding-top: 20px;
     text-align: center; }
     .meal-hero .meal-picker .btn, .meal-hero .meal-picker select {
       text-transform: uppercase;
@@ -152,7 +162,7 @@ a {
 .detail-view h2, .detail-view h3,
 .list-view h2,
 .list-view h3 {
-  color: #FD7400; }
+  color: #1F8A70; }
 
 .detail-view h3, .detail-view h4,
 .list-view h3,
@@ -249,7 +259,7 @@ a {
 
 .detail-view .title,
 .list-view .title {
-  color: #FD7400;
+  color: #1F8A70;
   text-align: center;
   padding: 30px; }
   @media (max-width: 480px) {
@@ -279,12 +289,18 @@ a {
 .block {
   float: left; }
 
+.button {
+  text-transform: uppercase; }
+  .button .glyphicon {
+    margin-right: 12px; }
+
 .aux-nav {
   padding-top: 20px; }
 
 .content-controls {
   border-bottom: 1px solid #BEDB39;
-  margin: 20px 0; }
+  margin: 20px 0;
+  overflow: auto; }
   .content-controls ul {
     padding-bottom: 10px; }
 
