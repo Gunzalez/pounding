@@ -2,89 +2,89 @@
     <div class="introduction">
         <div class="container">
             <div class="row">
-                <div class="col-xs-10 col-xs-push-1 no-padding" ng-bind-html="mealDescription"></div>
+                <div class="col-xs-12 col-sm-10 col-sm-push-1 no-padding" ng-bind-html="mealDescription"></div>
             </div>
         </div>
     </div>
     <div class="body-copy">
         <div class="container">
-        <div class="row">
+            <div class="row">
 
-            <div class="content-controls">
-                <div class="col-sm-8">
-                    <ul>
-                        <li>
-                            <button type="button" class="button btn btn-primary" ng-click="setPanel('cook')">
-                                <span class="glyphicon glyphicon-glass"></span> Cook
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button" class="button btn btn-primary" ng-click="setPanel('watch')">
-                                <span class="glyphicon glyphicon-glass"></span> Cook
-                            </button>
-                        </li>
-                        <!--<li>-->
-                            <!--<button type="button" class="button btn btn-primary" ng-click="setPanel('share')">-->
-                                <!--<span class="glyphicon glyphicon-glass"></span> Cook-->
-                            <!--</button>-->
-                        <!--</li>-->
-                        <!--<li>-->
-                            <!--<button type="button" class="button btn btn-primary" ng-click="setPanel('')">-->
-                                <!--<span class="glyphicon glyphicon-glass"></span> Comment-->
-                            <!--</button>-->
-                        <!--</li>-->
-                    </ul>
+                <div class="content-controls">
+                    <div class="col-sm-8">
+                        <ul>
+                            <li>
+                                <button type="button" class="button btn btn-primary" ng-click="setPanel('cook')">
+                                    <span class="glyphicon glyphicon-glass"></span> Cook
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="button btn btn-primary" ng-click="setPanel('watch')">
+                                    <span class="glyphicon glyphicon-glass"></span> Cook
+                                </button>
+                            </li>
+                            <!--<li>-->
+                                <!--<button type="button" class="button btn btn-primary" ng-click="setPanel('share')">-->
+                                    <!--<span class="glyphicon glyphicon-glass"></span> Cook-->
+                                <!--</button>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<button type="button" class="button btn btn-primary" ng-click="setPanel('')">-->
+                                    <!--<span class="glyphicon glyphicon-glass"></span> Comment-->
+                                <!--</button>-->
+                            <!--</li>-->
+                        </ul>
+                    </div>
+                    <div class="col-sm-4">
+                        <button type="button" class="button btn btn-primary pull-right" ng-click="askForPostCode()">
+                            <span class="glyphicon glyphicon-align-left"></span> Buy
+                        </button>
+                    </div>
                 </div>
-                <div class="col-sm-4">
-                    <button type="button" class="button btn btn-primary pull-right" ng-click="askForPostCode()">
-                        <span class="glyphicon glyphicon-align-left"></span> Buy
-                    </button>
+
+                <div class="block">
+                    <div class="col-sm-12 col-md-4 content-block">
+                        <h3>Ingredients</h3>
+                        <ul>
+                            <li>1 kg (2.2 lbs) <a href="http://www.allnigerianrecipes.com/food-ingredients/yam.html" title="White puna yam">white puna yam</a></li>
+                            <li>Red palm Oil (to colour)</li>
+                            <li>1 <a href="#" title="Smoked Fish">smoked fish</a> (mackerel)</li>
+                            <li>1 tablespoon ground <a href="#" title="Crayfish, Dry Prawns, Dry Shrimps">crayfish</a></li>
+                            <li>1 medium onion</li>
+                            <li>Fresh green vegetable (eg pumpkin, parsley, scent leaf or green amaranth)</li>
+                            <li><a href="#" target="_blank">Habanero</a> or <a href="#" target="_blank">Chilli</a> Pepper &amp; Salt (to taste)</li>
+                            <li>2 big stock cubes</li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-12 col-md-8 content-block">
+                        <h3>Method</h3>
+                        <h4>Notes about the ingredients</h4>
+                        <ol>
+                            <li>Add enough red palm oil to make the meal colourful.</li>
+                            <li>You can use dry fish instead of smoked fish.</li>
+                        </ol>
+                        <h4>Before you cook Yam Porridge</h4>
+                        <ol>
+                            <li>Peel and cut the yam tuber into medium sizes. Wash the yam cubes and place in a sizeable pot.</li>
+                            <li>Wash and cut the onions into tiny pieces. Grind or blend the chilli pepper. Set these aside.</li>
+                            <li>If using dry fish, soak and pick the bones.</li>
+                        </ol>
+                        <h4>Cooking Directions</h4>
+                        <ol>
+                            <li>Pour enough water to cover the yam cubes and start cooking at medium to high heat. If you are using dry fish, add it now.</li>
+                            <li>When the yams have got a good boil, add the onions, ground crayfish, pepper, stock cubes, palm oil and the smoked fish.</li>
+                            <li>Cover the pot and continue cooking till the yam is done.</li>
+                            <li>Add salt to taste and stir very well. Cook at high heat for about 5 minutes.</li>
+                            <li>Add the green vegetable, stir and leave to stand for about 5 minutes then serve.</li>
+                        </ol>
+                    </div>
                 </div>
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+
             </div>
-
-            <div class="block">
-                <div class="col-sm-12 col-md-4 content-block">
-                    <h3>Ingredients</h3>
-                    <ul>
-                        <li>1 kg (2.2 lbs) <a href="http://www.allnigerianrecipes.com/food-ingredients/yam.html" title="White puna yam">white puna yam</a></li>
-                        <li>Red palm Oil (to colour)</li>
-                        <li>1 <a href="http://www.allnigerianrecipes.com/fish/smoked-fish.html" title="Smoked Fish">smoked fish</a> (mackerel)</li>
-                        <li>1 tablespoon ground <a href="http://www.allnigerianrecipes.com/food-ingredients/crayfish.html" title="Crayfish, Dry Prawns, Dry Shrimps">crayfish</a></li>
-                        <li>1 medium onion</li>
-                        <li>Fresh green vegetable (eg pumpkin, parsley, scent leaf or green amaranth)</li>
-                        <li><a href="http://www.allnigerianrecipes.com/images/habanero-pepper.jpg" target="_blank">Habanero</a> or <a href="http://www.allnigerianrecipes.com/images/chilli-pepper.jpg" target="_blank">Chilli</a> Pepper &amp; Salt (to taste)</li>
-                        <li>2 big stock cubes</li>
-                    </ul>
-                </div>
-                <div class="col-sm-12 col-md-8 content-block">
-                    <h3>Method</h3>
-                    <h4>Notes about the ingredients</h4>
-                    <ol>
-                        <li>Add enough red palm oil to make the meal colourful.</li>
-                        <li>You can use dry fish instead of smoked fish.</li>
-                    </ol>
-                    <h4>Before you cook Yam Porridge</h4>
-                    <ol>
-                        <li>Peel and cut the yam tuber into medium sizes. Wash the yam cubes and place in a sizeable pot.</li>
-                        <li>Wash and cut the onions into tiny pieces. Grind or blend the chilli pepper. Set these aside.</li>
-                        <li>If using dry fish, soak and pick the bones.</li>
-                    </ol>
-                    <h4>Cooking Directions</h4>
-                    <ol>
-                        <li>Pour enough water to cover the yam cubes and start cooking at medium to high heat. If you are using dry fish, add it now.</li>
-                        <li>When the yams have got a good boil, add the onions, ground crayfish, pepper, stock cubes, palm oil and the smoked fish.</li>
-                        <li>Cover the pot and continue cooking till the yam is done.</li>
-                        <li>Add salt to taste and stir very well. Cook at high heat for about 5 minutes.</li>
-                        <li>Add the green vegetable, stir and leave to stand for about 5 minutes then serve.</li>
-                    </ol>
-                </div>
-            </div>
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
-
         </div>
-    </div>
     </div>
 </div>

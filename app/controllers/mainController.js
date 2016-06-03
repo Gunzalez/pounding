@@ -61,17 +61,14 @@ angular
             if(vm.selectedMeal != null){
                 vm.getHeroImageBackground();
                 vm.shouldShowVideo = false;
-            } else {
-                clearMealSettings();
             }
         });
 
         vm.getHeroImageBackground = function(){
-            var defaultBackground = document.querySelectorAll("div.hero-image")[0].getAttribute('data-default-image');
             if(vm.selectedMeal){
                 return vm.selectedMeal.image;
             } else {
-                return defaultBackground;
+                return 'blank.gif';
             }
         };
 

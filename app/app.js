@@ -24,7 +24,7 @@ angular
         return function(scope, element) {
             angular.element($window).bind("scroll", function() {
                 var topBarEl = element[0].getElementsByClassName('top-bar');
-                var topBar = angular.element(topBarEl)
+                var topBar = angular.element(topBarEl);
                 if (this.pageYOffset > 10) {
                     topBar.removeClass('top');
                 } else {
