@@ -23,7 +23,7 @@ angular
     .directive("scroll", function ($window) {
         return function(scope, element) {
             angular.element($window).bind("scroll", function() {
-                var topBarEl = element[0].getElementsByClassName('top-bar');
+                var topBarEl = element[0].getElementsByClassName('top-bar')[0];
                 var topBar = angular.element(topBarEl);
                 if (this.pageYOffset > 10) {
                     topBar.removeClass('top');

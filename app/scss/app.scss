@@ -8,6 +8,19 @@ body {
     font-size: 1.6rem;
 }
 
+body:before {
+    content: "";
+    position: fixed;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,.8);
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,.8);
+    box-shadow: 0 0 10px rgba(0,0,0,.8);
+    z-index: 100;
+}
+
 a {
     color: $clr-green-mid;
     text-decoration: underline;
@@ -17,8 +30,6 @@ a {
         text-decoration: none;
     }
 }
-
-$heroHeight:   500px;
 
 .top-bar {
     top: 0;
@@ -61,7 +72,6 @@ $heroHeight:   500px;
 
 
 .meal-hero {
-    height: $heroHeight;
     position: relative;
 
     .hero-image,
@@ -72,37 +82,26 @@ $heroHeight:   500px;
         top: 0;
         left: 0;
         width: 100%;
-        height: $heroHeight;
+        height: 100%;
         @include transitions(0.25s);
     }
 
     .hero-video {
-        top: -$heroHeight;
+        opacity: 0;
         &.on-screen {
-            top: 0;
+            opacity: 1;
         }
         background: url("../images/pepper-soup.jpg") 0 0 no-repeat #323232;
         background-size: cover;
     }
 
-    .form-box {
-        position: absolute;
-        bottom: 0;
-        padding: 20px;
-        left: 50%;
-        margin-left: -50%;
-        background: rgb(0, 0, 0); /* The Fallback */
-        background: rgba(0, 0, 0, 0.10);
-    }
-
     .meal-picker {
-        padding-top: 20px;
-        text-align: center;
+        padding: 0 0 20px 0;
 
         .btn, select  {
             text-transform: uppercase;
             padding: 10px 14px;
-            margin: 0 5px;
+            margin: 0 15px 0 0;
             outline: none;
             border: none;
             @include transitions(0.25s);
@@ -122,7 +121,6 @@ $heroHeight:   500px;
 
     .introduction {
         color: #ffffff;
-        text-align: center;
         @extend %textshadow;
 
         .title {
@@ -130,13 +128,6 @@ $heroHeight:   500px;
             span {
                 position: relative;
             }
-
-//            a {
-//                position: absolute;
-//                right: -20px;
-//                top: -20px;
-//                font-size: 20px;
-//            }
         }
     }
 }
@@ -145,13 +136,25 @@ $heroHeight:   500px;
     min-height: 300px;
 }
 
-.aux-nav,
-.cook-mode,
-.home-mode {
+.aux-nav {
     display: none;
     &.show-me {
         display: block;
     }
+}
+
+.introduction {
+    &.copy {
+        display: none;
+        min-height: 150px;
+        &.show-me {
+            display: block;
+        }
+    }
+}
+
+.mode-container {
+    padding-top: 330px;
 }
 
 .detail-view,
@@ -179,15 +182,10 @@ $heroHeight:   500px;
     .introduction {
         font-size: 1.8rem;
         background-color: #f0f0f0;
-        padding: 15px;
-        text-align: center;
+        padding: 15px 0;
         border-bottom: 1px solid #e3e3e3;
         border-top: 1px solid #e3e3e3;
-
-//
-//        -webkit-box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8);
-//        -moz-box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8);
-//        box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8);
+        margin-bottom: 20px;
     }
 
     .meal {

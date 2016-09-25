@@ -1,4 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Ubuntu:400,300,500,700);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,700,600&subset=latin,latin-ext);
+@import url(https://fonts.googleapis.com/css?family=Hind:400,500,600,700);
 .content-controls ul {
   margin: 0;
   padding: 0;
@@ -14,24 +17,23 @@
 
 h1, h2, h3, h4, h5 {
   margin: 0;
-  padding: 0;
+  padding: 0 0 20px 0;
   line-height: 100%; }
 
 select, input {
   font-family: 'Ubuntu'; }
 
 .large-font {
-  font-size: 4.2rem;
+  font-size: 4.0rem;
   font-weight: 700;
-  line-height: 110%; }
-  @media (max-width: 480px) {
-    .large-font {
-      font-size: 3.4rem;
-      line-height: 120%; } }
+  line-height: 110%;
+  padding: 0 0 15px 0; }
 
 .strapline {
   font-size: 2.2rem;
-  font-weight: 100; }
+  font-weight: 100;
+  max-width: 20em;
+  padding-bottom: 20px; }
 
 p {
   padding: 0;
@@ -45,6 +47,18 @@ p {
 body {
   font-family: 'Ubuntu';
   font-size: 1.6rem; }
+
+body:before {
+  content: "";
+  position: fixed;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  z-index: 100; }
 
 a {
   color: #1F8A70;
@@ -88,7 +102,6 @@ a {
       color: #ffffff; }
 
 .meal-hero {
-  height: 500px;
   position: relative; }
   .meal-hero .hero-image,
   .meal-hero .hero-video {
@@ -98,33 +111,23 @@ a {
     top: 0;
     left: 0;
     width: 100%;
-    height: 500px;
+    height: 100%;
     -webkit-transition: all 0.25s;
     -moz-transition: all 0.25s;
     -o-transition: all 0.25s;
     transition: all 0.25s; }
   .meal-hero .hero-video {
-    top: -500px;
+    opacity: 0;
     background: url("../images/pepper-soup.jpg") 0 0 no-repeat #323232;
     background-size: cover; }
     .meal-hero .hero-video.on-screen {
-      top: 0; }
-  .meal-hero .form-box {
-    position: absolute;
-    bottom: 0;
-    padding: 20px;
-    left: 50%;
-    margin-left: -50%;
-    background: black;
-    /* The Fallback */
-    background: rgba(0, 0, 0, 0.1); }
+      opacity: 1; }
   .meal-hero .meal-picker {
-    padding-top: 20px;
-    text-align: center; }
+    padding: 0 0 20px 0; }
     .meal-hero .meal-picker .btn, .meal-hero .meal-picker select {
       text-transform: uppercase;
       padding: 10px 14px;
-      margin: 0 5px;
+      margin: 0 15px 0 0;
       outline: none;
       border: none;
       -webkit-transition: all 0.25s;
@@ -142,22 +145,26 @@ a {
         .meal-hero .meal-picker select {
           display: inline-block; } }
   .meal-hero .introduction {
-    color: #ffffff;
-    text-align: center; }
+    color: #ffffff; }
     .meal-hero .introduction .title span {
       position: relative; }
 
 #wrap {
   min-height: 300px; }
 
-.aux-nav,
-.cook-mode,
-.home-mode {
+.aux-nav {
   display: none; }
-  .aux-nav.show-me,
-  .cook-mode.show-me,
-  .home-mode.show-me {
+  .aux-nav.show-me {
     display: block; }
+
+.introduction.copy {
+  display: none;
+  min-height: 150px; }
+  .introduction.copy.show-me {
+    display: block; }
+
+.mode-container {
+  padding-top: 330px; }
 
 .detail-view h2, .detail-view h3,
 .list-view h2,
@@ -182,10 +189,10 @@ a {
 .list-view .introduction {
   font-size: 1.8rem;
   background-color: #f0f0f0;
-  padding: 15px;
-  text-align: center;
+  padding: 15px 0;
   border-bottom: 1px solid #e3e3e3;
-  border-top: 1px solid #e3e3e3; }
+  border-top: 1px solid #e3e3e3;
+  margin-bottom: 20px; }
 
 .detail-view .meal .item,
 .list-view .meal .item {

@@ -29,34 +29,32 @@
 </div>
 
     <div class="meal-hero">
-
         <div class="hero-image" ng-style="{'background-image': 'url(images/' + main.getHeroImageBackground() + ')'}">&nbsp;</div>
         <div class="hero-video" ng-class="{'on-screen':main.shouldShowVideo}">&nbsp;</div>
-        <div class="container">
+
+        <div class="container mode-container">
             <div class="row">
-                <div class="col-xs-12 form-box">
-                    <div class="home-mode" ng-class="{'show-me':main.shouldShowForm}">
-                        <div class="introduction">
-                            <p class="large-font">Pick&nbsp;a&nbsp;meal, then cook&nbsp;a&nbsp;meal.<br />Or just be lazy and just buy&nbsp;a&nbsp;meal.</p>
+                <div class="col-xs-12">
+                    <div>
+                        <div class="introduction copy" ng-class="{'show-me':main.shouldShowForm}">
+                            <p class="large-font">Pick&nbsp;the&nbsp;meal, cook&nbsp;the&nbsp;meal<br />...or just shop&nbsp;the&nbsp;meal.</p>
+                        </div>
+                        <div class="introduction copy" ng-class="{'show-me':main.shouldShowCookHeader}">
+                            <h2 class="title large-font">{{ main.selectedMeal.title }}</h2>
+                            <p class="strapline">{{ main.selectedMeal.description }}</p>
                         </div>
                         <form name="mealPicker" class="meal-picker">
                             <select ng-model="main.selectedMeal" ng-options="meal.title for meal in main.meals">
                                 <option value="" selected="selected">List of meals</option>
                             </select>
-                            <input class="button btn"
-                                   type="button"
-                                   title="Select"
-                                   value="Select"
-                                   ng-class="{'disabled btn-default':main.selectedMeal == null, 'btn-primary':main.selectedMeal != null}"
-                                   ng-disabled="main.selectedMeal == null"
-                                   ng-click="main.selectThisMeal()" />
+                            <!--<input class="button btn"-->
+                                   <!--type="button"-->
+                                   <!--title="Select"-->
+                                   <!--value="Select"-->
+                                   <!--ng-class="{'disabled btn-default':main.selectedMeal == null, 'btn-primary':main.selectedMeal != null}"-->
+                                   <!--ng-disabled="main.selectedMeal == null"-->
+                                   <!--ng-click="main.selectThisMeal()" />-->
                         </form>
-                    </div>
-                    <div class="cook-mode" ng-class="{'show-me':main.shouldShowCookHeader}">
-                        <div class="introduction">
-                            <h2 class="title large-font">{{ main.selectedMeal.title }}</h2>
-                            <p class="strapline">{{ main.selectedMeal.strapline }}</p>
-                        </div>
                     </div>
                 </div>
             </div>

@@ -3,6 +3,7 @@ angular
     .module('yamApp')
     .controller('detailController', ['$scope', 'mealsService', '$routeParams', '$rootScope', '$sce', function ($scope, mealsService, $routeParams, $rootScope, $sce) {
 
+        console.log('detail  Controller');
         $scope.param = $routeParams.id;
         $scope.selectedMeal = {};
         $scope.askForPostCode = function(){

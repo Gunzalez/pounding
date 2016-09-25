@@ -8,7 +8,7 @@
 
 h1, h2, h3, h4, h5 {
     margin: 0;
-    padding: 0;
+    padding: 0 0 20px 0;
     line-height: 100%;
 }
 
@@ -17,19 +17,17 @@ select, input {
 }
 
 .large-font {
-    font-size: 4.2rem;
+    font-size: 4.0rem;
     font-weight: 700;
     line-height: 110%;
-
-    @media (max-width: $width-xs){
-        font-size: 3.4rem;
-        line-height: 120%;
-    }
+    padding: 0 0 15px 0;
 }
 
 .strapline {
     font-size: 2.2rem;
     font-weight: 100;
+    max-width: 20em;
+    padding-bottom: 20px;
 }
 
 p {
@@ -42,4 +40,6 @@ p {
     padding: 0 !important;
     margin: 0 !important;
 }
+
+
 
