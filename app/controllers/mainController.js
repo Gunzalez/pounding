@@ -22,13 +22,22 @@ angular
             navigatorService.goToLocation('/');
         };
 
-        $rootScope.$on('mealFetched', function() {
-            //vm.selectedMeal = mealsService.selectedMeal;
-        });
-
         mealsService.getMeals()
             .success(function (data) {
                 vm.meals = data;
+
+                var params = String($location.path()).split('/');
+                if(params.length > 1 && params[params.length-1] != ""){
+                    var mealId = params[params.length-1];
+                    if (!vm.selectedMeal){
+                        vm.meals.forEach(function(obj){
+                            if(obj['id'] == mealId){
+                                vm.selectedMeal = obj
+                            }
+                        });
+                    }
+                }
+
             }).error(function (error) {
                 vm.status = 'Unable to load meals data: ' + error.message;
         });
@@ -37,18 +46,8 @@ angular
             $rootScope.actualLocation = $location.path();
             if(($rootScope.actualLocation + '') == '/'){
                 clearMealSettings();
-            } else {
-                console.log($rootScope.actualLocation);
             }
         });
-
-        // $rootScope.$watch(function() {return $location.path()}, function (newLocation) {
-        //     if($rootScope.actualLocation === newLocation) {
-        //         if((newLocation + '') == '/'){
-        //             clearMealSettings();
-        //         }
-        //     }
-        // });
 
         $scope.$watch(function() {return vm.selectedMeal}, function () {
             if(vm.selectedMeal != null){
@@ -57,6 +56,7 @@ angular
                 vm.shouldShowForm = false;
                 vm.shouldShowCookHeader = true;
                 navigatorService.goToLocation('/cook/'+vm.selectedMeal.id);
+
             }
         });
 
