@@ -22,30 +22,25 @@ angular
             navigatorService.goToLocation('/');
         };
 
-        mealsService.getMeals()
-            .success(function (data) {
-                vm.meals = data;
-
-                var params = String($location.path()).split('/');
-                if(params.length > 1 && params[params.length-1] != ""){
-                    var mealId = params[params.length-1];
-                    if (!vm.selectedMeal){
-                        vm.meals.forEach(function(obj){
-                            if(obj['id'] == mealId){
-                                vm.selectedMeal = obj
-                            }
-                        });
-                    }
+        vm.useIdFromParamsIfPresent = function () {
+            var params = String($location.path()).split('/');
+            if(params.length > 1 && params[params.length-1] != ""){
+                var mealId = params[params.length-1];
+                if (!vm.selectedMeal){
+                    vm.meals.forEach(function(obj){
+                        if(obj['id'] == mealId){
+                            vm.selectedMeal = obj
+                        }
+                    });
                 }
-
-            }).error(function (error) {
-                vm.status = 'Unable to load meals data: ' + error.message;
-        });
+            }
+        };
 
         $rootScope.$on('$locationChangeSuccess', function() {
-            $rootScope.actualLocation = $location.path();
-            if(($rootScope.actualLocation + '') == '/'){
+            if(String($location.path()) == '/'){
                 clearMealSettings();
+            } else {
+                vm.useIdFromParamsIfPresent();
             }
         });
 
@@ -56,7 +51,6 @@ angular
                 vm.shouldShowForm = false;
                 vm.shouldShowCookHeader = true;
                 navigatorService.goToLocation('/cook/'+vm.selectedMeal.id);
-
             }
         });
 
@@ -67,5 +61,13 @@ angular
                 return 'blank.gif';
             }
         };
+
+        mealsService.getMeals()
+            .success(function (data) {
+                vm.meals = data;
+                vm.useIdFromParamsIfPresent();
+            }).error(function (error) {
+            vm.status = 'Unable to load meals data: ' + error.message;
+        });
 
     }]);

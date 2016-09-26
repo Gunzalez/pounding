@@ -1,11 +1,7 @@
 {
     "id": "5",
-    "title": "Beans and Dodo",
-    "image": "beans-and-dodo.jpg",
-    "instructions": "<h3>Instructions</h3><p>What to do with the stuff to be making the meal, the meal being of course Jollof rice and plantain.</p>",
-    "description":"<p>Hogging the show</p>",
-    "ingredients": "<h3>Stuff to go into the making</h3><p>A set of stuff what goes in to make said meal, said meal being Jollof rice and plantain.</p>",
+    "instructions": "<h3>Instructions</h3><p>I was such an idiot when I was younger, what the hell go into me.</p>",
+    "ingredients": "<h3>How to cook Beans</h3><p>Black-Eyed or Brown beans are rich in high quality</p><p>I cook this all the time and my kids never eat it.</p>",
     "about": "<p>Black-Eyed or Brown beans are rich in high quality protein which provides a healthy alternative to meat and other animal protein. Nigerian Beans (Ewa) is delicious on its own or when accompanied with various other foods such as Nigerian fried plantain (Dodo) or boiled Yam. One of Nigeria’s everyday foods and it is easy to prepare as you can see below.</p>",
-    "strapline": "Nigerian Fried Beans is so delicious that even those who do not like beans enjoy it",
     "featured": true
 }

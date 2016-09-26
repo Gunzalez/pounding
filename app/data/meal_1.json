@@ -1,11 +1,7 @@
 {
     "id": "1",
-    "title": "Pounded Yam",
-    "image": "pounded-yam.jpg",
-    "instructions": "<h3>Instructions</h3><p>What to do with the stuff to be making the meal, the meal being of course Jollof rice and plantain.</p>",
-    "description":"<p>Hogging the show</p>",
-    "ingredients": "<h3>Stuff to go into the making</h3><p>A set of stuff what goes in to make said meal, said meal being Jollof rice and plantain.</p>",
+    "instructions": "<h3>Instructions</h3><p>This should be all about Pounded yam</p>",
+    "ingredients": "<h3>Stuff to go into the making</h3><p>Pounded, pounded yam I say</p>",
     "about": "<p>Pounded Yam is one of the Nigerian fufu recipes that is eaten with the various Nigerian soup recipes. The most popular combinations are Pounded Yam with Egusi Soup. Alternatively Pounded Yam can be prepared by stirring yam flour in hot water.</p>",
-    "strapline": "The yam is boiled and pounded then eaten with any of many Nigerian soup dishes",
     "featured": true
 }

@@ -1,11 +1,7 @@
 {
     "id": "3",
-    "title": "Eba with Okra stew",
-    "image": "eba-and-okra.jpg",
-    "instructions": "<h3>Instructions</h3><p>What to do with the stuff to be making the meal, the meal being of course Jollof rice and plantain.</p>",
-    "description":"<p>Hogging the show</p>",
-    "ingredients": "<h3>Stuff to go into the making</h3><p>A set of stuff what goes in to make said meal, said meal being Jollof rice and plantain.</p>",
+    "instructions": "<h3>Instructions</h3><ul>Boil some water<li></li><li>Sprinkle some Garri powder into it</li><li>Str for thickness</li></ul></p>",
+    "ingredients": "<h3>Eba, making Eba</h3><p>Stuff, words and stuff, go in here. Muscle food will knock you out</p>",
     "about": "<p>Garri is a major fufu recipe in Nigeria. It is processed from cassava. It isn't clear where the word Garri originated from, but many think it is derived from the Hausa word for grain: <strong>Garin</strong>. You can add cold water, sugar, milk, groundnuts (peanuts) and drink it like cereal.</p>",
-    "strapline": "Chew it, drink it, swallow it! That's how versatile these Garri grains are.",
     "featured": true
 }

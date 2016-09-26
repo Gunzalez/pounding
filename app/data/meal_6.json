@@ -1,11 +1,7 @@
 {
     "id": "6",
-    "title": "Jollof Rice",
-    "image": "jollof.jpg",
     "instructions": "<h3>Instructions</h3><p>What to do with the stuff to be making the meal, the meal being of course Jollof rice and plantain.</p>",
-    "description":"<p>Hogging the show</p>",
-    "ingredients": "<h3>Stuff to go into the making</h3><p>A set of stuff what goes in to make said meal, said meal being Jollof rice and plantain.</p>",
+    "ingredients": "<h3>Finally, Jollof itself</h3><p>A set of stuff what goes in to make said meal, said meal being Jollof rice and plantain.</p>",
     "about": "<p>Some prefer the traditional spicy taste with a characteristic smoky flavour imparted by the cast iron pots in which it has been cooked. Others prefer an al-dente style with the grains not sticking together. A recent survey concluded that we all like to enjoy our Jollof rice in different and imaginative ways.</p>",
-    "strapline": "Typically served with fried chicken and fried plantain.",
     "featured": true
 }
