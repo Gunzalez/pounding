@@ -26,7 +26,7 @@ angular
             var params = String($location.path()).split('/');
             if(params.length > 1 && params[params.length-1] != ""){
                 var mealId = params[params.length-1];
-                if (!vm.selectedMeal){
+                if (!vm.selectedMeal && vm.meals){
                     vm.meals.forEach(function(obj){
                         if(obj['id'] == mealId){
                             vm.selectedMeal = obj

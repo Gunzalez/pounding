@@ -19,6 +19,8 @@
     "run-sequence": "^1.1.5"
   },
   "dependencies": {
-    "express": "^4.13.2"
+    "express": "^4.13.2",
+    "body-parser": "^1.13.3",
+    "underscore": "^1.8.3"
   }
 }

@@ -4,23 +4,23 @@ angular
         .service('mealsService', ['$http', function($http) {
 
             var msAPI = {},
-                    baseUrl = "data/";
+                    baseUrl = "meals";
 
             msAPI.getMeals = function() {
-                return $http.get( baseUrl + "meals.json");
+                return $http.get(baseUrl);
             };
 
             msAPI.getAMeal = function(id) {
-                return $http.get( baseUrl + "meal_"+ id +".json");
+                return $http.get(baseUrl + "/"+ id);
             };
 
-            msAPI.getDeals = function() {
-                return $http.get( baseUrl + "deals.json");
-            };
-
-            msAPI.getStores = function(id) {
-                return $http.get( baseUrl + "stores.json");
-            };
+            // msAPI.getDeals = function() {
+            //     return $http.get( baseUrl + "deals.json");
+            // };
+            //
+            // msAPI.getStores = function(id) {
+            //     return $http.get( baseUrl + "stores.json");
+            // };
 
             msAPI.selectedMeal = null;
 
