@@ -11,7 +11,6 @@ angular
 
         mealsService.getAMeal($scope.param)
             .success(function (data) {
-                console.log(data);
                 $scope.selectedMeal = data;
                 $scope.mealDescription = $sce.trustAsHtml($scope.selectedMeal['about']);
                 $scope.mealIngredients = $sce.trustAsHtml($scope.selectedMeal['ingredients']);
