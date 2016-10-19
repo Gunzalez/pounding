@@ -47,9 +47,20 @@ a {
     box-shadow: 0 3px 11px 0 rgba(0,0,0,0.10);
     @include transitions(0.5s);
 
+
+    .mortar-and-pestle {
+        float: left;
+        width: 28px;
+        height: 45px;
+        background: url('../images/m-and-p.png');
+        background-size: cover;
+        margin: 9px 12px 0 0;
+    }
+
+
     h1 {
-        font-weight: 600;
-        font-size: 3.8rem;
+        //font-weight: 600;
+        //font-size: 3.8rem;
         margin: 0;
         padding: 0;
         line-height: 70px;
@@ -67,6 +78,13 @@ a {
         }
 
         box-shadow: none;
+
+
+        .mortar-and-pestle {
+            background: url('../images/m-and-p-white.png');
+            background-size: cover;
+        }
+
     }
 }
 
@@ -96,7 +114,9 @@ a {
     }
 
     .meal-picker {
-        padding: 0 0 20px 0;
+        position: absolute;
+        left: 0;
+        bottom: 30px;
 
         .btn, select  {
             text-transform: uppercase;
@@ -106,6 +126,7 @@ a {
             border: none;
             @include transitions(0.25s);
             display: inline-block;
+            font-size: 1.8rem;
         }
 
         select {
@@ -120,15 +141,26 @@ a {
     }
 
     .introduction {
+        position: absolute;
+        bottom: 80px;
+        left: 0;
         color: #ffffff;
-        @extend %textshadow;
 
-        .title {
-
-            span {
-                position: relative;
-            }
+        h2 {
+            @extend %textshadow;
+            padding: 0;
         }
+
+        .landing-title {
+            font-size: 3.5rem;
+            line-height: 130%;
+        }
+
+    }
+
+    .intro-and-form {
+        position: relative;
+        height: 240px;
     }
 }
 
@@ -144,9 +176,9 @@ a {
 }
 
 .introduction {
+
     &.copy {
         display: none;
-        min-height: 150px;
         &.show-me {
             display: block;
         }
@@ -181,11 +213,17 @@ a {
 
     .introduction {
         font-size: 1.8rem;
-        background-color: #f0f0f0;
-        padding: 15px 0;
-        border-bottom: 1px solid #e3e3e3;
-        border-top: 1px solid #e3e3e3;
+        background-color: $clr-grey-light;
+        padding: 30px 0;
+        border-top: 1px solid #ffffff;
         margin-bottom: 20px;
+        color: $clr-grey-dark;
+        text-align: center;
+
+        p {
+
+            line-height: 180%;
+        }
     }
 
     .meal {
@@ -207,10 +245,10 @@ a {
                     position: absolute;
                     bottom: 40px;
                     left: 0;
-                    color: #ffffff;
+                    color: $clr-grey-light;
                     font-size: 2.7rem;
                     font-weight: bold;
-                    @extend %textshadow;
+                    // @extend %textshadow;
                     width: 100%;
                 }
 
@@ -222,7 +260,7 @@ a {
             .quick-description {
                 @include transitions(0.75s);
                 color: $clr-grey-dark;
-                background-color: #f0f0f0;
+                background-color: $clr-grey-light;
                 border: 1px solid #e3e3e3;
             }
 

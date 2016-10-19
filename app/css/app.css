@@ -1,38 +1,29 @@
 @import url(https://fonts.googleapis.com/css?family=Ubuntu:400,300,500,700);
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
-@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,700,600&subset=latin,latin-ext);
-@import url(https://fonts.googleapis.com/css?family=Hind:400,500,600,700);
 .content-controls ul {
   margin: 0;
   padding: 0;
   list-style: none; }
 
-.top-bar.top h1, .meal-hero .introduction, .detail-view .meal .item a .title,
-.list-view .meal .item a .title {
+.top-bar.top h1, .meal-hero .introduction h2 {
   text-shadow: 0 0 7px rgba(0, 0, 0, 0.75); }
 
 @media (max-width: 1200px) {
   .container {
     width: 100%; } }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, .large-font {
   margin: 0;
   padding: 0 0 20px 0;
-  line-height: 100%; }
+  line-height: 100%;
+  text-transform: uppercase;
+  font: 300 30px/30px "Ubuntu", sans-serif; }
 
 select, input {
   font-family: 'Ubuntu'; }
 
-.large-font {
-  font-size: 4.0rem;
-  font-weight: 700;
-  line-height: 110%;
-  padding: 0 0 15px 0; }
-
 .strapline {
   font-size: 2.2rem;
   font-weight: 100;
-  max-width: 20em;
   padding-bottom: 20px; }
 
 p {
@@ -43,6 +34,13 @@ p {
 .no-padding {
   padding: 0 !important;
   margin: 0 !important; }
+
+h2 span {
+  display: inline-block;
+  padding: 6px 10px;
+  background-color: #f2f2f2;
+  color: #444444;
+  margin-bottom: 1px; }
 
 body {
   font-family: 'Ubuntu';
@@ -71,9 +69,14 @@ a {
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s; }
+  .top-bar .mortar-and-pestle {
+    float: left;
+    width: 28px;
+    height: 45px;
+    background: url("../images/m-and-p.png");
+    background-size: cover;
+    margin: 9px 12px 0 0; }
   .top-bar h1 {
-    font-weight: 600;
-    font-size: 3.8rem;
     margin: 0;
     padding: 0;
     line-height: 70px;
@@ -88,6 +91,9 @@ a {
     box-shadow: none; }
     .top-bar.top h1 {
       color: #ffffff; }
+    .top-bar.top .mortar-and-pestle {
+      background: url("../images/m-and-p-white.png");
+      background-size: cover; }
 
 .meal-hero {
   position: relative; }
@@ -111,7 +117,9 @@ a {
     .meal-hero .hero-video.on-screen {
       opacity: 1; }
   .meal-hero .meal-picker {
-    padding: 0 0 20px 0; }
+    position: absolute;
+    left: 0;
+    bottom: 30px; }
     .meal-hero .meal-picker .btn, .meal-hero .meal-picker select {
       text-transform: uppercase;
       padding: 10px 14px;
@@ -122,7 +130,8 @@ a {
       -moz-transition: all 0.25s;
       -o-transition: all 0.25s;
       transition: all 0.25s;
-      display: inline-block; }
+      display: inline-block;
+      font-size: 1.8rem; }
     .meal-hero .meal-picker select {
       cursor: pointer;
       padding: 10px 14px;
@@ -133,9 +142,18 @@ a {
         .meal-hero .meal-picker select {
           display: inline-block; } }
   .meal-hero .introduction {
+    position: absolute;
+    bottom: 80px;
+    left: 0;
     color: #ffffff; }
-    .meal-hero .introduction .title span {
-      position: relative; }
+    .meal-hero .introduction h2 {
+      padding: 0; }
+    .meal-hero .introduction .landing-title {
+      font-size: 3.5rem;
+      line-height: 130%; }
+  .meal-hero .intro-and-form {
+    position: relative;
+    height: 240px; }
 
 #wrap {
   min-height: 300px; }
@@ -146,8 +164,7 @@ a {
     display: block; }
 
 .introduction.copy {
-  display: none;
-  min-height: 150px; }
+  display: none; }
   .introduction.copy.show-me {
     display: block; }
 
@@ -176,11 +193,15 @@ a {
 .detail-view .introduction,
 .list-view .introduction {
   font-size: 1.8rem;
-  background-color: #f0f0f0;
-  padding: 15px 0;
-  border-bottom: 1px solid #e3e3e3;
-  border-top: 1px solid #e3e3e3;
-  margin-bottom: 20px; }
+  background-color: #f2f2f2;
+  padding: 30px 0;
+  border-top: 1px solid #ffffff;
+  margin-bottom: 20px;
+  color: #444444;
+  text-align: center; }
+  .detail-view .introduction p,
+  .list-view .introduction p {
+    line-height: 180%; }
 
 .detail-view .meal .item,
 .list-view .meal .item {
@@ -198,7 +219,7 @@ a {
       position: absolute;
       bottom: 40px;
       left: 0;
-      color: #ffffff;
+      color: #f2f2f2;
       font-size: 2.7rem;
       font-weight: bold;
       width: 100%; }
@@ -212,7 +233,7 @@ a {
     -o-transition: all 0.75s;
     transition: all 0.75s;
     color: #444444;
-    background-color: #f0f0f0;
+    background-color: #f2f2f2;
     border: 1px solid #e3e3e3; }
   .detail-view .meal .item span,
   .list-view .meal .item span {

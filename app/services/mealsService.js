@@ -6,21 +6,29 @@ angular
             var msAPI = {},
                     baseUrl = "meals";
 
+            // msAPI.getMeals = function() {
+            //     return $http.get(baseUrl);
+            // };
+            //
+            // msAPI.getAMeal = function(id) {
+            //     return $http.get(baseUrl + "/"+ id);
+            // };
+
             msAPI.getMeals = function() {
-                return $http.get(baseUrl);
+                return $http.get("data/meals.json");
             };
 
             msAPI.getAMeal = function(id) {
-                return $http.get(baseUrl + "/"+ id);
+                return $http.get("data/meal_" + id + ".json");
             };
 
-            // msAPI.getDeals = function() {
-            //     return $http.get( baseUrl + "deals.json");
-            // };
-            //
-            // msAPI.getStores = function(id) {
-            //     return $http.get( baseUrl + "stores.json");
-            // };
+            msAPI.getDeals = function() {
+                return $http.get( baseUrl + "deals.json");
+            };
+
+            msAPI.getStores = function() {
+                return $http.get( baseUrl + "stores.json");
+            };
 
             msAPI.selectedMeal = null;
 

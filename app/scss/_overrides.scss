@@ -1,32 +1,26 @@
 
-
 @media (max-width: $width-lg){
     .container {
         width: 100%;
     }
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, .large-font {
     margin: 0;
     padding: 0 0 20px 0;
     line-height: 100%;
+    text-transform: uppercase;
+    font: 300 30px/30px "Ubuntu", sans-serif
 }
 
 select, input {
     font-family: 'Ubuntu';
 }
 
-.large-font {
-    font-size: 4.0rem;
-    font-weight: 700;
-    line-height: 110%;
-    padding: 0 0 15px 0;
-}
 
 .strapline {
     font-size: 2.2rem;
     font-weight: 100;
-    max-width: 20em;
     padding-bottom: 20px;
 }
 
@@ -41,5 +35,15 @@ p {
     margin: 0 !important;
 }
 
+
+h2 {
+    span {
+        display: inline-block;
+        padding: 6px 10px;
+        background-color: $clr-grey-light;
+        color: $clr-grey-dark;
+        margin-bottom: 1px;
+    }
+}
 
 

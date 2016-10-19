@@ -70,4 +70,7 @@ angular
             vm.status = 'Unable to load meals data: ' + error.message;
         });
 
+
+
+
     }]);

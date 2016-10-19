@@ -1,7 +1,7 @@
 <!doctype html>
 <html ng-app="yamApp">
 <head>
-    <title>PoundThatYam!</title>
+    <title>Pound That Yam</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> 
@@ -17,7 +17,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-9">
-                <h1>PoundThatYam!</h1>
+                <h1><span class="mortar-and-pestle"></span> <span>Pound That Yam</span></h1>
             </div>
             <div class="col-xs-3 text-right aux-nav" ng-class="{'show-me':main.shouldShowAuxMenu}">
                 <button type="button" class="button btn btn-primary" ng-click="main.resetMeal()">
@@ -35,12 +35,15 @@
         <div class="container mode-container">
             <div class="row">
                 <div class="col-xs-12">
-                    <div>
+                    <div class="intro-and-form">
                         <div class="introduction copy" ng-class="{'show-me':main.shouldShowForm}">
-                            <p class="large-font">Pick&nbsp;the&nbsp;meal, cook&nbsp;the&nbsp;meal<br />...or just shop&nbsp;the&nbsp;meal.</p>
+                            <h2 class="landing-title">
+                                Pick&nbsp;the&nbsp;meal, cook&nbsp;the&nbsp;meal,<br>
+                                Or&nbsp;just shop&nbsp;the&nbsp;meal.
+                            </h2>
                         </div>
                         <div class="introduction copy" ng-class="{'show-me':main.shouldShowCookHeader}">
-                            <h2 class="title large-font">{{ main.selectedMeal.title }}</h2>
+                            <h2 class="title">{{ main.selectedMeal.title }}</h2>
                             <p class="strapline">{{ main.selectedMeal.description }}</p>
                         </div>
                         <form name="mealPicker" class="meal-picker">
