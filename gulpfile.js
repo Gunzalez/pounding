@@ -76,6 +76,11 @@ gulp.task('watch', function (){
     // Other watchers
 });
 
+
+gulp.task('justSass', function (callback) {
+    runSequence(['sass', 'watch'], callback)
+});
+
 gulp.task('default', function (callback) {
     runSequence(['sass','browserSync', 'watch'], callback)
 });

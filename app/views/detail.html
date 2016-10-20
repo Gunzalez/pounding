@@ -9,8 +9,18 @@
     <div class="body-copy">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12 col-md-4 content-block" ng-bind-html="mealIngredients">
-                    <!--<h3>Ingredients</h3>-->
+                <div class="welcome-text">
+                    <h2>How to cook {{selectedMeal.title}}</h2>
+                    <p class="strapline">It's easier than you think.</p>
+                    <hr>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-4 content-block">
+                    <h3>Ingredients</h3>
+                    <div ng-bind-html="mealIngredients"></div>
                     <!--<ul>-->
                         <!--<li>1 kg (2.2 lbs) <a href="http://www.allnigerianrecipes.com/food-ingredients/yam.html" title="White puna yam">white puna yam</a></li>-->
                         <!--<li>Red palm Oil (to colour)</li>-->
@@ -22,7 +32,9 @@
                         <!--<li>2 big stock cubes</li>-->
                     <!--</ul>-->
                 </div>
-                <div class="col-sm-12 col-md-8 content-block" ng-bind-html="mealInsructions">
+                <div class="col-sm-12 col-md-8 content-block">
+                    <h3>Instructions</h3>
+                    <div ng-bind-html="mealInsructions"></div>
                     <!--<h3>Method for {{selectedMeal.title}}</h3>-->
                     <!--<h4>Notes about the ingredients</h4>-->
                     <!--<ol>-->

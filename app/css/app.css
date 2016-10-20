@@ -21,11 +21,6 @@ h1, h2, h3, h4, h5, .large-font {
 select, input {
   font-family: 'Ubuntu'; }
 
-.strapline {
-  font-size: 2.2rem;
-  font-weight: 100;
-  padding-bottom: 20px; }
-
 p {
   padding: 0;
   margin: 0;
@@ -145,12 +140,16 @@ a {
     position: absolute;
     bottom: 80px;
     left: 0;
-    color: #ffffff; }
+    color: #ffffff;
+    width: 100%; }
     .meal-hero .introduction h2 {
-      padding: 0; }
+      padding: 0;
+      line-height: 120%; }
     .meal-hero .introduction .landing-title {
-      font-size: 3.5rem;
-      line-height: 130%; }
+      font-size: 3.5rem; }
+    .meal-hero .introduction .title {
+      font-size: 3.0rem;
+      max-width: 50%; }
   .meal-hero .intro-and-form {
     position: relative;
     height: 240px; }
@@ -168,13 +167,29 @@ a {
   .introduction.copy.show-me {
     display: block; }
 
+.welcome-text {
+  text-align: center;
+  padding-bottom: 15px; }
+  .welcome-text h2 {
+    font-size: 3.8rem;
+    text-align: center;
+    padding: 20px 0 20px 0;
+    color: #1F8A70; }
+  .welcome-text .strapline {
+    font-size: 2.0rem;
+    font-weight: 100;
+    text-transform: uppercase; }
+  .welcome-text hr {
+    width: 200px;
+    color: #1F8A70; }
+
 .mode-container {
   padding-top: 330px; }
 
-.detail-view h2, .detail-view h3,
-.list-view h2,
+.detail-view h3,
 .list-view h3 {
-  color: #1F8A70; }
+  color: #444444;
+  font-size: 2.5rem; }
 
 .detail-view h3, .detail-view h4,
 .list-view h3,
@@ -185,10 +200,13 @@ a {
 .list-view h3 + h4 {
   margin-top: 0; }
 
-.detail-view .content-block ul, .detail-view .content-block ol,
-.list-view .content-block ul,
-.list-view .content-block ol {
-  padding-bottom: 10px; }
+.detail-view .content-block,
+.list-view .content-block {
+  padding-bottom: 30px; }
+  .detail-view .content-block ul, .detail-view .content-block ol,
+  .list-view .content-block ul,
+  .list-view .content-block ol {
+    padding-bottom: 10px; }
 
 .detail-view .introduction,
 .list-view .introduction {

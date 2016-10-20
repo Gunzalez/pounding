@@ -43,8 +43,7 @@
                             </h2>
                         </div>
                         <div class="introduction copy" ng-class="{'show-me':main.shouldShowCookHeader}">
-                            <h2 class="title">{{ main.selectedMeal.title }}</h2>
-                            <p class="strapline">{{ main.selectedMeal.description }}</p>
+                            <h2 class="title">{{ main.selectedMeal.description }}</h2>
                         </div>
                         <form name="mealPicker" class="meal-picker">
                             <select ng-model="main.selectedMeal" ng-options="meal.title for meal in main.meals">
