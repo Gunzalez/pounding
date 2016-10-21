@@ -3,4 +3,4 @@ _assets/
 .sass-cache/*
 node_modules/
 debug.log
-.DS_stores
+.DS_store
