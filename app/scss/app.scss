@@ -394,6 +394,10 @@ a {
         background: url("/images/testimonial-quote.png") 0 0 no-repeat;
         padding: 40px 0 0 0;
     }
+
+    @media (max-width: $width-sm){
+        padding: 20px 0;
+    }
 }
 
 .media-links {
