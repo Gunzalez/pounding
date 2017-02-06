@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Ubuntu:400,300,500,700);
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 .detail-view .meals,
-.list-view .meals, .content-controls ul {
+.list-view .meals, .content-controls ul, .media-links {
   margin: 0;
   padding: 0;
   list-style: none; }
@@ -314,8 +315,9 @@ a {
 
 .footer {
   border-top: 10px solid #BEDB39;
-  height: 200px;
-  background-color: #444444; }
+  padding: 30px;
+  background-color: #444444;
+  color: #ffffff; }
 
 .most-cooked {
   border-top: 1px solid #e7e7e7;
@@ -324,7 +326,27 @@ a {
   padding: 20px 0; }
 
 .social-media {
-  padding: 30px 0; }
+  padding: 60px 0; }
   .social-media blockquote {
     border: none;
-    padding: 0; }
+    background: url("/images/testimonial-quote.png") 0 0 no-repeat;
+    padding: 40px 0 0 0; }
+
+.media-links {
+  width: 100%;
+  float: left;
+  margin-top: 40px; }
+  .media-links span {
+    display: none; }
+  .media-links li {
+    float: left;
+    margin: 0;
+    padding: 0 10px;
+    width: 20%;
+    text-align: center; }
+  .media-links a {
+    display: block;
+    text-decoration: none;
+    font-size: 1.8em;
+    padding-top: 20px;
+    border-top: 1px solid #BEDB39; }
