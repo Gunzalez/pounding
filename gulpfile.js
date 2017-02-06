@@ -6,10 +6,12 @@ var uglify = require('gulp-uglify');
 var gulpIf = require('gulp-if');
 var del = require('del');
 var runSequence = require('run-sequence');
+var plumber = require('gulp-plumber');
 
-gulp.task('sass', function() {
+gulp.task('runSass', function() {
     return gulp.src('app/scss/**/*.scss')
         .pipe(sass())
+        .pipe(plumber())
         .pipe(gulp.dest('app/css'))
         .pipe(browserSync.reload({
             stream: true
@@ -32,24 +34,24 @@ gulp.task('clean:dist', function() {
 
 gulp.task('copyImages', function() {
     return gulp.src('app/images/*')
-            .pipe(gulp.dest('dist/images'))
+        .pipe(gulp.dest('dist/images'))
 });
 
 gulp.task('copyCSS', function() {
     return gulp.src('app/css/**/*')
-            .pipe(gulp.dest('dist/css'))
+        .pipe(gulp.dest('dist/css'))
 });
 
 gulp.task('copyViews', function() {
     return gulp.src('app/views/*')
-            .pipe(gulp.dest('dist/views'))
+        .pipe(gulp.dest('dist/views'))
 });
 
 gulp.task('useref', function(){
     return gulp.src('app/*.html')
-            .pipe(useref())
-            .pipe(gulpIf('*.js', uglify()))
-            .pipe(gulp.dest('dist'))
+        .pipe(useref())
+        .pipe(gulpIf('*.js', uglify()))
+        .pipe(gulp.dest('dist'))
 });
 
 gulp.task('launchSync', function() {
@@ -65,7 +67,7 @@ gulp.task('build', function(callback) {
 });
 
 gulp.task('watch', function (){
-    gulp.watch('app/scss/**/*.scss', ['sass']);
+    gulp.watch('app/scss/**/*.scss', ['runSass']);
     gulp.watch('app/*.html', browserSync.reload);
     gulp.watch('app/views/*.html', browserSync.reload);
     gulp.watch('app/js/**/*.js', browserSync.reload);
@@ -77,12 +79,12 @@ gulp.task('watch', function (){
 });
 
 
-gulp.task('justSass', function (callback) {
-    runSequence(['sass', 'watch'], callback)
-});
+//gulp.task('justSass', function (callback) {
+//    runSequence(['sass', 'watch'], callback)
+//});
 
 gulp.task('default', function (callback) {
-    runSequence(['sass','browserSync', 'watch'], callback)
+    runSequence(['runSass','browserSync', 'watch'], callback)
 });
 
 

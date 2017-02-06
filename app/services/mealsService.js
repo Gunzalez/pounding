@@ -4,7 +4,7 @@ angular
         .service('mealsService', ['$http', function($http) {
 
             var msAPI = {},
-                    baseUrl = "meals";
+                baseUrl = "meals";
 
             msAPI.getMeals = function() {
                 return $http.get(baseUrl);

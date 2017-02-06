@@ -1,6 +1,8 @@
 
 <div class="list-view">
+
     <div class="introduction">
+
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
@@ -12,23 +14,29 @@
                 </div>
             </div>
         </div>
+
     </div>
 
-    <div class="lined">
+    <div class="meet-chef">
 
         <div class="container">
             <div class="row">
-                <div class="col-sm-4 col-sm-push-1">
+                <div class="col-sm-4 col-sm-push-1 chef-image">
                     <img src="images/the-chef.jpg" class="full-scale-img" alt="">
                 </div>
                 <div class="col-sm-6 col-sm-push-1">
                     <div class="chef-intro">
 
-                        <h2 class="title">The chef will see you now</h2>
-                        <p>I will be giving the classes today, what would you like to cook?</p>
-                        <p>Along with detailed instructions, watch a slide show or video of me cooking the meal right from scratch, using ingredients you can find in your local Afro-Caribbean stores.</p>
-                        <p>Leave any comments and tips at the end of each video.</p>
-                        <p>Happy cooking.</p>
+                        <div class="centered-vertical">
+
+                            <h2 class="title">The chef will see you now</h2>
+                            <p>I will be giving the classes today. What would you like to cook today?
+                                Watch slideshow or videos of me cooking the meal right from scratch, using ingredients you can find in your local Afro-Caribbean stores.</p>
+
+                            <p>Leave any comments and tips at the bottom of each meal detail.<br>
+                                Happy cooking.</p>
+                        </div>
+
                     </div>
 
                 </div>
@@ -37,49 +45,60 @@
 
     </div>
 
-    <div class="container">
+    <div class="most-cooked">
+        <div class="container">
 
-
-
-
-
-        <div class="row">
-            <div class="col-xs-12">
-                <h2 class="title centered">Most cooked meals</h2>
-                <p>Registered users get to log how many times a meal is cooked, competition.</p>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="centered-copy">
+                        <h2 class="title">Most cooked meals</h2>
+                        <p>These meals have been cooked the most on this site. <br><a href="#">Registered users</a> can add to this list, and submit to the restaurant list</p>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="row">
 
-            <div class="meal col-xs-12 col-md-4" ng-repeat="meal in meals">
-                <div class="item">
-                    <a href="#/cook/{{ meal.id }}">
-                        <img ng-src="images/{{ meal.image }}" alt="" />
-                        <span class="title">{{ meal.title }} ({{meal.count}})</span>
-                        <span class="glyphicon glyphicon-menu-right"></span>
-                        <span class="quick-description">{{ meal.quote }}</span>
-                    </a>
+            <div class="row">
+                <div class="col-xs-12">
+                    <ul class="meals">
+                        <li ng-repeat="meal in meals" class="meal">
+                            <a href="#/cook/{{ meal.id }}" class="centered-copy">
+                                <img ng-src="images/{{ meal.image }}" alt="" />
+                                <h3 class="sub-title">{{ meal.title }} ({{meal.count}})</h3>
+                                <p class="quick-description">{{ meal.quote }}</p>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
         </div>
     </div>
-    <div class="container centered-copy">
 
-        <div class="row">
-            <div class="col-xs-12 col-sm-6 sub-module">
-                <h3 class="title">Submit a meal</h3>
-                <p>Donec et leo rhoncus, aliquam nsectetnsectetur telc,</p>
-                <p>Lnon faucibus condimentum.</p>
+    <div class="social-media">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-xs-12 col-md-4">
+                    <blockquote>
+                        <p>Clearly I must have put too much scotch bonnets into my Jollof rice mix, I nearly burned my tongue off.</p>
+                        <footer>Titi Adesanya</footer>
+                    </blockquote>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <blockquote>
+                        <p>My beans came out perfect, first time as well, well I did have help from my girl friend.</p>
+                        <footer>Donald Trump</footer>
+                    </blockquote>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <blockquote>
+                        <p>The prices are as good as the menu! Each time I spend less money, than anywhere else and get a fresh, homemade dinner!</p>
+                        <footer>Arsene Wenger</footer>
+                    </blockquote>
+                </div>
             </div>
-            <div class="col-xs-12 col-sm-6 sub-module">
-                <h3 class="title">Submit a restaurant</h3>
-                <p>You'll need to be <a href="#">registered</a> to do this.</p>
-                <p>Some more talk about submitting a restaurant.</p>
-            </div>
+
         </div>
-
-
-
     </div>
+
 </div>

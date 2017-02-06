@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Ubuntu:400,300,500,700);
-.content-controls ul {
+.detail-view .meals,
+.list-view .meals, .content-controls ul {
   margin: 0;
   padding: 0;
   list-style: none; }
@@ -215,124 +216,76 @@ a {
 .detail-view .introduction,
 .list-view .introduction {
   background-color: #f2f2f2;
-  padding: 30px 0;
+  padding: 20px 0;
   border-top: 1px solid #ffffff;
-  margin-bottom: 20px;
   color: #444444;
-  text-align: center; }
+  border-bottom: 1px solid #e7e7e7; }
   .detail-view .introduction p,
   .list-view .introduction p {
     line-height: 180%;
     font-size: 1.8rem; }
+  @media (min-width: 768px) {
+    .detail-view .introduction,
+    .list-view .introduction {
+      text-align: center; } }
 
-.detail-view .meal .item,
-.list-view .meal .item {
-  margin-bottom: 25px; }
-  .detail-view .meal .item a,
-  .list-view .meal .item a {
-    position: relative;
-    text-decoration: none;
-    display: block; }
-    .detail-view .meal .item a img,
-    .list-view .meal .item a img {
-      width: 100%; }
-    .detail-view .meal .item a .title,
-    .list-view .meal .item a .title {
-      position: absolute;
-      bottom: 40px;
-      left: 0;
-      color: #f2f2f2;
-      font-size: 2.7rem;
-      font-weight: bold;
-      width: 100%; }
-    .detail-view .meal .item a .glyphicon,
-    .list-view .meal .item a .glyphicon {
-      display: none; }
-  .detail-view .meal .item .quick-description,
-  .list-view .meal .item .quick-description {
-    -webkit-transition: all 0.75s;
-    -moz-transition: all 0.75s;
-    -o-transition: all 0.75s;
-    transition: all 0.75s;
-    color: #444444;
-    background-color: #f2f2f2;
-    border: 1px solid #e3e3e3; }
-  .detail-view .meal .item span,
-  .list-view .meal .item span {
-    padding: 10px 15px;
-    display: block;
-    text-align: left; }
-  @media (max-width: 992px) {
-    .detail-view .meal .item,
-    .list-view .meal .item {
-      margin-bottom: 5px; }
-      .detail-view .meal .item a .title,
-      .list-view .meal .item a .title {
-        position: static;
-        color: #444444;
-        background-color: #f0f0f0;
-        border: 1px solid #e3e3e3;
-        text-shadow: none;
-        font-size: 1.8rem;
-        font-weight: 100;
-        padding: 8px 10px; }
-      .detail-view .meal .item a .glyphicon,
-      .list-view .meal .item a .glyphicon {
-        display: block;
-        position: absolute;
-        right: -4px;
-        top: 0;
-        font-size: 2.5rem;
-        color: #444444; }
-      .detail-view .meal .item a img,
-      .list-view .meal .item a img {
-        display: none; }
-      .detail-view .meal .item .quick-description,
-      .list-view .meal .item .quick-description {
-        display: none; } }
-  .detail-view .meal .item:hover .quick-description,
-  .list-view .meal .item:hover .quick-description {
-    background-color: #d8d8d8;
-    color: #000000; }
+.detail-view .meals,
+.list-view .meals {
+  float: left;
+  width: 100%; }
+  .detail-view .meals .meal,
+  .list-view .meals .meal {
+    float: left;
+    width: 25%; }
+    @media (max-width: 1200px) {
+      .detail-view .meals .meal,
+      .list-view .meals .meal {
+        width: 50%; } }
+    @media (max-width: 768px) {
+      .detail-view .meals .meal,
+      .list-view .meals .meal {
+        width: 100%; } }
+    .detail-view .meals .meal a,
+    .list-view .meals .meal a {
+      display: block;
+      text-decoration: none;
+      padding-bottom: 20px; }
+      .detail-view .meals .meal a img,
+      .list-view .meals .meal a img {
+        width: 100%;
+        margin-bottom: 10px; }
+      .detail-view .meals .meal a .sub-title,
+      .list-view .meals .meal a .sub-title {
+        padding-bottom: 0; }
 
 .detail-view .title,
 .list-view .title {
   color: #1F8A70;
   padding: 30px 0; }
+  @media (max-width: 768px) {
+    .detail-view .title,
+    .list-view .title {
+      padding-top: 0; } }
   @media (max-width: 480px) {
     .detail-view .title,
     .list-view .title {
-      font-size: 2.8rem;
-      padding: 0 15px; } }
-  .detail-view .title.centered,
-  .list-view .title.centered {
-    text-align: center; }
+      font-size: 2.8rem; } }
 
-.detail-view .chef-intro,
-.list-view .chef-intro {
-  padding-top: 80px; }
-  .detail-view .chef-intro p,
-  .list-view .chef-intro p {
+.detail-view .meet-chef,
+.list-view .meet-chef {
+  padding: 20px 0;
+  border-bottom: 1px solid #f2f2f2; }
+  .detail-view .meet-chef .chef-intro p,
+  .list-view .meet-chef .chef-intro p {
     line-height: 180%;
     font-size: 1.8rem; }
-
-.detail-view .sub-module,
-.list-view .sub-module {
-  padding-bottom: 35px; }
-  .detail-view .sub-module .title,
-  .list-view .sub-module .title {
-    font-size: 2.5rem;
-    padding: 10px;
-    text-align: center;
-    font-weight: bold; }
-  @media (max-width: 480px) {
-    .detail-view .sub-module .title,
-    .list-view .sub-module .title {
-      font-size: 1.8rem; }
-    .detail-view .sub-module:first-child,
-    .list-view .sub-module:first-child {
-      padding-bottom: 15px;
-      padding-top: 15px; } }
+  .detail-view .meet-chef .chef-image,
+  .list-view .meet-chef .chef-image {
+    padding: 30px 0; }
+    @media (max-width: 768px) {
+      .detail-view .meet-chef .chef-image,
+      .list-view .meet-chef .chef-image {
+        display: none; } }
 
 .block {
   float: left; }
@@ -353,13 +306,25 @@ a {
     padding-bottom: 10px; }
 
 .centered-copy {
-  text-align: center; }
+  text-align: center;
+  padding-bottom: 30px; }
+  @media (max-width: 768px) {
+    .centered-copy {
+      text-align: left; } }
 
 .footer {
   border-top: 10px solid #BEDB39;
   height: 200px;
   background-color: #444444; }
 
-.lined {
-  padding: 20px 0;
-  border-bottom: 1px solid #f2f2f2; }
+.most-cooked {
+  border-top: 1px solid #e7e7e7;
+  border-bottom: 1px solid #e7e7e7;
+  background-color: #f2f2f2;
+  padding: 20px 0; }
+
+.social-media {
+  padding: 30px 0; }
+  .social-media blockquote {
+    border: none;
+    padding: 0; }

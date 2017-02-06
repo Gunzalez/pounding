@@ -6,7 +6,7 @@ angular
         $scope.meals = [];
         mealsService.getMeals()
             .success(function (data) {
-                $scope.meals = data.slice(1, 4);
+                $scope.meals = data.slice(1, 5);
             })
             .error(function (error) {
                 $scope.status = 'Unable to load meals data: ' + error.message;
