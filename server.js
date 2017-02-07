@@ -23,9 +23,10 @@ var meals = [
         "title":"Fried Plantain",
         "image":"rice-and-plantain.jpg",
         "description":"Great snack on it's own but better as a versatile side dish",
+        "strapline":"It's easier than you think",
         "quote":"20 min / light",
         "count":"16",
-        "video":"https://www.youtube.com/watch?v=N9dpPNP58Iw",
+        "video":"N9dpPNP58Iw",
         "instructions": [
                 'Peal and slice roughly into thin discs',
                 'Add salt to taste',
@@ -48,10 +49,21 @@ var meals = [
         "title":"Eba",
         "image":"eba-and-okra.jpg",
         "description":"Starchy meal, super quick to make but rather heavy",
+        "strapline":"Really quite to make",
         "quote":"30 min / heavy",
         "count":"14",
-        "instructions": "<ul>Boil some water<li></li><li>Sprinkle some Garri powder into it</li><li>Str for thickness</li></ul></p>",
-        "ingredients": "<p>Stuff, words and stuff, go in here. Muscle food will knock you out</p>",
+        "video":"rDuetklFtDQ",
+        "instructions": [
+            'Boil about 300 ml of water',
+            'Sprinkle the Cari to it while stirring with spatula',
+            'Stir until harden to preferred density',
+            'This is always served as side dish'
+        ],
+        "ingredients": [
+            '500 gram of Gari powder',
+            'A medium sized put',
+            'Large wooden spoon or spatula'
+        ],
         "about": "<p>Garri is a major fufu recipe in Nigeria. It is processed from cassava. </p><p>It isn't clear where the word Garri originated from, but many think it is derived from the Hausa word for grain: <strong>Garin</strong>.</p><p> You can add cold water, sugar, milk, groundnuts (peanuts) and drink it like cereal.</p>",
         "featured": true
     },

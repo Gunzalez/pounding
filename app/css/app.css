@@ -57,6 +57,9 @@ a {
     color: #004358;
     text-decoration: none; }
 
+.video {
+  padding: 20px 0; }
+
 .top-bar {
   top: 0;
   left: 0;
@@ -193,9 +196,6 @@ a {
   display: none; }
   .introduction.copy.show-me {
     display: block; }
-
-.strapline {
-  margin-top: -20px; }
 
 .mode-container {
   padding-top: 330px; }
@@ -337,7 +337,8 @@ a {
   background-color: #444444;
   color: #ffffff; }
 
-.most-cooked {
+.most-cooked,
+.shop-meal {
   border-top: 1px solid #e7e7e7;
   border-bottom: 1px solid #e7e7e7;
   background-color: #f2f2f2;
@@ -370,3 +371,10 @@ a {
     font-size: 1.8em;
     padding: 20px 0;
     border-top: 1px solid #BEDB39; }
+
+.cook-meal {
+  padding: 20px 0; }
+
+.strapline {
+  margin-top: -10px;
+  margin-bottom: 20px; }
