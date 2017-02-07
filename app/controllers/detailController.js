@@ -9,6 +9,30 @@ angular
         $scope.videoDisplay = document.getElementById('videoEl');
 
         $scope.videoPlaying = false;
+        $scope.currentTime = 0;
+        $scope.totalTime = 0;
+
+        $scope.initPlayer = function(){
+            $scope.currentTime = 0;
+            $scope.totalTime = 0;
+            $scope.videoDisplay.addEventListener("timeupdate", $scope.updateTime, true);
+            $scope.videoDisplay.addEventListener("loadedmetadata", $scope.updateDate, true);
+        };
+
+        $scope.updateLayout = function(){
+            if(!$scope.$$phase){
+                $scope.$apply();
+            }
+        };
+
+        $scope.updateTime = function(e){
+            $scope.currentTime = e.target.currentTime;
+            $scope.updateLayout()
+        };
+
+        $scope.updateDate = function(e){
+            $scope.totalTime = e.target.duration;
+        };
 
         $scope.togglePlay  = function(){
             var playBtn = document.getElementById('playBtn'),
@@ -51,5 +75,7 @@ angular
             .error(function (error) {
                 $scope.status = 'Unable to load customer data: ' + error.message;
             });
+
+        $scope.initPlayer();
 
     }]);
