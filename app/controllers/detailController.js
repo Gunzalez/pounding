@@ -14,7 +14,7 @@ angular
                 $scope.videoSource = 'video/' + $scope.selectedMeal.video;
 
                 $scope.videoTitle = $scope.selectedMeal.title;
-                $scope.videoDescription = 'video/' + $scope.selectedMeal.video;
+                $scope.videoDescription = $scope.selectedMeal.description;
             })
             .error(function (error) {
                 $scope.status = 'Unable to load customer data: ' + error.message;

@@ -93,7 +93,7 @@ var meals = [
     },
     {
         "id":"4",
-        "title":"Yam porridge",
+        "title":"Yam Porridge",
         "image":"yam-porridge.jpg",
         "description":"The choice yam recipe if you like your yam meals soupy.",
         "strapline":"Nice ans soupy",
@@ -101,11 +101,11 @@ var meals = [
         "count":"9",
         "video":"sample.mp4",
         "instructions": [
-            'Do instructions 1',
-            'Do instructions Two',
-            'Do instructions number three',
-            'Do instructions 4',
-            'Servers many'
+            'Execute these instructions 1',
+            'Then do these things and also some of those things',
+            'Sample instructions. sample copy, nothing real yet here',
+            'Just a few more steps and you\'re done',
+            'This recipe servers 4'
         ],
         "ingredients": [
             '250 grams of Poundo yam powder',
@@ -113,7 +113,7 @@ var meals = [
             'Large wooden spoon or spatula'
         ],
         "about": [
-            'You need a tasty yam recipe in no time? This is for you! Referred to as yam soup,\n it\'s mainly yam cooked with ingredients and the resulting dish contains a soupy liquid or curry.',
+            'Need a tasty yam recipe in no time, then this is for you! Referred to as yam soup,\n it\'s mainly yam cooked with ingredients and the resulting dish contains a soupy liquid or curry.',
             'It is usually not cooked with added vegetables but can be added for some green colour to the meal.'
         ],
         "featured": true
@@ -150,7 +150,7 @@ var meals = [
         "id":"6",
         "title":"Jollof Rice",
         "image":"jollof.jpg",
-        "description":"The party food of all party foods, with a million variations",
+        "description":"The party food of all party foods, with a dozen variations",
         "strapline":"Everyone loves some jollof",
         "time":"120 mins",
         "count":"6",

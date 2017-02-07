@@ -16,7 +16,6 @@ h1, h2, h3, h4, h5, .large-font {
 
 select, input {
     @include border-radius(0);
-    box-shadow: 0;
 }
 
 p {
@@ -31,7 +30,7 @@ p {
 }
 
 a {
-    @include transitions(0.5s);
+    @include transitions(0.25s);
     color: $clr-green-mid;
     text-decoration: underline;
 
@@ -44,10 +43,9 @@ a {
 .btn {
     @include border-radius(0);
     text-transform: uppercase;
-    box-shadow: 0;
 
     &.btn-find {
-        @include transitions(0.5s);
+        @include transitions(0.25s);
         background: $clr-green-dark;
         color: #ffffff;
 

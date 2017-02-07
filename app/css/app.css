@@ -24,8 +24,7 @@ h1, h2, h3, h4, h5, .large-font {
 select, input {
   -webkit-border-radius: 0 !important;
   -moz-border-radius: 0 !important;
-  border-radius: 0 !important;
-  box-shadow: 0; }
+  border-radius: 0 !important; }
 
 p {
   padding: 0;
@@ -37,10 +36,10 @@ p {
   margin: 0 !important; }
 
 a {
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
   color: #1F8A70;
   text-decoration: underline; }
   a:hover {
@@ -51,13 +50,12 @@ a {
   -webkit-border-radius: 0 !important;
   -moz-border-radius: 0 !important;
   border-radius: 0 !important;
-  text-transform: uppercase;
-  box-shadow: 0; }
+  text-transform: uppercase; }
   .btn.btn-find {
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s;
+    -webkit-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    transition: all 0.25s;
     background: #004358;
     color: #ffffff; }
     .btn.btn-find:hover {
@@ -223,20 +221,6 @@ body {
 .mode-container {
   padding-top: 330px; }
 
-.detail-view h3,
-.list-view h3 {
-  color: #444444;
-  font-size: 2.5rem; }
-
-.detail-view h3, .detail-view h4,
-.list-view h3,
-.list-view h4 {
-  padding-bottom: 10px; }
-
-.detail-view h3 + h4,
-.list-view h3 + h4 {
-  margin-top: 0; }
-
 .detail-view .content-block,
 .list-view .content-block {
   padding-bottom: 30px; }
@@ -336,18 +320,16 @@ body {
   .content-controls ul {
     padding-bottom: 10px; }
 
-.centered-copy {
-  text-align: center;
-  padding-bottom: 30px; }
-  @media (max-width: 768px) {
-    .centered-copy {
-      text-align: left; } }
-
+.centered-copy,
 .centered-text {
   text-align: center; }
   @media (max-width: 768px) {
+    .centered-copy,
     .centered-text {
       text-align: left; } }
+
+.centered-copy {
+  padding-bottom: 30px; }
 
 .footer {
   border-top: 10px solid #BEDB39;
@@ -399,6 +381,20 @@ body {
 
 .pipe {
   color: #1F8A70; }
+
+.steps .sub-title {
+  margin-top: 20px;
+  padding-bottom: 10px; }
+
+.steps ul {
+  margin-bottom: 20px;
+  padding-left: 20px; }
+
+@media (max-width: 768px) {
+  .steps ul {
+    margin-bottom: 20px; }
+  .steps .sub-title {
+    margin-top: 0; } }
 
 .unselectable {
   -moz-user-select: -moz-none;
