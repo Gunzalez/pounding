@@ -133,7 +133,7 @@ var meals = [
             'Large wooden spoon or spatula'
         ],
         "about": [
-            'Black-Eyed or Brown beans are rich in high quality protein which provides a healthy alternative to meat and other animal protein.',
+            'Brown beans are high in protein and provide a healthy alternative to meat and other animal products.',
             'Ewa is delicious on its own or when accompanied with various other foods such as Nigerian fried plantain.',
             'One of Nigeria’s everyday foods and it is easy to prepare as you can see below.'
         ],
