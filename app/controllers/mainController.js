@@ -3,6 +3,8 @@ angular
     .module('yamApp')
     .controller('mainController', ['$scope', 'mealsService', '$routeParams', 'navigatorService', '$rootScope', '$route', '$location', function ($scope, mealsService, $routeParams, navigatorService, $rootScope, $route, $location) {
 
+        window.scroll(0,0);
+
         var vm = this;
         vm.selectedMeal = null;
         vm.shouldShowVideo = false;

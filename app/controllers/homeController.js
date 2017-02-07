@@ -3,6 +3,8 @@ angular
     .module('yamApp')
     .controller('homeController', ['$scope', 'mealsService', function ($scope, mealsService) {
 
+        window.scroll(0,0);
+
         $scope.meals = [];
         mealsService.getMeals()
             .success(function (data) {
