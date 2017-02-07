@@ -8,12 +8,42 @@ angular
         $scope.selectedMeal = {};
         $scope.videoDisplay = document.getElementById('videoEl');
 
+        $scope.videoPlaying = false;
+
+        $scope.togglePlay  = function(){
+            var playBtn = document.getElementById('playBtn'),
+                $playBtn = angular.element(playBtn);
+            if($scope.videoDisplay.paused){
+                  $scope.videoDisplay.play();
+                  $scope.videoPlaying = true;
+                  $playBtn.find('span').toggleClass("glyphicon-play", false);
+                  $playBtn.find('span').toggleClass("glyphicon-pause", true);
+            } else {
+                  $scope.videoDisplay.pause();
+                  $scope.videoPlaying = false;
+                  $playBtn.find('span').toggleClass("glyphicon-play", true);
+                  $playBtn.find('span').toggleClass("glyphicon-pause", false);
+            }
+        };
+
+        $scope.toggleMute  = function(){
+            var muteBtn = document.getElementById('muteBtn'),
+                $muteBtn = angular.element(muteBtn);
+            if($scope.videoDisplay.volume == 0.0){
+                $scope.videoDisplay.volume = 1.0;
+                $muteBtn.find('span').toggleClass("glyphicon-volume-up", true);
+                $muteBtn.find('span').toggleClass("glyphicon-volume-off", false);
+            } else {
+                $scope.videoDisplay.volume = 0.0;
+                $muteBtn.find('span').toggleClass("glyphicon-volume-up", false);
+                $muteBtn.find('span').toggleClass("glyphicon-volume-off", true);
+            }
+        };
+
         mealsService.getAMeal($routeParams.id)
             .success(function (data) {
                 $scope.selectedMeal = data;
                 $scope.videoSource = 'video/' + $scope.selectedMeal.video;
-
-                    console.log($scope.videoDisplay);
 
                 $scope.videoTitle = $scope.selectedMeal.title;
                 $scope.videoDescription = $scope.selectedMeal.description;
