@@ -12,7 +12,6 @@ angular
         mealsService.getAMeal($scope.param)
             .success(function (data) {
                 $scope.selectedMeal = data;
-                $scope.about = $sce.trustAsHtml($scope.selectedMeal['about']);
             })
             .error(function (error) {
                 $scope.status = 'Unable to load customer data: ' + error.message;

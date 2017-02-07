@@ -12,10 +12,20 @@ var meals = [
         "image":"pounded-yam.jpg",
         "description":"Delicious and very popular, best when served with Egusi soup.",
         "strapline":"There is a faster way",
-        "time":"30 min",
+        "time":"30 mins",
         "count":"11",
-        "instructions": "<p>This should be all about Pounded yam</p>",
-        "ingredients": "<p>Pounded, pounded yam I say</p>",
+        "instructions": [
+            'Boil about 300 ml of water',
+            'Sprinkle the Poundo yam to it while stirring with spatula',
+            'Stir continuously and consistently to avoid bubbles',
+            'Continue until hardened to preferred density',
+            'Always served as side dish'
+        ],
+        "ingredients": [
+            '250 grams of Poundo yam powder',
+            'A medium sized put',
+            'Large wooden spoon or spatula'
+        ],
         "about": "<p>Pounded Yam is one of the Nigerian fufu recipes that is eaten with the various Nigerian soup recipes.</p><p>The most popular combinations are Pounded Yam with Egusi Soup. </p><p>Alternatively Pounded Yam can be prepared by stirring yam flour in hot water.</p>",
         "featured": true
     },
@@ -25,7 +35,7 @@ var meals = [
         "image":"rice-and-plantain.jpg",
         "description":"Great snack on it's own but better as a versatile side dish",
         "strapline":"It's easier than you think",
-        "time":"20 min",
+        "time":"20 mins",
         "count":"16",
         "video":"N9dpPNP58Iw",
         "instructions": [
@@ -42,7 +52,11 @@ var meals = [
             'A large deep frying page',
             'Enough vegetable for deep frying'
         ],
-        "about": "<p>Fried Plantain can be eaten in a variety of ways. It will often come to the rescue when you need a fast and easy meal. </p><p>A popular side dish to many of the rice recipes and can be enjoyed by people from all over the world.</p><p> Low in fat and super delicious.</p>",
+        "about": [
+            'Fried Plantain can be eaten in a variety of ways. It will often come to the rescue when you need a fast and easy meal.',
+            'A popular side dish to many of the rice recipes and can be enjoyed by people from all over the world.',
+            'Low in fat and super delicious.'
+        ],
         "featured": true
     },
     {
@@ -51,21 +65,25 @@ var meals = [
         "image":"eba-and-okra.jpg",
         "description":"Starchy meal, super quick to make but rather heavy",
         "strapline":"Really quick to make",
-        "time":"30 min",
+        "time":"30 mins",
         "count":"14",
         "video":"rDuetklFtDQ",
         "instructions": [
             'Boil about 300 ml of water',
-            'Sprinkle the Cari to it while stirring with spatula',
-            'Stir until harden to preferred density',
+            'Sprinkle the Garri to it while stirring with spatula',
+            'Stir hard until hardened to preferred density',
             'This is always served as side dish'
         ],
         "ingredients": [
-            '500 gram of Gari powder',
+            '500 gram of Garri powder',
             'A medium sized put',
             'Large wooden spoon or spatula'
         ],
-        "about": "<p>Garri is a major fufu recipe in Nigeria. It is processed from cassava. </p><p>It isn't clear where the word Garri originated from, but many think it is derived from the Hausa word for grain: <strong>Garin</strong>.</p><p> You can add cold water, sugar, milk, groundnuts (peanuts) and drink it like cereal.</p>",
+        "about": [
+            'Garri is a major fufu recipe in Nigeria. It is processed from cassava.',
+            'It isn\'t clear where the word Garri originated from, but many think it is derived from the Hausa word for grain: Garin',
+            'You can add cold water, sugar, milk, groundnuts (peanuts) and drink it like cereal.'
+        ],
         "featured": true
     },
     {
@@ -74,11 +92,24 @@ var meals = [
         "image":"yam-porridge.jpg",
         "description":"The choice yam recipe if you like your yam meals soupy.",
         "strapline":"Nice ans soupy",
-        "time":"120 min",
+        "time":"120 mins",
         "count":"9",
-        "instructions": "<p>What to do with the stuff to be making the meal, the meal being of course Yam porridge rice and plantain.</p>",
-        "ingredients": "<p>Need people to add in content here</p><p>It's all about Yam porridge!</p>",
-        "about": "<p>You need a tasty yam recipe in no time? This is for you! Referred to as yam soup,<br /> it's mainly yam cooked with ingredients and the resulting dish contains a soupy liquid or curry.</p><p> It is usually not cooked with added vegetables but can be added for some green colour to the meal.</p>",
+        "instructions": [
+            'Do instructions 1',
+            'Do instructions Two',
+            'Do instructions number three',
+            'Do instructions 4',
+            'Servers many'
+        ],
+        "ingredients": [
+            '250 grams of Poundo yam powder',
+            'A medium sized put',
+            'Large wooden spoon or spatula'
+        ],
+        "about": [
+            'You need a tasty yam recipe in no time? This is for you! Referred to as yam soup,\n it\'s mainly yam cooked with ingredients and the resulting dish contains a soupy liquid or curry.',
+            'It is usually not cooked with added vegetables but can be added for some green colour to the meal.'
+        ],
         "featured": true
     },
     {
@@ -87,11 +118,25 @@ var meals = [
         "image":"beans-and-dodo.jpg",
         "description":"Really rich in protein so expect to toot all day after this.",
         "strapline":"Well worth the wait",
-        "time":"120 min",
+        "time":"120 mins",
         "count":"5",
-        "instructions": "<p>I was such an idiot when I was younger, what the hell go into me.</p>",
-        "ingredients": "<p>Black-Eyed or Brown beans are rich in high quality</p><p>I cook this all the time and my kids never eat it.</p>",
-        "about": "<p>Black-Eyed or Brown beans are rich in high quality protein which provides a healthy alternative to meat and other animal protein.</p><p>Ewa is delicious on its own or when accompanied with various other foods such as Nigerian fried plantain.</p><p>One of Nigeria’s everyday foods and it is easy to prepare as you can see below.</p>",
+        "instructions": [
+            'Do instructions 1',
+            'Do instructions Two',
+            'Do instructions number three',
+            'Do instructions 4',
+            'Servers many'
+        ],
+        "ingredients": [
+            '250 grams of Poundo yam powder',
+            'A medium sized put',
+            'Large wooden spoon or spatula'
+        ],
+        "about": [
+            'Black-Eyed or Brown beans are rich in high quality protein which provides a healthy alternative to meat and other animal protein.',
+            'Ewa is delicious on its own or when accompanied with various other foods such as Nigerian fried plantain.',
+            'One of Nigeria’s everyday foods and it is easy to prepare as you can see below.'
+        ],
         "featured": true
     },
     {
@@ -100,11 +145,25 @@ var meals = [
         "image":"jollof.jpg",
         "description":"The party food of all party foods, with a million variations",
         "strapline":"Everyone loves some jollof",
-        "time":"120 min",
+        "time":"120 mins",
         "count":"6",
-        "instructions": "<p>What to do with the stuff to be making the meal, the meal being of course Jollof rice and plantain.</p>",
-        "ingredients": "<p>A set of stuff what goes in to make said meal, said meal being Jollof rice and plantain.</p>",
-        "about": "<p>Some prefer the traditional spicy taste with a characteristic smoky flavour imparted by the cast iron pots in which it has been cooked.</p><p> Others prefer an al-dente style with the grains not sticking together. </p><p>A recent survey concluded that we all like to enjoy our Jollof rice in different and imaginative ways.</p>",
+        "instructions": [
+            'Do instructions 1',
+            'Do instructions Two',
+            'Do instructions number three',
+            'Do instructions 4',
+            'Servers many'
+        ],
+        "ingredients": [
+            '250 grams of Poundo yam powder',
+            'A medium sized put',
+            'Large wooden spoon or spatula'
+        ],
+        "about": [
+            'Some prefer the traditional spicy taste with a characteristic smoky flavour imparted by the cast iron pots in which it has been cooked.',
+            'Others prefer an al-dente style with the grains not sticking together.',
+            'A recent survey concluded that we all like to enjoy our Jollof rice in different and imaginative ways.'
+        ],
         "featured": true
     }
 ];
