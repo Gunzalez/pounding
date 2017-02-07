@@ -26,7 +26,11 @@ var meals = [
             'A medium sized put',
             'Large wooden spoon or spatula'
         ],
-        "about": "<p>Pounded Yam is one of the Nigerian fufu recipes that is eaten with the various Nigerian soup recipes.</p><p>The most popular combinations are Pounded Yam with Egusi Soup. </p><p>Alternatively Pounded Yam can be prepared by stirring yam flour in hot water.</p>",
+        "about": [
+            'Pounded Yam is one of the Nigerian fufu recipes that is eaten with the various Nigerian soup recipes.',
+            'The most popular combinations are Pounded Yam with Egusi Soup.',
+            'Alternatively Pounded Yam can be prepared by stirring yam flour in hot water.'
+        ],
         "featured": true
     },
     {
@@ -160,7 +164,7 @@ var meals = [
             'Large wooden spoon or spatula'
         ],
         "about": [
-            'Some prefer the traditional spicy taste with a characteristic smoky flavour imparted by the cast iron pots in which it has been cooked.',
+            'Some prefer the traditional spicy taste with a characteristic smoky flavour imparted by the cast iron pots.',
             'Others prefer an al-dente style with the grains not sticking together.',
             'A recent survey concluded that we all like to enjoy our Jollof rice in different and imaginative ways.'
         ],

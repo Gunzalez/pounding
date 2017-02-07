@@ -22,13 +22,12 @@ h1, h2, h3, h4, h5, .large-font {
   font-weight: 100; }
 
 select, input {
-  font-family: 'Ubuntu'; }
-
-a {
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s; }
+  font-family: 'Ubuntu';
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  border-radius: 0 !important; }
+  select:focus, input:focus {
+    outline: none !important; }
 
 p {
   padding: 0;
@@ -51,11 +50,30 @@ body {
   font-size: 1.6rem; }
 
 a {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
   color: #1F8A70;
   text-decoration: underline; }
   a:hover {
     color: #004358;
     text-decoration: none; }
+
+.btn {
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  border-radius: 0 !important; }
+  .btn.btn-find {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    background: #004358;
+    color: #ffffff; }
+    .btn.btn-find:hover {
+      background: #1F8A70;
+      color: #ffffff; }
 
 .video {
   padding: 20px 0; }
@@ -147,9 +165,9 @@ a {
     .meal-hero .meal-picker select {
       cursor: pointer;
       padding: 10px 14px;
-      -webkit-border-radius: 3px;
-      -moz-border-radius: 3px;
-      border-radius: 3px; }
+      -webkit-border-radius: 3px !important;
+      -moz-border-radius: 3px !important;
+      border-radius: 3px !important; }
       @media (max-width: 768px) {
         .meal-hero .meal-picker select {
           display: inline-block; } }

@@ -1,7 +1,7 @@
 @mixin border-radius($radius: 0px){
-    -webkit-border-radius: $radius;
-    -moz-border-radius: $radius;
-    border-radius: $radius;
+    -webkit-border-radius: $radius !important;
+    -moz-border-radius: $radius !important;
+    border-radius: $radius !important;
 }
 
 @mixin transitions($speed: 0.5s){

@@ -9,6 +9,7 @@ body {
 }
 
 a {
+    @include transitions(0.5s);
     color: $clr-green-mid;
     text-decoration: underline;
 
@@ -17,6 +18,22 @@ a {
         text-decoration: none;
     }
 }
+
+.btn {
+    @include border-radius(0);
+
+    &.btn-find {
+        @include transitions(0.5s);
+        background: $clr-green-dark;
+        color: #ffffff;
+
+        &:hover {
+            background: $clr-green-mid;
+            color: #ffffff;
+        }
+    }
+}
+
 
 .video {
     padding: 20px 0;

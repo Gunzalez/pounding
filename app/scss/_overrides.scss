@@ -16,10 +16,11 @@ h1, h2, h3, h4, h5, .large-font {
 
 select, input {
     font-family: 'Ubuntu';
-}
+    @include border-radius(0);
 
-a {
-    @include transitions(0.5s);
+    &:focus {
+        outline: none !important;
+    }
 }
 
 p {
