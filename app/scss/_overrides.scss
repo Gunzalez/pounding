@@ -15,12 +15,8 @@ h1, h2, h3, h4, h5, .large-font {
 }
 
 select, input {
-    font-family: 'Ubuntu';
     @include border-radius(0);
-
-    &:focus {
-        outline: none !important;
-    }
+    box-shadow: 0;
 }
 
 p {
@@ -34,6 +30,39 @@ p {
     margin: 0 !important;
 }
 
+a {
+    @include transitions(0.5s);
+    color: $clr-green-mid;
+    text-decoration: underline;
+
+    &:hover {
+        color: $clr-green-dark;
+        text-decoration: none;
+    }
+}
+
+.btn {
+    @include border-radius(0);
+    text-transform: uppercase;
+    box-shadow: 0;
+
+    &.btn-find {
+        @include transitions(0.5s);
+        background: $clr-green-dark;
+        color: #ffffff;
+
+        &:hover {
+            background: $clr-green-mid;
+            color: #ffffff;
+        }
+    }
+}
+
+.btn-group {
+    .btn {
+        border: none;
+    }
+}
 
 h2 {
     span {

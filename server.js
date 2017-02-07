@@ -14,6 +14,7 @@ var meals = [
         "strapline":"There is a faster way",
         "time":"30 mins",
         "count":"11",
+        "video":"default.mp4",
         "instructions": [
             'Boil about 300 ml of water',
             'Sprinkle the Poundo yam to it while stirring with spatula',
@@ -41,7 +42,7 @@ var meals = [
         "strapline":"It's easier than you think",
         "time":"20 mins",
         "count":"16",
-        "video":"N9dpPNP58Iw",
+        "video":"default.mp4",
         "instructions": [
                 'Peal and slice roughly into thin discs',
                 'Add salt to taste',
@@ -71,7 +72,7 @@ var meals = [
         "strapline":"Really quick to make",
         "time":"30 mins",
         "count":"14",
-        "video":"rDuetklFtDQ",
+        "video":"sample.mp4",
         "instructions": [
             'Boil about 300 ml of water',
             'Sprinkle the Garri to it while stirring with spatula',
@@ -98,6 +99,7 @@ var meals = [
         "strapline":"Nice ans soupy",
         "time":"120 mins",
         "count":"9",
+        "video":"sample.mp4",
         "instructions": [
             'Do instructions 1',
             'Do instructions Two',
@@ -124,6 +126,7 @@ var meals = [
         "strapline":"Well worth the wait",
         "time":"120 mins",
         "count":"5",
+        "video":"sample.mp4",
         "instructions": [
             'Do instructions 1',
             'Do instructions Two',
@@ -151,12 +154,11 @@ var meals = [
         "strapline":"Everyone loves some jollof",
         "time":"120 mins",
         "count":"6",
+        "video":"sample.mp4",
         "instructions": [
             'Do instructions 1',
             'Do instructions Two',
-            'Do instructions number three',
-            'Do instructions 4',
-            'Servers many'
+            'Do instructions number three, 4 five and six'
         ],
         "ingredients": [
             '250 grams of Poundo yam powder',

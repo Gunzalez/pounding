@@ -22,12 +22,10 @@ h1, h2, h3, h4, h5, .large-font {
   font-weight: 100; }
 
 select, input {
-  font-family: 'Ubuntu';
   -webkit-border-radius: 0 !important;
   -moz-border-radius: 0 !important;
-  border-radius: 0 !important; }
-  select:focus, input:focus {
-    outline: none !important; }
+  border-radius: 0 !important;
+  box-shadow: 0; }
 
 p {
   padding: 0;
@@ -37,17 +35,6 @@ p {
 .no-padding {
   padding: 0 !important;
   margin: 0 !important; }
-
-h2 span {
-  display: inline-block;
-  padding: 6px 10px;
-  background-color: #f2f2f2;
-  color: #444444;
-  margin-bottom: 1px; }
-
-body {
-  font-family: 'Ubuntu';
-  font-size: 1.6rem; }
 
 a {
   -webkit-transition: all 0.5s;
@@ -63,7 +50,9 @@ a {
 .btn {
   -webkit-border-radius: 0 !important;
   -moz-border-radius: 0 !important;
-  border-radius: 0 !important; }
+  border-radius: 0 !important;
+  text-transform: uppercase;
+  box-shadow: 0; }
   .btn.btn-find {
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
@@ -74,6 +63,20 @@ a {
     .btn.btn-find:hover {
       background: #1F8A70;
       color: #ffffff; }
+
+.btn-group .btn {
+  border: none; }
+
+h2 span {
+  display: inline-block;
+  padding: 6px 10px;
+  background-color: #f2f2f2;
+  color: #444444;
+  margin-bottom: 1px; }
+
+body {
+  font-family: 'Ubuntu';
+  font-size: 1.6rem; }
 
 .video {
   padding: 20px 0; }
@@ -323,11 +326,6 @@ a {
 .block {
   float: left; }
 
-.button {
-  text-transform: uppercase; }
-  .button .glyphicon {
-    margin-right: 12px; }
-
 .aux-nav {
   padding-top: 20px; }
 
@@ -398,3 +396,67 @@ a {
 .strapline {
   margin-top: -10px;
   margin-bottom: 20px; }
+
+.pipe {
+  color: #1F8A70; }
+
+.unselectable {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none; }
+
+/* VIDEODISPLAY */
+#videoDisplay {
+  background-color: black; }
+
+/* CONTROLBAR */
+#playerToolBar {
+  background-color: #464545; }
+
+#playerToolBar a {
+  font-size: 1.2em;
+  color: #b8b8bb; }
+
+#playerToolBar .btn {
+  border-radius: 0px;
+  width: 40px;
+  height: 40px; }
+
+#playerToolBar .glyphicon {
+  top: -1px;
+  left: -5px; }
+
+#playerToolBar .btn:focus {
+  border: none;
+  box-shadow: 0;
+  outline: 0 none; }
+
+#videoTime {
+  position: relative;
+  top: 3px;
+  left: 12px;
+  font-size: 1.1em;
+  color: #c0c0c0; }
+
+/* OVERLAYS */
+#bigPlayButton {
+  background-color: rgba(0, 0, 0, 0.78);
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  font-size: 3.2em;
+  cursor: pointer;
+  text-align: center; }
+
+#videoTitle {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-size: 1.3em;
+  color: whitesmoke;
+  width: 100%;
+  margin: 5px;
+  margin-left: 10px;
+  text-shadow: 1px 1px #333333; }

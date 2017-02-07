@@ -8,33 +8,6 @@ body {
     font-size: 1.6rem;
 }
 
-a {
-    @include transitions(0.5s);
-    color: $clr-green-mid;
-    text-decoration: underline;
-
-    &:hover {
-        color: $clr-green-dark;
-        text-decoration: none;
-    }
-}
-
-.btn {
-    @include border-radius(0);
-
-    &.btn-find {
-        @include transitions(0.5s);
-        background: $clr-green-dark;
-        color: #ffffff;
-
-        &:hover {
-            background: $clr-green-mid;
-            color: #ffffff;
-        }
-    }
-}
-
-
 .video {
     padding: 20px 0;
 
@@ -358,14 +331,6 @@ a {
     float: left;
 }
 
-.button {
-    text-transform: uppercase;
-
-    .glyphicon {
-        margin-right: 12px;
-    }
-}
-
 .aux-nav {
     padding-top: 20px;
 }
@@ -462,3 +427,9 @@ a {
     margin-top: -10px;
     margin-bottom: 20px;
 }
+
+.pipe {
+    color: $clr-green-mid;
+}
+
+@import "video";
