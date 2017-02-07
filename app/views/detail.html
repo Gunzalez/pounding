@@ -17,7 +17,7 @@
                 <div class="col-sm-12">
                     <div class="centered-copy">
                         <h2 class="title">How to cook {{selectedMeal.title}}</h2>
-                        <p class="strapline">It's easier than you think.</p>
+                        <p class="strapline">{{selectedMeal.strapline}}</p>
                     </div>
                 </div>
             </div>
@@ -28,7 +28,7 @@
                 <div class="col-sm-3 col-sm-push-2">
                     <h3>Ingredients</h3>
                     <ul>
-                        <li ng-repeat="ingredient in ingredients">
+                        <li ng-repeat="ingredient in selectedMeal.ingredients">
                             {{ ingredient }}
                         </li>
                     </ul>
@@ -36,7 +36,7 @@
                 <div class="col-sm-5 col-sm-push-2">
                     <h3>Instructions</h3>
                     <ul>
-                        <li ng-repeat="instruction in instructions">
+                        <li ng-repeat="instruction in selectedMeal.instructions">
                             {{ instruction }}
                         </li>
                     </ul>
@@ -49,7 +49,7 @@
                 <div class="row">
                     <div class="col-sm-10 col-sm-push-1">
                         <div class="centered-text">
-                            <h2 class="title">Watch chef do it</h2>
+                            <h2 class="title">Watch the chef do it</h2>
                             <p class="strapline">Detailed instructions are one thing, watching someone do it is another.</p>
                         </div>
                         <div class="embed-responsive embed-responsive-16by9">
