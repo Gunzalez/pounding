@@ -25,8 +25,21 @@ var meals = [
         "description":"Great snack on it's own but better as a versatile side dish",
         "quote":"20 min / light",
         "count":"16",
-        "instructions": "<p>An by this I mean for cooking Fried plantain of course, what else?</p>",
-        "ingredients": "<p>A set of stuff what goes in to make said meal, said meal being Jollof rice and plantain.</p>",
+        "video":"https://www.youtube.com/watch?v=N9dpPNP58Iw",
+        "instructions": [
+                'Peal and slice roughly into thin discs',
+                'Add salt to taste',
+                'Heat up the oil in a deep pan',
+                'Place discs into hot oil with fork',
+                'Always attend, turn over when golden brown on the edges',
+                'All done when brown on both sides',
+                'Serve on its own or as a side dish'
+        ],
+        "ingredients": [
+            '3 ripe plantain',
+            'A large deep frying page',
+            'Enough vegetable for deep frying'
+        ],
         "about": "<p>Fried Plantain can be eaten in a variety of ways. It will often come to the rescue when you need a fast and easy meal. </p><p>A popular side dish to many of the rice recipes and can be enjoyed by people from all over the world.</p><p> Low in fat and super delicious.</p>",
         "featured": true
     },

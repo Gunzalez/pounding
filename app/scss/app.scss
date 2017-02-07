@@ -46,7 +46,6 @@ a {
         margin: 9px 12px 0 0;
     }
 
-
     h1 {
         //font-weight: 600;
         //font-size: 3.8rem;
@@ -212,27 +211,8 @@ a {
     }
 }
 
-.welcome-text {
-    text-align: center;
-    padding-bottom: 15px;
-
-    h2 {
-        font-size: 3.8rem;
-        text-align: center;
-        padding: 20px 0 20px 0;
-        color: $header-clr;
-    }
-
-    .strapline {
-        font-size: 2.0rem;
-        font-weight: 100;
-        text-transform: uppercase;
-    }
-
-    hr {
-        width: 200px;
-        color: $header-clr;
-    }
+.strapline {
+    margin-top: -20px;
 }
 
 .mode-container {
