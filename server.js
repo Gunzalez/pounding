@@ -96,7 +96,7 @@ var meals = [
         "title":"Yam Porridge",
         "image":"yam-porridge.jpg",
         "description":"The choice yam recipe if you like your yam meals soupy.",
-        "strapline":"Nice ans soupy",
+        "strapline":"Nice and soupy",
         "time":"120 mins",
         "count":"9",
         "video":"sample.mp4",

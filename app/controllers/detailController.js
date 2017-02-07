@@ -13,6 +13,8 @@ angular
                 $scope.selectedMeal = data;
                 $scope.videoSource = 'video/' + $scope.selectedMeal.video;
 
+                    console.log($scope.videoDisplay);
+
                 $scope.videoTitle = $scope.selectedMeal.title;
                 $scope.videoDescription = $scope.selectedMeal.description;
             })
