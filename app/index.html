@@ -20,9 +20,10 @@
                 <h1><span class="mortar-and-pestle"></span> <span>Pound That Yam</span></h1>
             </div>
             <div class="col-xs-3 text-right aux-nav" ng-class="{'show-me':main.shouldShowAuxMenu}">
-                <button type="button" class="button btn btn-primary" ng-click="main.resetMeal()">
-                    <span class="glyphicon glyphicon-align-left"></span> Menu
-                </button>
+                <a ng-click="main.resetMeal()">
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                    <span>Home</span>
+                </a>
             </div>
         </div>
     </div>
@@ -68,8 +69,8 @@
 
     <div class="footer">
 
-        <div class="centered-copy">
-            <p>Copyright &copy; 2017 Pound That Yam. All rights reserved.<br>
+        <div class="centered-text">
+            <p>Copyright &copy; 2017 Pound That Yam. All&nbsp;rights&nbsp;reserved.<br>
                 Modern Kode Ltd, Company No. 10594333.</p>
         </div>
 

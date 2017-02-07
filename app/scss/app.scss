@@ -181,6 +181,22 @@ a {
     &.show-me {
         display: block;
     }
+
+    a {
+        color: #ffffff;
+        @extend %textshadow;
+        cursor: pointer;
+        i {
+            font-size: 2.2em;
+        }
+
+        span {
+            display: none;
+        }
+        &:hover {
+            color: $clr-green-light;
+        }
+    }
 }
 
 .introduction {
@@ -372,6 +388,14 @@ a {
     }
 }
 
+.centered-text {
+    text-align: center;
+
+    @media (max-width: $width-sm){
+        text-align: left;
+    }
+}
+
 .footer {
     border-top: 10px solid $border-clr;
     padding: 30px;
@@ -387,16 +411,15 @@ a {
 }
 
 .social-media {
-    padding: 60px 0;
 
     blockquote {
         border: none;
-        background: url("/images/testimonial-quote.png") 0 0 no-repeat;
-        padding: 40px 0 0 0;
-    }
+        padding: 0;
 
-    @media (max-width: $width-sm){
-        padding: 20px 0;
+        i {
+            color: $clr-green-light;
+            font-size: 2.0em;
+        }
     }
 }
 
@@ -404,7 +427,7 @@ a {
     @extend %cleanUl;
     width: 100%;
     float: left;
-    margin-top: 40px;
+    margin: 40px 0;
 
     span {
         display: none;
@@ -422,8 +445,7 @@ a {
         display: block;
         text-decoration: none;
         font-size: 1.8em;
-        padding-top: 20px;
+        padding: 20px 0;
         border-top: 1px solid $clr-green-light;
-
     }
 }

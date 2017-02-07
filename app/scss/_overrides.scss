@@ -8,13 +8,17 @@
 h1, h2, h3, h4, h5, .large-font {
     margin: 0;
     padding: 0 0 20px 0;
-    line-height: 100%;
+    line-height: 130%;
     text-transform: uppercase;
     font: 300 30px/30px "Ubuntu", sans-serif
 }
 
 select, input {
     font-family: 'Ubuntu';
+}
+
+a {
+    @include transitions(0.5s);
 }
 
 p {

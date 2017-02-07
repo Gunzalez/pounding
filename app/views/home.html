@@ -52,7 +52,7 @@
                 <div class="col-xs-12">
                     <div class="centered-copy">
                         <h2 class="title">Most cooked meals</h2>
-                        <p>These meals have been cooked the most on this site. <br><a href="#">Registered users</a> can add to this list, and submit to the restaurant list</p>
+                        <p>Some of our meals and how many times they have been cooked this month. <br><a href="#">Registered users</a> can add to this list, and submit to the restaurant list</p>
                     </div>
                 </div>
             </div>
@@ -63,8 +63,8 @@
                         <li ng-repeat="meal in meals" class="meal">
                             <a href="#/cook/{{ meal.id }}" class="centered-copy">
                                 <img ng-src="images/{{ meal.image }}" alt="" />
-                                <h3 class="sub-title">{{ meal.title }} ({{meal.count}})</h3>
-                                <p class="quick-description">{{ meal.quote }}</p>
+                                <h3 class="sub-title">{{ meal.title }}</h3>
+                                <p class="times-cooked">Cooked {{meal.count}} times</p>
                             </a>
                         </li>
                     </ul>
@@ -78,20 +78,31 @@
         <div class="container">
 
             <div class="row">
+                <div class="col-xs-12">
+                    <div class="centered-text">
+                        <h2 class="title">Stuff people say</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
                 <div class="col-xs-12 col-md-4">
                     <blockquote>
+                        <i class="fa fa-quote-left" aria-hidden="true"></i>
                         <p>Clearly I must have put too much scotch bonnets into my Jollof rice mix, I nearly burned my tongue off.</p>
                         <footer>Titi Adesanya</footer>
                     </blockquote>
                 </div>
                 <div class="col-xs-12 col-md-4">
                     <blockquote>
+                        <i class="fa fa-quote-left" aria-hidden="true"></i>
                         <p>My beans came out perfect, first time too, okay I confess I did have help from my girl friend.</p>
                         <footer>Donald Trump</footer>
                     </blockquote>
                 </div>
                 <div class="col-xs-12 col-md-4">
                     <blockquote>
+                        <i class="fa fa-quote-left" aria-hidden="true"></i>
                         <p>The prices are as good as the menu! Each time I spend less money, than anywhere else and get a fresh, homemade dinner!</p>
                         <footer>Arsene Wenger</footer>
                     </blockquote>
