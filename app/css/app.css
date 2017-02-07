@@ -16,9 +16,10 @@
 h1, h2, h3, h4, h5, .large-font {
   margin: 0;
   padding: 0 0 20px 0;
-  line-height: 130%;
+  line-height: 120%;
   text-transform: uppercase;
-  font: 300 30px/30px "Ubuntu", sans-serif; }
+  font-family: "Ubuntu";
+  font-weight: 100; }
 
 select, input {
   font-family: 'Ubuntu'; }
@@ -88,6 +89,9 @@ a {
     -moz-transition: all 0.5s;
     -o-transition: all 0.5s;
     transition: all 0.5s; }
+    @media (max-width: 768px) {
+      .top-bar h1 .text {
+        display: none; } }
   .top-bar.top {
     background: none;
     border-bottom: 1px solid #BEDB39;
@@ -158,6 +162,9 @@ a {
     .meal-hero .introduction .title {
       font-size: 3.0rem;
       max-width: 50%; }
+      @media (max-width: 768px) {
+        .meal-hero .introduction .title {
+          max-width: 100%; } }
   .meal-hero .intro-and-form {
     position: relative;
     height: 240px; }

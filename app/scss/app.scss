@@ -55,6 +55,12 @@ a {
         line-height: 70px;
         color: $header-clr;
         @include transitions(0.5s);
+
+        @media (max-width: $width-sm){
+            .text {
+                display: none;
+            }
+        }
     }
 
     &.top {
@@ -68,12 +74,10 @@ a {
 
         box-shadow: none;
 
-
         .mortar-and-pestle {
             background: url('../images/m-and-p-white.png');
             background-size: cover;
         }
-
     }
 }
 
@@ -149,6 +153,10 @@ a {
         .title {
             font-size: 3.0rem;
             max-width: 50%;
+
+            @media (max-width: $width-sm) {
+                max-width: 100%;
+            }
         }
 
     }
