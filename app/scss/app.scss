@@ -17,6 +17,8 @@ body {
 
     #fullPlayer {
         background: $clr-grey-light;
+        position: relative;
+        overflow: hidden;
     }
 
     .btn {

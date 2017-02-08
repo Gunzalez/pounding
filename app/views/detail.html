@@ -58,15 +58,19 @@
                             <h2 class="title">Watch the chef cook it</h2>
                             <p class="strapline">Detailed instructions are one thing, watching someone do it is another.</p>
                         </div>
-                        <div id="fullPlayer" class="unselectable" ng-cloak>
+                        <div ng-cloak id="fullPlayer" class="unselectable" ng-mousemove="mouseMoving($event)" ng-mouseup="dragStop($event)">
                             <div class="embed-responsive embed-responsive-16by9">
                                 <video id="videoEl" ng-click="togglePlay()" width="100%" ng-src="{{videoSource}}"></video>
-                                <div id="bigPlayButton" style="margin-top:{{vidHeightCenter}}px;margin-left:{{vidWidthCenter}}px" ng-hide="videoPlaying" ng-click="togglePlay()"><span class="glyphicon glyphicon-play"></span></div>
+                                <div id="bigPlayButton"
+                                     style="margin-top:{{vidHeightCenter}}px;margin-left:{{vidWidthCenter}}px"
+                                     ng-hide="videoPlaying"
+                                     ng-click="togglePlay()"><span class="glyphicon glyphicon-play"></span></div>
                                 <div id="videoTitle" ng-hide="videoPlaying">How to cook {{ selectedMeal.title }}</div>
                             </div>
-                            <div id="progressMeterFull">
-                                <div id="progressMeter" style="width:{{scrubLeft}}px"></div>
+                            <div id="progressMeterFull" ng-click="videoSeek($event)">
+                                <div id="progressMeter" ng-click="videoSeek($event)" style="width:{{scrubLeft+7}}px"></div>
                             </div>
+                            <div id="thumbScrubber" style="top:{{scrubTop+1}}px;left:{{scrubLeft+4}}px;" ng-mousedown="dragStart($event)"></div>
                             <div id="playToolBar">
                                 <a id="playBtn" class="btn btn-default" ng-click="togglePlay()"><span class="glyphicon glyphicon-play"></span></a>
                                 <a id="muteBtn" class="btn btn-default" ng-click="toggleMute()"><span class="glyphicon glyphicon-volume-up"></span></a>

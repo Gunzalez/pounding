@@ -81,7 +81,9 @@ body {
   .video .feedback {
     padding-top: 20px; }
   .video #fullPlayer {
-    background: #f2f2f2; }
+    background: #f2f2f2;
+    position: relative;
+    overflow: hi; }
   .video .btn {
     border: 1px solid transparent; }
 
@@ -474,6 +476,16 @@ body {
 #progressMeter {
   background-color: #BEDB39;
   position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 0px; }
+  top: 0;
+  left: 0;
+  width: 0; }
+
+#thumbScrubber {
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+  width: 13px;
+  height: 13px;
+  cursor: pointer;
+  border-radius: 50%;
+  background: #FFE11A; }

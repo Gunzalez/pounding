@@ -15,6 +15,7 @@ angular
         $scope.scrubTop = -1000;
         $scope.scrubLeft = -1000;
         $scope.looper = undefined;
+        $scope.isDragging = false;
 
         $scope.initPlayer = function(){
             $scope.currentTime = 0;
@@ -33,24 +34,51 @@ angular
         };
 
         $scope.looper = $interval(function(){
-            var t = $scope.videoDisplay.currentTime;
-            var d = $scope.videoDisplay.duration;
-            //var w = t / d * 100;
-            var p = document.getElementById('progressMeterFull').offsetLeft + document.getElementById('progressMeterFull').offsetWidth;
-            $scope.scrubLeft = t / d * p;
+            if(!$scope.isDragging){
+                var t = $scope.videoDisplay.currentTime;
+                var d = $scope.videoDisplay.duration;
+                //var w = t / d * 100;
+                var p = document.getElementById('progressMeterFull').offsetLeft + document.getElementById('progressMeterFull').offsetWidth;
+                $scope.scrubLeft = (t / d * p) - 7;
+            } else {
+                $scope.scrubLeft = document.getElementById('thumbScrubber').offsetLeft;
+            }
             $scope.updateLayout();
         }, 100);
 
+        $scope.dragStart = function ($event) {
+            $scope.isDragging = true;
+        };
+
+        $scope.dragStop = function ($event) {
+            if($scope.isDragging){
+                $scope.videoSeek($event);
+                $scope.isDragging = false;
+            }
+        };
+
+        $scope.mouseMoving = function ($event) {
+            if($scope.isDragging){
+                var winWidth = window.innerWidth;
+                var playerWidth = document.getElementById('fullPlayer').clientWidth;
+                var adjustedDistance = $event.pageX - (winWidth - playerWidth)/2;
+                document.getElementById("thumbScrubber").style.left = adjustedDistance + 'px';
+
+            }
+        };
+
         $scope.updateTime = function(e){
-            $scope.currentTime = e.target.currentTime;
-            var playBtn = document.getElementById('playBtn'),
+            if(!$scope.videoDisplay.seeking){
+                $scope.currentTime = e.target.currentTime;
+                var playBtn = document.getElementById('playBtn'),
                     $playBtn = angular.element(playBtn);
-            if($scope.currentTime == $scope.totalTime){
-                $scope.videoDisplay.pause();
-                $scope.videoPlaying = false;
-                $scope.videoDisplay.currentTime = 0;
-                $playBtn.find('span').toggleClass("glyphicon-play", true);
-                $playBtn.find('span').toggleClass("glyphicon-pause", false);
+                if($scope.currentTime == $scope.totalTime){
+                    $scope.videoDisplay.pause();
+                    $scope.videoPlaying = false;
+                    $scope.videoDisplay.currentTime = 0;
+                    $playBtn.find('span').toggleClass("glyphicon-play", true);
+                    $playBtn.find('span').toggleClass("glyphicon-pause", false);
+                }
             }
         };
 
@@ -72,6 +100,17 @@ angular
                   $playBtn.find('span').toggleClass("glyphicon-play", true);
                   $playBtn.find('span').toggleClass("glyphicon-pause", false);
             }
+        };
+        
+        $scope.videoSeek = function ($event) {
+            var winWidth = window.innerWidth;
+            var playerWidth = document.getElementById('fullPlayer').clientWidth;
+            var adjustedDistance = $event.pageX - (winWidth - playerWidth)/2;
+
+            var w = document.getElementById('progressMeterFull').offsetWidth;
+            var d = $scope.videoDisplay.duration;
+            var s = Math.round(adjustedDistance / w * d);
+            $scope.videoDisplay.currentTime = s + 1;
         };
 
         $scope.toggleMute  = function(){
