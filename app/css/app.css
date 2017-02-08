@@ -83,7 +83,7 @@ body {
   .video #fullPlayer {
     background: #f2f2f2;
     position: relative;
-    overflow: hi; }
+    overflow: hidden; }
   .video .btn {
     border: 1px solid transparent; }
 
@@ -487,5 +487,4 @@ body {
   width: 13px;
   height: 13px;
   cursor: pointer;
-  border-radius: 50%;
-  background: #FFE11A; }
+  background: #FD7400; }
