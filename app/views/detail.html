@@ -60,17 +60,18 @@
                         <div id="fullPlayer" class="unselectable" ng-cloak>
                             <div class="embed-responsive embed-responsive-16by9">
                                 <video id="videoEl" ng-click="togglePlay()" width="100%" ng-src="{{videoSource}}"></video>
-                                <div id="bigPlayButton" ng-hide="videoPlaying" class="well" ng-click="togglePlay()"><span class="glyphicon glyphicon-play"></span></div>
+                                <div id="bigPlayButton" style="margin-top:{{vidHeightCenter}}px;margin-left:{{vidWidthCenter}}px" ng-hide="videoPlaying" ng-click="togglePlay()"><span class="glyphicon glyphicon-play"></span></div>
                                 <div id="videoTitle" ng-hide="videoPlaying">{{ selectedMeal.title}}</div>
+                            </div>
+                            <div id="progressMeterFull">
+                                <div id="progressMeter" style="width:{{scrubLeft+7}}px"></div>
                             </div>
                             <div id="playToolBar">
                                 <a id="playBtn" class="btn btn-default" ng-click="togglePlay()"><span class="glyphicon glyphicon-play"></span></a>
                                 <a id="muteBtn" class="btn btn-default" ng-click="toggleMute()"><span class="glyphicon glyphicon-volume-up"></span></a>
-                                <span id="videoTime">{{currentTime}} / {{totalTime}}</span>
+                                <span id="videoTime">{{currentTime | time}} / {{totalTime | time}}</span>
                             </div>
                         </div>
-
-
 
                         <div class="centered-text feedback">
                             <p>How did chef do, how did you do? <a href="#">Feedback</a> welcome.</p>
