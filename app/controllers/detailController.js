@@ -37,7 +37,7 @@ angular
             var d = $scope.videoDisplay.duration;
             //var w = t / d * 100;
             var p = document.getElementById('progressMeterFull').offsetLeft + document.getElementById('progressMeterFull').offsetWidth;
-            $scope.scrubLeft = (t / d * p) - 7;
+            $scope.scrubLeft = t / d * p;
             $scope.updateLayout();
         }, 100);
 
@@ -48,7 +48,7 @@ angular
             if($scope.currentTime == $scope.totalTime){
                 $scope.videoDisplay.pause();
                 $scope.videoPlaying = false;
-                $scope.currentTime = 0;
+                $scope.videoDisplay.currentTime = 0;
                 $playBtn.find('span').toggleClass("glyphicon-play", true);
                 $playBtn.find('span').toggleClass("glyphicon-pause", false);
             }
