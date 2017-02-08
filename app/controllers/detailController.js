@@ -14,6 +14,7 @@ angular
         $scope.vidWidthCenter = -1000;
         $scope.scrubTop = -1000;
         $scope.scrubLeft = -1000;
+        $scope.looper = undefined;
 
         $scope.initPlayer = function(){
             $scope.currentTime = 0;
@@ -31,7 +32,7 @@ angular
             }
         };
 
-        $interval(function(){
+        $scope.looper = $interval(function(){
             var t = $scope.videoDisplay.currentTime;
             var d = $scope.videoDisplay.duration;
             //var w = t / d * 100;
@@ -98,6 +99,13 @@ angular
             .error(function (error) {
                 $scope.status = 'Unable to load customer data: ' + error.message;
             });
+
+        $scope.$on('$destroy', function() {
+            if (angular.isDefined($scope.looper)) {
+                $interval.cancel($scope.looper);
+                $scope.looper = undefined;
+            }
+        });
 
         $scope.initPlayer();
 
