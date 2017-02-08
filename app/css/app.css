@@ -286,7 +286,7 @@ body {
 .list-view .title {
   color: #1F8A70;
   padding: 30px 0; }
-  @media (max-width: 768px) {
+  @media (max-width: 992px) {
     .detail-view .title,
     .list-view .title {
       padding-top: 0; } }
@@ -306,7 +306,7 @@ body {
   .detail-view .meet-chef .chef-image,
   .list-view .meet-chef .chef-image {
     padding: 30px 0; }
-    @media (max-width: 768px) {
+    @media (max-width: 992px) {
       .detail-view .meet-chef .chef-image,
       .list-view .meet-chef .chef-image {
         display: none; } }
@@ -327,7 +327,7 @@ body {
 .centered-copy,
 .centered-text {
   text-align: center; }
-  @media (max-width: 768px) {
+  @media (max-width: 992px) {
     .centered-copy,
     .centered-text {
       text-align: left; } }
@@ -394,7 +394,7 @@ body {
   margin-bottom: 20px;
   padding-left: 20px; }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .steps ul {
     margin-bottom: 20px; }
   .steps .sub-title {

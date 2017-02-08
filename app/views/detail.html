@@ -4,10 +4,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="about" ng-bind-html="about"></div>
-                    <p ng-repeat="paragraph in selectedMeal.about">
-                        {{ paragraph }}
-                    </p>
+                    <div class="centered-text">
+                        <p ng-repeat="paragraph in selectedMeal.about">
+                            {{ paragraph }}
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
