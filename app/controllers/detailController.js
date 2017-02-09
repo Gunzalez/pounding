@@ -57,6 +57,20 @@ angular
             }
         };
 
+        $scope.toggleFullScreen = function(){
+            var v = $scope.videoDisplay;
+            if(v.requestFullscreen){
+                v.requestFullscreen();
+            } else if(v.mozRequestFullscreen){
+                v.mozRequestFullscreen();
+            } else if(v.webkitRequestFullscreen){
+                v.webkitRequestFullscreen();
+            } else if(v.msRequestFullscreen){
+                v.msRequestFullscreen();
+            }
+
+        };
+
         $scope.mouseMoving = function ($event) {
             if($scope.isDragging){
                 var winWidth = window.innerWidth;
