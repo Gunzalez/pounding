@@ -275,7 +275,7 @@ body {
     .list-view .meals .meal a {
       display: block;
       text-decoration: none;
-      padding-bottom: 20px; }
+      margin: 0 5px; }
       .detail-view .meals .meal a img,
       .list-view .meals .meal a img {
         width: 100%;
@@ -283,6 +283,10 @@ body {
       .detail-view .meals .meal a .sub-title,
       .list-view .meals .meal a .sub-title {
         padding-bottom: 0; }
+      @media (max-width: 992px) {
+        .detail-view .meals .meal a,
+        .list-view .meals .meal a {
+          margin: 0; } }
 
 .detail-view .title,
 .list-view .title {
@@ -301,10 +305,14 @@ body {
 .list-view .meet-chef {
   padding: 20px 0;
   border-bottom: 1px solid #f2f2f2; }
-  .detail-view .meet-chef .chef-intro p,
-  .list-view .meet-chef .chef-intro p {
-    line-height: 180%;
-    font-size: 1.8rem; }
+  .detail-view .meet-chef .chef-intro,
+  .list-view .meet-chef .chef-intro {
+    min-height: 100%;
+    height: 100%; }
+    .detail-view .meet-chef .chef-intro p,
+    .list-view .meet-chef .chef-intro p {
+      line-height: 180%;
+      font-size: 1.8rem; }
   .detail-view .meet-chef .chef-image,
   .list-view .meet-chef .chef-image {
     padding: 30px 0; }
@@ -345,30 +353,31 @@ body {
 
 .most-cooked,
 .shop-meal {
-  border-top: 1px solid #e7e7e7;
-  border-bottom: 1px solid #e7e7e7;
+  border-top: 1px solid #e2e2e2;
   background-color: #f2f2f2;
   padding: 20px 0; }
 
-.social-media {
+.our-testimonials {
   padding: 20px 0; }
-  .social-media blockquote {
+  .our-testimonials blockquote {
     border: none;
-    padding: 0; }
-    .social-media blockquote i {
+    padding: 0 0 30px 0; }
+    .our-testimonials blockquote i {
       color: #BEDB39;
       font-size: 2.0em; }
+  @media (max-width: 992px) {
+    .our-testimonials blockquote {
+      padding: 0; } }
 
 .media-links {
   width: 100%;
-  margin: 20px 0;
   overflow: auto; }
   .media-links span {
     display: none; }
   .media-links li {
     float: left;
-    margin: 0;
-    padding: 0 10px;
+    margin: 0 0 50px 0;
+    padding: 0 5px;
     width: 20%;
     text-align: center; }
   .media-links a {
@@ -376,7 +385,11 @@ body {
     text-decoration: none;
     font-size: 1.8em;
     padding: 20px 0;
-    border-top: 1px solid #BEDB39; }
+    color: #BEDB39;
+    border-bottom: 1px solid #BEDB39; }
+    .media-links a:hover {
+      color: #ffffff;
+      border-bottom: 1px solid #ffffff; }
 
 .cook-meal {
   padding: 20px 0; }

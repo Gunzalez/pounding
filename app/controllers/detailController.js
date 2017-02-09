@@ -68,7 +68,6 @@ angular
             } else if(v.msRequestFullscreen){
                 v.msRequestFullscreen();
             }
-
         };
 
         $scope.mouseMoving = function ($event) {

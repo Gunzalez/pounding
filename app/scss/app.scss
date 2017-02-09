@@ -273,7 +273,7 @@ body {
             a {
                 display: block;
                 text-decoration: none;
-                padding-bottom: 20px;
+                margin: 0 5px;
 
                 img {
                     width: 100%;
@@ -282,6 +282,10 @@ body {
 
                 .sub-title {
                     padding-bottom: 0;
+                }
+
+                @media (max-width: $width-md){
+                    margin: 0;
                 }
             }
         }
@@ -305,6 +309,8 @@ body {
         border-bottom: 1px solid $clr-grey-light;
 
         .chef-intro {
+            min-height: 100%;
+            height: 100%;
 
             p {
                 line-height: 180%;
@@ -363,22 +369,27 @@ body {
 
 .most-cooked,
 .shop-meal {
-    border-top: 1px solid lighten($clr-grey-dark, 64%);
-    border-bottom: 1px solid lighten($clr-grey-dark, 64%);
-    background-color: #f2f2f2;
+    border-top: 1px solid lighten($clr-grey-dark, 62%);
+    background-color: $clr-grey-light;
     padding: 20px 0;
 }
 
-.social-media {
+.our-testimonials {
     padding: 20px 0;
 
     blockquote {
         border: none;
-        padding: 0;
+        padding: 0 0 30px 0;
 
         i {
             color: $clr-green-light;
             font-size: 2.0em;
+        }
+    }
+
+    @media (max-width: $width-md){
+        blockquote {
+            padding: 0;
         }
     }
 }
@@ -386,7 +397,6 @@ body {
 .media-links {
     @extend %cleanUl;
     width: 100%;
-    margin: 20px 0;
     overflow: auto;
 
     span {
@@ -395,8 +405,8 @@ body {
 
     li {
         float: left;
-        margin: 0;
-        padding: 0 10px;
+        margin: 0 0 50px 0;
+        padding: 0 5px;
         width: 20%;
         text-align: center;
     }
@@ -406,7 +416,13 @@ body {
         text-decoration: none;
         font-size: 1.8em;
         padding: 20px 0;
-        border-top: 1px solid $clr-green-light;
+        color: $clr-green-light;
+        border-bottom: 1px solid $clr-green-light;
+
+        &:hover {
+            color: #ffffff;
+            border-bottom: 1px solid #ffffff;
+        }
     }
 }
 
