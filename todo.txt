@@ -1,3 +1,9 @@
 create content
 redesign data source
-complete mobile layout
+complete mobile layout for header
+fix button colors for Find Shop
+Work on scrolling to map
+Map/List sho hiding functionality
+Outline on input and button
+Select - nice select, or something else
+fix social media navigation

@@ -196,7 +196,6 @@ var socialMediaLinks = [
     }
 ];
 
-
 app.get('/socialmedia', function (req, res) {
     res.json(socialMediaLinks);
 });

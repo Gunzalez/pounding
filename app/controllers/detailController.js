@@ -150,7 +150,6 @@ angular
             .success(function (data) {
                 $scope.selectedMeal = data;
                 $scope.videoSource = 'video/' + $scope.selectedMeal.video;
-
                 $scope.videoTitle = $scope.selectedMeal.title;
                 $scope.videoDescription = $scope.selectedMeal.description;
             })
@@ -164,6 +163,11 @@ angular
                 $scope.looper = undefined;
             }
         });
+
+        $scope.showShopResults = false;
+        $scope.findShops = function(){
+            $scope.showShopResults = true;
+        };
 
         $scope.initPlayer();
 

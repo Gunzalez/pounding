@@ -77,7 +77,7 @@
 }
 
 #progressMeterFull {
-    background-color: #004358;
+    background-color: $clr-grey-dark;
     position: relative;
 }
 
@@ -97,7 +97,7 @@
     height: 11px;
     cursor: pointer;
     //border-radius: 50%;
-    background: #FD7400;
+    background: $clr-green-mid;
 }
 
 #videoOptions {

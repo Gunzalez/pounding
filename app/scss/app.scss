@@ -223,6 +223,10 @@ body {
         &:hover {
             color: $clr-green-dark;
         }
+
+        img {
+            width: 40px;
+        }
     }
 }
 
@@ -492,3 +496,36 @@ body {
 }
 
 @import "video";
+
+
+#map {
+    height: 0;
+    background-color: $clr-grey-light;
+    overflow: hidden;
+    transition: height 0.25s;
+
+    &.open {
+        height: 580px;
+    }
+
+    .navbar-nav {
+        width: 100%;
+        height: 80px;
+        text-align: center;
+        margin: 0;
+
+        > li {
+            float: none;
+            display: inline-block;
+
+            a {
+                cursor: pointer;
+                text-decoration: none;
+
+                i {
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}
