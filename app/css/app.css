@@ -72,6 +72,11 @@ h2 span {
   color: #444444;
   margin-bottom: 1px; }
 
+.panel {
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  border-radius: 0 !important; }
+
 body {
   font-family: 'Ubuntu';
   font-size: 1.6rem; }
@@ -84,8 +89,15 @@ body {
     background: #f2f2f2;
     position: relative;
     overflow: hidden; }
-  .video .btn {
-    border: 1px solid transparent; }
+  .video #playToolBar #videoTime {
+    color: #004358 !important; }
+  .video #playToolBar a {
+    background: #444444;
+    border-left: none !important; }
+    .video #playToolBar a span {
+      color: #BEDB39; }
+    .video #playToolBar a:nth-last-child(2) {
+      border-right: none !important; }
 
 .top-bar {
   top: 0;
@@ -497,7 +509,21 @@ body {
   position: absolute;
   top: -1000px;
   left: -1000px;
-  width: 13px;
-  height: 13px;
+  width: 11px;
+  height: 11px;
   cursor: pointer;
   background: #FD7400; }
+
+#videoOptions {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+#videoOptions h2 {
+  font-size: 1.4em;
+  color: #c3c3c3; }
+
+#videoOptions li {
+  cursor: pointer; }

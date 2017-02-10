@@ -93,9 +93,27 @@
     position: absolute;
     top: -1000px;
     left: -1000px;
-    width: 13px;
-    height: 13px;
+    width: 11px;
+    height: 11px;
     cursor: pointer;
     //border-radius: 50%;
     background: #FD7400;
 }
+
+#videoOptions {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+
+#videoOptions h2 {
+    font-size: 1.4em;
+    color: #c3c3c3;
+}
+
+#videoOptions li {
+    cursor: pointer;
+}
+

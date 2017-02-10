@@ -72,4 +72,8 @@ h2 {
     }
 }
 
+.panel {
+    @include border-radius(0);
+}
+
 

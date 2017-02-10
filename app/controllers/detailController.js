@@ -16,6 +16,7 @@ angular
         $scope.scrubLeft = -1000;
         $scope.looper = undefined;
         $scope.isDragging = false;
+        $scope.showOptions = false;
 
         $scope.initPlayer = function(){
             $scope.currentTime = 0;
@@ -68,6 +69,10 @@ angular
             } else if(v.msRequestFullscreen){
                 v.msRequestFullscreen();
             }
+        };
+
+        $scope.toggleDetails = function(){
+            $scope.showOptions = !$scope.showOptions;
         };
 
         $scope.mouseMoving = function ($event) {
