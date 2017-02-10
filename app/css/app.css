@@ -397,8 +397,8 @@ body {
   .media-links li {
     float: left;
     margin: 0 0 50px 0;
-    padding: 0 5px;
-    width: 20%;
+    padding: 0 10px;
+    width: 25%;
     text-align: center; }
   .media-links a {
     display: block;

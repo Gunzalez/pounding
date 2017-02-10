@@ -56,6 +56,29 @@ angular
             }
         });
 
+        $scope.socialLinks = [
+            {
+                title: "Facebook",
+                url: "http://www.facebook.com",
+                icon: "fa-facebook"
+            },
+            {
+                title: "Twitter",
+                url: "https://twitter.com/?lang=en-gb",
+                icon: "fa-twitter"
+            },
+            {
+                title: "Instagram",
+                url: "https://www.instagram.com/?hl=en",
+                icon: "fa-instagram"
+            },
+            {
+                title: "Google Plus",
+                url: "https://plus.google.com/",
+                icon: "fa-google-plus"
+            }
+        ];
+
         vm.getHeroImageBackground = function(){
             if(vm.selectedMeal){
                 return vm.selectedMeal.image;
