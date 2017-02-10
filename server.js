@@ -5,7 +5,7 @@ var PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 
-var meals = [
+var listOfMeals = [
     {
         "id":"1",
         "title":"Pounded Yam",
@@ -173,20 +173,45 @@ var meals = [
         "featured": true
     }
 ];
+var socialMediaLinks = [
+    {
+        title: "Facebook",
+        url: "http://www.facebook.com",
+        icon: "fa-facebook"
+    },
+    {
+        title: "Twitter",
+        url: "https://twitter.com/?lang=en-gb",
+        icon: "fa-twitter"
+    },
+    {
+        title: "Instagram",
+        url: "https://www.instagram.com/?hl=en",
+        icon: "fa-instagram"
+    },
+    {
+        title: "Google Plus",
+        url: "https://plus.google.com/",
+        icon: "fa-google-plus"
+    }
+];
 
 
+app.get('/socialmedia', function (req, res) {
+    res.json(socialMediaLinks);
+});
 
 app.get('/meals', function (req, res) {
-    res.json(meals);
+    res.json(listOfMeals);
 });
 
 app.get('/meals/:id', function (req, res) {
     var mealId = parseInt(req.params.id);
     var selectedMeal = undefined;
 
-    for(var x=0; x<meals.length; x++){
-        if(meals[x].id == mealId){
-            selectedMeal = meals[x];
+    for(var x=0; x<listOfMeals.length; x++){
+        if(listOfMeals[x].id == mealId){
+            selectedMeal = listOfMeals[x];
         }
     }
 
@@ -201,5 +226,4 @@ app.use(express.static(__dirname + '/app' ));
 
 app.listen(PORT, function () {
     console.log('Express ever started on PORT: ' + PORT);
-
 });

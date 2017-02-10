@@ -1,7 +1,7 @@
 
 angular
     .module('yamApp')
-    .controller('mainController', ['$scope', 'mealsService', '$routeParams', 'navigatorService', '$rootScope', '$route', '$location', function ($scope, mealsService, $routeParams, navigatorService, $rootScope, $route, $location) {
+    .controller('mainController', ['$scope', 'mealsService', 'siteContentService', '$routeParams', 'navigatorService', '$rootScope', '$route', '$location', function ($scope, mealsService, siteContentService, $routeParams, navigatorService, $rootScope, $route, $location) {
 
         window.scroll(0,0);
 
@@ -11,6 +11,7 @@ angular
         vm.shouldShowForm = false;
         vm.shouldShowCookHeader = false;
         vm.shouldShowAuxMenu = false;
+        vm.socialLinks = [];
 
         var clearMealSettings = function(){
             vm.selectedMeal = null;
@@ -56,29 +57,6 @@ angular
             }
         });
 
-        $scope.socialLinks = [
-            {
-                title: "Facebook",
-                url: "http://www.facebook.com",
-                icon: "fa-facebook"
-            },
-            {
-                title: "Twitter",
-                url: "https://twitter.com/?lang=en-gb",
-                icon: "fa-twitter"
-            },
-            {
-                title: "Instagram",
-                url: "https://www.instagram.com/?hl=en",
-                icon: "fa-instagram"
-            },
-            {
-                title: "Google Plus",
-                url: "https://plus.google.com/",
-                icon: "fa-google-plus"
-            }
-        ];
-
         vm.getHeroImageBackground = function(){
             if(vm.selectedMeal){
                 return vm.selectedMeal.image;
@@ -95,7 +73,12 @@ angular
             vm.status = 'Unable to load meals data: ' + error.message;
         });
 
-
+        siteContentService.getMediaLinks()
+            .success(function (data) {
+                vm.socialLinks = data;
+            }).error(function (error) {
+            vm.status = 'Unable to load social media links data: ' + error.message;
+        });
 
 
     }]);
