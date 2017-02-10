@@ -43,17 +43,6 @@ a {
 .btn {
     @include border-radius(0);
     text-transform: uppercase;
-
-    &.btn-find {
-        @include transitions(0.25s);
-        background: $clr-green-dark;
-        color: #ffffff;
-
-        &:hover {
-            background: $clr-green-mid;
-            color: #ffffff;
-        }
-    }
 }
 
 .btn-group {

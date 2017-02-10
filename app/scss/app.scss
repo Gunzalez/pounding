@@ -114,7 +114,6 @@ body {
     }
 }
 
-
 .meal-hero {
     position: relative;
 
@@ -404,6 +403,18 @@ body {
     border-top: 1px solid lighten($clr-grey-dark, 62%);
     background-color: $clr-grey-light;
     padding: 20px 0;
+
+
+    .btn-find {
+        @include transitions(0.25s);
+        background: $clr-grey-dark;
+        color: $clr-green-light;
+
+        &:hover {
+            //background: $clr-green-dark;
+            color: #ffffff;
+        }
+    }
 }
 
 .our-testimonials {
@@ -427,20 +438,26 @@ body {
 }
 
 .media-links {
-    @extend %cleanUl;
-    width: 100%;
+    margin: 0 auto;
+    width: 50%;
+    padding-bottom: 40px;
     overflow: auto;
+
+    ul {
+        width: 100%;
+        margin: 0;
+    }
 
     span {
         display: none;
     }
 
     li {
-        float: left;
-        margin: 0 0 50px 0;
+        margin: 0;
         padding: 0 10px;
         width: 25%;
-        text-align: center;
+        float: none;
+        display: inline-block;
     }
 
     a {
@@ -450,10 +467,21 @@ body {
         padding: 20px 0;
         color: $clr-green-light;
         border-bottom: 1px solid $clr-green-light;
+        text-align: center;
 
-        &:hover {
+        &:hover,
+        &:focus{
             color: #ffffff;
+            background-color: $clr-grey-dark !important;
             border-bottom: 1px solid #ffffff;
+        }
+    }
+
+    @media (max-width: $width-sm){
+        width: 100%;
+
+        a {
+            font-size: 1.2em;
         }
     }
 }
@@ -497,8 +525,7 @@ body {
 
 @import "video";
 
-
-#map {
+#mapBox {
     height: 0;
     background-color: $clr-grey-light;
     overflow: hidden;

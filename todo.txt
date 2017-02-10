@@ -6,4 +6,8 @@ Work on scrolling to map
 Map/List sho hiding functionality
 Outline on input and button
 Select - nice select, or something else
+
+
+
+// DONE
 fix social media navigation

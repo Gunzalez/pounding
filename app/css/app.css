@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Ubuntu:400,300,500,700);
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 .detail-view .meals,
-.list-view .meals, .content-controls ul, .media-links {
+.list-view .meals, .content-controls ul {
   margin: 0;
   padding: 0;
   list-style: none; }
@@ -51,16 +51,6 @@ a {
   -moz-border-radius: 0 !important;
   border-radius: 0 !important;
   text-transform: uppercase; }
-  .btn.btn-find {
-    -webkit-transition: all 0.25s;
-    -moz-transition: all 0.25s;
-    -o-transition: all 0.25s;
-    transition: all 0.25s;
-    background: #004358;
-    color: #ffffff; }
-    .btn.btn-find:hover {
-      background: #1F8A70;
-      color: #ffffff; }
 
 .btn-group .btn {
   border: none; }
@@ -378,6 +368,17 @@ body {
   border-top: 1px solid #e2e2e2;
   background-color: #f2f2f2;
   padding: 20px 0; }
+  .most-cooked .btn-find,
+  .shop-meal .btn-find {
+    -webkit-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    transition: all 0.25s;
+    background: #444444;
+    color: #BEDB39; }
+    .most-cooked .btn-find:hover,
+    .shop-meal .btn-find:hover {
+      color: #ffffff; }
 
 .our-testimonials {
   padding: 20px 0; }
@@ -392,26 +393,38 @@ body {
       padding: 0; } }
 
 .media-links {
-  width: 100%;
+  margin: 0 auto;
+  width: 50%;
+  padding-bottom: 40px;
   overflow: auto; }
+  .media-links ul {
+    width: 100%;
+    margin: 0; }
   .media-links span {
     display: none; }
   .media-links li {
-    float: left;
-    margin: 0 0 50px 0;
+    margin: 0;
     padding: 0 10px;
     width: 25%;
-    text-align: center; }
+    float: none;
+    display: inline-block; }
   .media-links a {
     display: block;
     text-decoration: none;
     font-size: 1.8em;
     padding: 20px 0;
     color: #BEDB39;
-    border-bottom: 1px solid #BEDB39; }
-    .media-links a:hover {
+    border-bottom: 1px solid #BEDB39;
+    text-align: center; }
+    .media-links a:hover, .media-links a:focus {
       color: #ffffff;
+      background-color: #444444 !important;
       border-bottom: 1px solid #ffffff; }
+  @media (max-width: 768px) {
+    .media-links {
+      width: 100%; }
+      .media-links a {
+        font-size: 1.2em; } }
 
 .cook-meal {
   padding: 20px 0; }
@@ -538,23 +551,23 @@ body {
 #videoOptions li {
   cursor: pointer; }
 
-#map {
+#mapBox {
   height: 0;
   background-color: #f2f2f2;
   overflow: hidden;
   transition: height 0.25s; }
-  #map.open {
+  #mapBox.open {
     height: 580px; }
-  #map .navbar-nav {
+  #mapBox .navbar-nav {
     width: 100%;
     height: 80px;
     text-align: center;
     margin: 0; }
-    #map .navbar-nav > li {
+    #mapBox .navbar-nav > li {
       float: none;
       display: inline-block; }
-      #map .navbar-nav > li a {
+      #mapBox .navbar-nav > li a {
         cursor: pointer;
         text-decoration: none; }
-        #map .navbar-nav > li a i {
+        #mapBox .navbar-nav > li a i {
           margin-right: 5px; }
