@@ -108,6 +108,7 @@ angular
             var playBtn = document.getElementById('playBtn'),
                 $playBtn = angular.element(playBtn);
             if($scope.videoDisplay.paused){
+                  $scope.showOptions = false;
                   $scope.videoDisplay.play();
                   $scope.videoPlaying = true;
                   $playBtn.find('span').toggleClass("glyphicon-play", false);

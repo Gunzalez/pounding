@@ -74,6 +74,7 @@ h2 {
 
 .panel {
     @include border-radius(0);
+    margin: 0;
 }
 
 
