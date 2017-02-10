@@ -28,15 +28,16 @@ body {
         }
 
         .btn {
+            border-color: $clr-grey-light;
             border-bottom: none !important;
         }
 
         a {
-            background: $clr-grey-dark;
+            background: $clr-grey-light;
             border-left: none !important;
 
             span {
-                color: $clr-green-light;
+                color: $clr-grey-dark;
             }
 
             &:nth-last-child(2){
@@ -44,8 +45,9 @@ body {
             }
 
             &:hover {
+                background: $clr-grey-dark;
                 span {
-                    color: #ffffff;
+                    color: $clr-green-light;
                 }
             }
         }

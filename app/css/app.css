@@ -93,16 +93,19 @@ body {
   .video #playToolBar #videoTime {
     color: #004358 !important; }
   .video #playToolBar .btn {
+    border-color: #f2f2f2;
     border-bottom: none !important; }
   .video #playToolBar a {
-    background: #444444;
+    background: #f2f2f2;
     border-left: none !important; }
     .video #playToolBar a span {
-      color: #BEDB39; }
+      color: #444444; }
     .video #playToolBar a:nth-last-child(2) {
       border-right: none !important; }
-    .video #playToolBar a:hover span {
-      color: #ffffff; }
+    .video #playToolBar a:hover {
+      background: #444444; }
+      .video #playToolBar a:hover span {
+        color: #BEDB39; }
 
 .top-bar {
   top: 0;
