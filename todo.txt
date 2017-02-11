@@ -5,7 +5,9 @@ fix button colors for Find Shop
 Work on scrolling to map
 Map/List sho hiding functionality
 Outline on input and button
-Select - nice select, or something else
+ * Select - nice select, or something else || WIll use overlay like an action sheet
+replay button
+User submitted videos
 
 
 
