@@ -77,6 +77,14 @@
                                                 <p>{{selectedMeal.description}}</p>
                                                 <p><em>Duration: {{totalTime | time}}</em></p>
                                             </div>
+                                            <div class="col-xs-6">
+                                                <h2>User submitted videos:</h2>
+                                                <ul nm-model="userSubmittedVideos">
+                                                    <li ng-repeat="user in userSubmittedVideos">
+                                                        <a ng-click="swapVideo(user.video)">Submitted by <span>{{user.name}}</span></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
 
                                     </div>

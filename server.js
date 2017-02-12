@@ -15,6 +15,20 @@ var listOfMeals = [
         "time":"30 mins",
         "count":"11",
         "video":"default.mp4",
+        "videos":[
+            {
+                "name":"Leonie Johnson",
+                "video":"cow.mp4"
+            },
+            {
+                "name":"Paul White",
+                "video":"ernesto.mp4"
+            },
+            {
+                "name":"Wonder WOman",
+                "video":"razorpalm.mp4"
+            }
+        ],
         "instructions": [
             'Boil about 300 ml of water',
             'Sprinkle the Poundo yam to it while stirring with spatula',
@@ -42,7 +56,21 @@ var listOfMeals = [
         "strapline":"It's easier than you think",
         "time":"20 mins",
         "count":"16",
-        "video":"default.mp4",
+        "video":"sample.mp4",
+        "videos":[
+            {
+                "name":"Keon Konibire",
+                "video":"cow.mp4"
+            },
+            {
+                "name":"Kayden Konibire",
+                "video":"ernesto.mp4"
+            },
+            {
+                "name":"Folarin Konibire",
+                "video":"razorpalm.mp4"
+            }
+        ],
         "instructions": [
                 'Peal and slice roughly into thin discs',
                 'Add salt to taste',
@@ -73,6 +101,20 @@ var listOfMeals = [
         "time":"30 mins",
         "count":"14",
         "video":"sample.mp4",
+        "videos":[
+            {
+                "name":"Keon Konibire",
+                "video":"cow.mp4"
+            },
+            {
+                "name":"Kayden Konibire",
+                "video":"ernesto.mp4"
+            },
+            {
+                "name":"Folarin Konibire",
+                "video":"razorpalm.mp4"
+            }
+        ],
         "instructions": [
             'Boil about 300 ml of water',
             'Sprinkle the Garri to it while stirring with spatula',
@@ -100,6 +142,20 @@ var listOfMeals = [
         "time":"120 mins",
         "count":"9",
         "video":"sample.mp4",
+        "videos":[
+            {
+                "name":"Keon Konibire",
+                "video":"cow.mp4"
+            },
+            {
+                "name":"Kayden Konibire",
+                "video":"ernesto.mp4"
+            },
+            {
+                "name":"Folarin Konibire",
+                "video":"razorpalm.mp4"
+            }
+        ],
         "instructions": [
             'Execute these instructions 1',
             'Then do these things and also some of those things',
@@ -127,6 +183,20 @@ var listOfMeals = [
         "time":"120 mins",
         "count":"5",
         "video":"sample.mp4",
+        "videos":[
+            {
+                "name":"Keon Konibire",
+                "video":"cow.mp4"
+            },
+            {
+                "name":"Kayden Konibire",
+                "video":"ernesto.mp4"
+            },
+            {
+                "name":"Folarin Konibire",
+                "video":"razorpalm.mp4"
+            }
+        ],
         "instructions": [
             'Do instructions 1',
             'Do instructions Two',
@@ -155,6 +225,20 @@ var listOfMeals = [
         "time":"120 mins",
         "count":"6",
         "video":"sample.mp4",
+        "videos":[
+            {
+                "name":"Keon Konibire",
+                "video":"cow.mp4"
+            },
+            {
+                "name":"Kayden Konibire",
+                "video":"ernesto.mp4"
+            },
+            {
+                "name":"Folarin Konibire",
+                "video":"razorpalm.mp4"
+            }
+        ],
         "instructions": [
             'Do instructions 1',
             'Do instructions Two',
