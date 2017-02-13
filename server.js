@@ -15,7 +15,7 @@ var listOfMeals = [
         "time":"30 mins",
         "count":"11",
         "video":"default.mp4",
-        "videos":[
+        "submitted":[
             {
                 "name":"Leonie Johnson",
                 "video":"cow.mp4"
@@ -57,7 +57,7 @@ var listOfMeals = [
         "time":"20 mins",
         "count":"16",
         "video":"sample.mp4",
-        "videos":[
+        "submitted":[
             {
                 "name":"Keon Konibire",
                 "video":"cow.mp4"
@@ -101,7 +101,7 @@ var listOfMeals = [
         "time":"30 mins",
         "count":"14",
         "video":"sample.mp4",
-        "videos":[
+        "submitted":[
             {
                 "name":"Keon Konibire",
                 "video":"cow.mp4"
@@ -142,7 +142,7 @@ var listOfMeals = [
         "time":"120 mins",
         "count":"9",
         "video":"sample.mp4",
-        "videos":[
+        "submitted":[
             {
                 "name":"Keon Konibire",
                 "video":"cow.mp4"
@@ -183,7 +183,7 @@ var listOfMeals = [
         "time":"120 mins",
         "count":"5",
         "video":"sample.mp4",
-        "videos":[
+        "submitted":[
             {
                 "name":"Keon Konibire",
                 "video":"cow.mp4"
@@ -225,7 +225,7 @@ var listOfMeals = [
         "time":"120 mins",
         "count":"6",
         "video":"sample.mp4",
-        "videos":[
+        "submitted":[
             {
                 "name":"Keon Konibire",
                 "video":"cow.mp4"

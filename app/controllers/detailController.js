@@ -157,8 +157,18 @@ angular
                 $scope.status = 'Unable to load customer data: ' + error.message;
             });
 
-        $scope.videoSelected = function(video){
+        $scope.videoSelected = function(i){
+            $scope.videoTitle = $scope.selectedMeal.title + ' by ' + $scope.selectedMeal.submitted[i].name;
+            //$scope.videoDescription = $scope.selectedMeal.description + ' by ' + $scope.selectedMeal.submitted[i].name;
+            $scope.videoSource = 'video/' + $scope.selectedMeal.submitted[i].video;
+            $scope.videoDisplay.load($scope.videoDisplay.source);
+            $scope.videoPlaying = false;
 
+            var playBtn = document.getElementById('playBtn'),
+                    $playBtn = angular.element(playBtn);
+            $playBtn.find('span').toggleClass("glyphicon-play", true);
+            $playBtn.find('span').toggleClass("glyphicon-pause", false);
+            $scope.showOptions = false;
         };
 
 
