@@ -9,6 +9,8 @@ Outline on input and button
 replay button
 User submitted videos
 Return to chef video
+Cache videos when loaded
+
 
 
 
