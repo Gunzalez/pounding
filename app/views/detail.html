@@ -79,9 +79,9 @@
                                             </div>
                                             <div class="col-xs-6">
                                                 <h2>User submitted videos:</h2>
-                                                <ul nm-model="userSubmittedVideos">
-                                                    <li ng-repeat="user in userSubmittedVideos">
-                                                        <a ng-click="swapVideo(user.video)">Submitted by <span>{{user.name}}</span></a>
+                                                <ul class="list-group" ng-model="selectedMeal.videos">
+                                                    <li class="list-group-item" ng-repeat="user in selectedMeal.videos">
+                                                        <a ng-click="videoSelected(user.video)">Submitted by <span>{{user.name}}</span></a>
                                                     </li>
                                                 </ul>
                                             </div>

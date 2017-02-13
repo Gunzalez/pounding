@@ -152,12 +152,14 @@ angular
                 $scope.videoSource = 'video/' + $scope.selectedMeal.video;
                 $scope.videoTitle = $scope.selectedMeal.title;
                 $scope.videoDescription = $scope.selectedMeal.description;
-                $scope.userSubmittedVideos = $scope.selectedMeal.videos;
-                    console.log($scope.userSubmittedVideos);
                 })
             .error(function (error) {
                 $scope.status = 'Unable to load customer data: ' + error.message;
             });
+
+        $scope.videoSelected = function(video){
+
+        };
 
 
         $scope.$on('$destroy', function() {

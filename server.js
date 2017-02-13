@@ -25,7 +25,7 @@ var listOfMeals = [
                 "video":"ernesto.mp4"
             },
             {
-                "name":"Wonder WOman",
+                "name":"Wonder Woman",
                 "video":"razorpalm.mp4"
             }
         ],
