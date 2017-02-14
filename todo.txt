@@ -14,7 +14,9 @@ Replay button on video
 
 // DOING
 User submitted videos
- - Return to chef video
+- Styling panel area
+
+
 Cache videos when loaded
 
 
@@ -23,3 +25,4 @@ Cache videos when loaded
 // DONE
 fix social media navigation
 Fix button colors for Find Shop
+Return to chef video

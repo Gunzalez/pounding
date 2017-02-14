@@ -76,13 +76,18 @@
                                                 <h2>Video Details:</h2>
                                                 <p>{{videoDescription}}</p>
                                                 <p><em>Duration: {{totalTime | time}}</em></p>
+                                                <p><br>By {{theCook}}</p>
                                             </div>
                                             <div class="col-xs-6">
                                                 <h2>User submitted videos:</h2>
                                                 <ul class="list-group" ng-model="selectedMeal.videos">
-                                                    <li class="list-group-item" ng-repeat="user in selectedMeal.submitted">
-                                                        <a ng-click="videoSelected($index)">Submitted by <span>{{user.name}}</span></a>
+                                                    <li class="list-group-item" ng-repeat="userVideo in selectedMeal.userVideos">
+                                                        <a ng-click="videoSelected($index)">By <span>{{userVideo.submittedBy}}</span></a>
                                                     </li>
+                                                </ul>
+                                                <h2>Chef's video</h2>
+                                                <ul class="list-group">
+                                                    <li class="list-group-item"><a ng-click="videoSelected(-1)">Back to Chef's video</a></li>
                                                 </ul>
                                             </div>
                                         </div>

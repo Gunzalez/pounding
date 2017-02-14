@@ -15,17 +15,20 @@ var listOfMeals = [
         "time":"30 mins",
         "count":"11",
         "video":"default.mp4",
-        "submitted":[
+        "userVideos":[
             {
-                "name":"Leonie Johnson",
+                "submittedBy":"Leonie Johnson",
+                "description":"Something thing my mother thought me when I was a child",
                 "video":"cow.mp4"
             },
             {
-                "name":"Paul White",
+                "submittedBy":"Paul White",
+                "description":"Alright, this is me having a go, it is not so hard actually",
                 "video":"ernesto.mp4"
             },
             {
-                "name":"Wonder Woman",
+                "submittedBy":"Wonder Woman",
+                "description":"I am en expert now, and expert I tell you!",
                 "video":"razorpalm.mp4"
             }
         ],
@@ -57,17 +60,20 @@ var listOfMeals = [
         "time":"20 mins",
         "count":"16",
         "video":"sample.mp4",
-        "submitted":[
+        "userVideos":[
             {
-                "name":"Keon Konibire",
+                "submittedBy":"Keon Konibire",
+                "description":"I cook this for my family a lot",
                 "video":"cow.mp4"
             },
             {
-                "name":"Kayden Konibire",
+                "submittedBy":"Kayden Konibire",
+                "description":"If you swirl the water like I do, the liquid comes out better",
                 "video":"ernesto.mp4"
             },
             {
-                "name":"Folarin Konibire",
+                "submittedBy":"Folarin Konibire",
+                "description":"Add some vinegar right at the end for the kick!",
                 "video":"razorpalm.mp4"
             }
         ],
@@ -101,17 +107,20 @@ var listOfMeals = [
         "time":"30 mins",
         "count":"14",
         "video":"sample.mp4",
-        "submitted":[
+        "userVideos":[
             {
-                "name":"Keon Konibire",
+                "submittedBy":"Keon Konibire",
+                "description":"I cook this for my family a lot",
                 "video":"cow.mp4"
             },
             {
-                "name":"Kayden Konibire",
+                "submittedBy":"Kayden Konibire",
+                "description":"If you swirl the water like I do, the liquid comes out better",
                 "video":"ernesto.mp4"
             },
             {
-                "name":"Folarin Konibire",
+                "submittedBy":"Folarin Konibire",
+                "description":"Add some vinegar right at the end for the kick!",
                 "video":"razorpalm.mp4"
             }
         ],
@@ -142,17 +151,20 @@ var listOfMeals = [
         "time":"120 mins",
         "count":"9",
         "video":"sample.mp4",
-        "submitted":[
+        "userVideos":[
             {
-                "name":"Keon Konibire",
+                "submittedBy":"Keon Konibire",
+                "description":"I cook this for my family a lot",
                 "video":"cow.mp4"
             },
             {
-                "name":"Kayden Konibire",
+                "submittedBy":"Kayden Konibire",
+                "description":"If you swirl the water like I do, the liquid comes out better",
                 "video":"ernesto.mp4"
             },
             {
-                "name":"Folarin Konibire",
+                "submittedBy":"Folarin Konibire",
+                "description":"Add some vinegar right at the end for the kick!",
                 "video":"razorpalm.mp4"
             }
         ],
@@ -183,17 +195,20 @@ var listOfMeals = [
         "time":"120 mins",
         "count":"5",
         "video":"sample.mp4",
-        "submitted":[
+        "userVideos":[
             {
-                "name":"Keon Konibire",
+                "submittedBy":"Keon Konibire",
+                "description":"I cook this for my family a lot",
                 "video":"cow.mp4"
             },
             {
-                "name":"Kayden Konibire",
+                "submittedBy":"Kayden Konibire",
+                "description":"If you swirl the water like I do, the liquid comes out better",
                 "video":"ernesto.mp4"
             },
             {
-                "name":"Folarin Konibire",
+                "submittedBy":"Folarin Konibire",
+                "description":"Add some vinegar right at the end for the kick!",
                 "video":"razorpalm.mp4"
             }
         ],
@@ -225,17 +240,20 @@ var listOfMeals = [
         "time":"120 mins",
         "count":"6",
         "video":"sample.mp4",
-        "submitted":[
+        "userVideos":[
             {
-                "name":"Keon Konibire",
+                "submittedBy":"Keon Konibire",
+                "description":"I cook this for my family a lot",
                 "video":"cow.mp4"
             },
             {
-                "name":"Kayden Konibire",
+                "submittedBy":"Kayden Konibire",
+                "description":"If you swirl the water like I do, the liquid comes out better",
                 "video":"ernesto.mp4"
             },
             {
-                "name":"Folarin Konibire",
+                "submittedBy":"Folarin Konibire",
+                "description":"Add some vinegar right at the end for the kick!",
                 "video":"razorpalm.mp4"
             }
         ],

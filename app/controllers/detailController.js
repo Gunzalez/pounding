@@ -152,15 +152,28 @@ angular
                 $scope.videoSource = 'video/' + $scope.selectedMeal.video;
                 $scope.videoTitle = $scope.selectedMeal.title;
                 $scope.videoDescription = $scope.selectedMeal.description;
-                })
+                $scope.theCook = 'Chef';
+            })
             .error(function (error) {
                 $scope.status = 'Unable to load customer data: ' + error.message;
             });
 
         $scope.videoSelected = function(i){
-            $scope.videoTitle = $scope.selectedMeal.title + ' by ' + $scope.selectedMeal.submitted[i].name;
-            //$scope.videoDescription = $scope.selectedMeal.description + ' by ' + $scope.selectedMeal.submitted[i].name;
-            $scope.videoSource = 'video/' + $scope.selectedMeal.submitted[i].video;
+            // $scope.videoTitle = $scope.selectedMeal.title;
+
+            console.log(i);
+
+            if(i > -1){
+                $scope.videoDescription = $scope.selectedMeal.userVideos[i].description;
+                $scope.videoSource = 'video/' + $scope.selectedMeal.userVideos[i].video;
+                $scope.theCook = $scope.selectedMeal.userVideos[i].submittedBy;
+
+            } else {
+
+                $scope.videoDescription = $scope.selectedMeal.description;
+                $scope.videoSource = 'video/' + $scope.selectedMeal.video;
+                $scope.theCook = 'Chef';
+            }
             $scope.videoDisplay.load($scope.videoDisplay.source);
             $scope.videoPlaying = false;
 
@@ -170,7 +183,6 @@ angular
             $playBtn.find('span').toggleClass("glyphicon-pause", false);
             $scope.showOptions = false;
         };
-
 
         $scope.$on('$destroy', function() {
             if (angular.isDefined($scope.looper)) {
