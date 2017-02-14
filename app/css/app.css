@@ -67,6 +67,9 @@ h2 span {
   border-radius: 0 !important;
   margin: 0; }
 
+.modal-open {
+  overflow: auto; }
+
 body {
   font-family: 'Lato';
   font-size: 1.6rem; }
@@ -211,24 +214,27 @@ body {
 #wrap {
   min-height: 300px; }
 
+.show-me {
+  display: block !important; }
+
 .aux-nav {
   display: none; }
-  .aux-nav.show-me {
-    display: block; }
   .aux-nav a {
-    color: #1F8A70;
+    color: #004358;
+    padding: 0 15px !important;
     cursor: pointer; }
-    .aux-nav a i {
-      font-size: 2.0em; }
     .aux-nav a span {
+      font-size: 1.8em; }
+    .aux-nav a .text {
       display: none; }
     .aux-nav a:hover {
-      color: #004358; }
-    .aux-nav a img {
-      width: 40px; }
+      background-color: transparent !important; }
 
 .top .aux-nav a {
   color: #ffffff; }
+  .top .aux-nav a:hover {
+    color: #004358;
+    text-shadow: none; }
 
 .introduction.copy {
   display: none; }

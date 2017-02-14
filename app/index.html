@@ -13,24 +13,33 @@
 </head>
 <body scroll ng-controller="mainController as main">
 
-<div class="top-bar top">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-9">
-                <h1>
-                    <span class="mortar-and-pestle"></span>
-                    <span class="text">Pound That Yam</span>
-                </h1>
-            </div>
-            <div class="col-xs-3 text-right aux-nav" ng-class="{'show-me':main.shouldShowAuxMenu}">
-                <a ng-click="main.resetMeal()">
-                    <i class="fa fa-home" aria-hidden="true"></i>
-                    <span>Home</span>
-                </a>
+    <div class="top-bar top">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-9">
+                    <h1>
+                        <span class="mortar-and-pestle"></span>
+                        <span class="text">Pound That Yam</span>
+                    </h1>
+                </div>
+                <div class="col-xs-3 text-right aux-nav" ng-class="{'show-me':main.shouldShowAuxMenu}">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a ng-click="main.showMealMenu()">
+                                <span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>
+                                <span class="text">Menu</span>
+                            </a>
+                        </li>
+                        <li><a ng-click="main.resetMeal()">
+                                <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                            <span class="text">Home</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
     <div class="meal-hero">
         <div class="hero-image" ng-style="{'background-image': 'url(images/' + main.getHeroImageBackground() + ')'}">&nbsp;</div>
@@ -49,20 +58,31 @@
                         <div class="introduction copy" ng-class="{'show-me':main.shouldShowCookHeader}">
                             <h2 class="title">{{ main.selectedMeal.description }}</h2>
                         </div>
-                        <form name="mealPicker" class="meal-picker">
-                            <select ng-model="main.selectedMeal" ng-options="meal.title for meal in main.meals">
-                                <option value="" selected="selected" class="option-none" style="display: none">List of meals</option>
-                            </select>
-                            <!--<input class="button btn"-->
-                                   <!--type="button"-->
-                                   <!--title="Select"-->
-                                   <!--value="Select"-->
-                                   <!--ng-class="{'disabled btn-default':main.selectedMeal == null, 'btn-primary':main.selectedMeal != null}"-->
-                                   <!--ng-disabled="main.selectedMeal == null"-->
-                                   <!--ng-click="main.selectThisMeal()" />-->
-                        </form>
+
+                        <button type="button" class="btn btn-default" aria-label="Left Align" ng-click="main.showMealMenu()">
+                            <span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>
+                            <span class="text">Menu</span>
+                        </button>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div modal="showModal" class="modal">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <ul class="list-group">
+                        <li class="list-group-item" ng-repeat="meal in main.meals">
+                            <a ng-click="main.selectThisMeal(meal)">{{meal.title}}</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--<div class="modal-footer">-->
+                    <!--<button class="btn btn-success" ng-click="ok()">Okay</button>-->
+                    <!--<button class="btn" ng-click="main.cancel()">Cancel</button>-->
+                <!--</div>-->
             </div>
         </div>
     </div>
@@ -102,7 +122,7 @@
     <script src="controllers/homeController.js"></script>
     <script src="controllers/mainController.js"></script>
     <script src="js/angular/angular-route.min.js"></script>
-    <script src="js/angular/angular-sanitize.min.js"></script>
+    <script src="js/angular/angular-ui-bootstrap-modal.js"></script>
     <!-- endbuild -->
 </body>
 </html>

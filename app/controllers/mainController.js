@@ -80,5 +80,23 @@ angular
             vm.status = 'Unable to load social media links data: ' + error.message;
         });
 
+        vm.showMealMenu = function() {
+            $scope.showModal = true;
+        };
+
+        vm.ok = function() {
+            $scope.showModal = false;
+        };
+
+        vm.cancel = function() {
+            $scope.showModal = false;
+        };
+
+        vm.selectThisMeal = function(meal){
+            if(vm.selectedMeal !== meal){
+                vm.selectedMeal = meal;
+            }
+            $scope.showModal = false;
+        }
 
     }]);

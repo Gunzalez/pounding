@@ -159,17 +159,14 @@ angular
             });
 
         $scope.videoSelected = function(i){
-
-            if(i > -1){
-                $scope.videoDescription = $scope.selectedMeal.userVideos[i].description;
-                $scope.videoSource = 'video/' + $scope.selectedMeal.userVideos[i].video;
-                $scope.theCook = $scope.selectedMeal.userVideos[i].submittedBy;
-
-            } else {
-
+            if(i < 0){
                 $scope.videoDescription = $scope.selectedMeal.description;
                 $scope.videoSource = 'video/' + $scope.selectedMeal.video;
                 $scope.theCook = 'Chef';
+            } else {
+                $scope.videoDescription = $scope.selectedMeal.userVideos[i].description;
+                $scope.videoSource = 'video/' + $scope.selectedMeal.userVideos[i].video;
+                $scope.theCook = $scope.selectedMeal.userVideos[i].submittedBy;
             }
             $scope.videoDisplay.load($scope.videoDisplay.source);
             $scope.videoPlaying = false;

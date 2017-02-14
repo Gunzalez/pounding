@@ -2,8 +2,6 @@
 Create and split content
 - Use in database
 
-Refactor naming in server.js before starts to confuses you, even more.
-
 Complete mobile layout for header
 Work on scrolling to map
 Map/List show and hide feature

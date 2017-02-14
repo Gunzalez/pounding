@@ -203,28 +203,27 @@ body {
     min-height: 300px;
 }
 
+.show-me {
+    display: block !important;
+}
+
 .aux-nav {
     display: none;
-    &.show-me {
-        display: block;
-    }
 
     a {
-        color: $clr-green-mid;
+        color: $clr-green-dark;
+        padding: 0 15px !important;
         cursor: pointer;
-        i {
-            font-size: 2.0em;
-        }
 
         span {
+            font-size: 1.8em;
+        }
+
+        .text {
             display: none;
         }
         &:hover {
-            color: $clr-green-dark;
-        }
-
-        img {
-            width: 40px;
+            background-color: transparent !important;
         }
     }
 }
@@ -234,6 +233,12 @@ body {
         a {
             color: #ffffff;
             @extend %textshadow;
+
+            &:hover {
+                color: $clr-green-dark;
+                text-shadow: none;
+
+            }
         }
     }
 }

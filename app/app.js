@@ -1,8 +1,9 @@
 angular
     .module('yamApp', [
         'ngRoute',
-        'ngSanitize'
+        'ui.bootstrap.modal'
     ])
+
 
     // Routing
     .config(['$routeProvider', function($routeProvider) {
