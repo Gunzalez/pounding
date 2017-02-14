@@ -159,9 +159,6 @@ angular
             });
 
         $scope.videoSelected = function(i){
-            // $scope.videoTitle = $scope.selectedMeal.title;
-
-            console.log(i);
 
             if(i > -1){
                 $scope.videoDescription = $scope.selectedMeal.userVideos[i].description;
