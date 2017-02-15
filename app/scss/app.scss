@@ -87,6 +87,7 @@ body {
         padding: 0;
         line-height: 70px;
         color: $header-clr;
+        float: left;
         @include transitions(0.5s);
 
         @media (max-width: $width-sm){
@@ -116,6 +117,12 @@ body {
 
 .meal-hero {
     position: relative;
+
+    .btn-menu {
+        position: absolute;
+        left: 0;
+        bottom: 20px;
+    }
 
     .hero-image,
     .hero-video {
@@ -208,7 +215,6 @@ body {
 }
 
 .aux-nav {
-    display: none;
 
     a {
         color: $clr-green-dark;
@@ -239,16 +245,6 @@ body {
                 text-shadow: none;
 
             }
-        }
-    }
-}
-
-.introduction {
-
-    &.copy {
-        display: none;
-        &.show-me {
-            display: block;
         }
     }
 }

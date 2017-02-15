@@ -42,6 +42,28 @@ a {
 .btn {
     @include border-radius(0);
     text-transform: uppercase;
+    @include transitions(0.5s);
+
+    &.btn-menu {
+        font-size: 1.4em;
+        border: none;
+        background-color: #ffffff;
+        color: $clr-green-dark;
+
+        .text {
+            padding-left: 10px;
+        }
+
+        &:hover {
+            color: $clr-green-mid;
+        }
+
+        &.white-bg {
+            color: #ffffff;
+            background-color: $clr-green-dark;
+
+        }
+    }
 }
 
 .btn-group {

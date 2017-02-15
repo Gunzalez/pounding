@@ -49,7 +49,23 @@ a {
   -webkit-border-radius: 0 !important;
   -moz-border-radius: 0 !important;
   border-radius: 0 !important;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s; }
+  .btn.btn-menu {
+    font-size: 1.4em;
+    border: none;
+    background-color: #ffffff;
+    color: #004358; }
+    .btn.btn-menu .text {
+      padding-left: 10px; }
+    .btn.btn-menu:hover {
+      color: #1F8A70; }
+    .btn.btn-menu.white-bg {
+      color: #ffffff;
+      background-color: #004358; }
 
 .btn-group .btn {
   border: none; }
@@ -127,6 +143,7 @@ body {
     padding: 0;
     line-height: 70px;
     color: #1F8A70;
+    float: left;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
     -o-transition: all 0.5s;
@@ -146,6 +163,10 @@ body {
 
 .meal-hero {
   position: relative; }
+  .meal-hero .btn-menu {
+    position: absolute;
+    left: 0;
+    bottom: 20px; }
   .meal-hero .hero-image,
   .meal-hero .hero-video {
     background-size: cover;
@@ -217,29 +238,22 @@ body {
 .show-me {
   display: block !important; }
 
-.aux-nav {
-  display: none; }
-  .aux-nav a {
-    color: #004358;
-    padding: 0 15px !important;
-    cursor: pointer; }
-    .aux-nav a span {
-      font-size: 1.8em; }
-    .aux-nav a .text {
-      display: none; }
-    .aux-nav a:hover {
-      background-color: transparent !important; }
+.aux-nav a {
+  color: #004358;
+  padding: 0 15px !important;
+  cursor: pointer; }
+  .aux-nav a span {
+    font-size: 1.8em; }
+  .aux-nav a .text {
+    display: none; }
+  .aux-nav a:hover {
+    background-color: transparent !important; }
 
 .top .aux-nav a {
   color: #ffffff; }
   .top .aux-nav a:hover {
     color: #004358;
     text-shadow: none; }
-
-.introduction.copy {
-  display: none; }
-  .introduction.copy.show-me {
-    display: block; }
 
 .mode-container {
   padding-top: 330px; }
