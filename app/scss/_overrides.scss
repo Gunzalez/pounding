@@ -47,21 +47,15 @@ a {
     &.btn-menu {
         font-size: 1.4em;
         border: none;
-        background-color: #ffffff;
-        color: $clr-green-dark;
+        color: $clr-green-light;
+        background-color: $clr-grey-dark;
 
         .text {
             padding-left: 10px;
         }
 
         &:hover {
-            color: $clr-green-mid;
-        }
-
-        &.white-bg {
             color: #ffffff;
-            background-color: $clr-green-dark;
-
         }
     }
 }

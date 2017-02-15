@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Lato");
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
-.detail-view .meals,
+.aux-nav, .detail-view .meals,
 .list-view .meals, .content-controls ul {
   margin: 0;
   padding: 0;
@@ -57,15 +57,12 @@ a {
   .btn.btn-menu {
     font-size: 1.4em;
     border: none;
-    background-color: #ffffff;
-    color: #004358; }
+    color: #BEDB39;
+    background-color: #444444; }
     .btn.btn-menu .text {
       padding-left: 10px; }
     .btn.btn-menu:hover {
-      color: #1F8A70; }
-    .btn.btn-menu.white-bg {
-      color: #ffffff;
-      background-color: #004358; }
+      color: #ffffff; }
 
 .btn-group .btn {
   border: none; }
@@ -238,16 +235,20 @@ body {
 .show-me {
   display: block !important; }
 
-.aux-nav a {
-  color: #004358;
-  padding: 0 15px !important;
-  cursor: pointer; }
-  .aux-nav a span {
-    font-size: 1.8em; }
-  .aux-nav a .text {
-    display: none; }
-  .aux-nav a:hover {
-    background-color: transparent !important; }
+.aux-nav {
+  float: right; }
+  .aux-nav li {
+    float: left; }
+  .aux-nav a {
+    color: #004358;
+    padding: 0 12px !important;
+    cursor: pointer; }
+    .aux-nav a span {
+      font-size: 1.6em; }
+    .aux-nav a .text {
+      display: none; }
+    .aux-nav a:hover {
+      background-color: transparent !important; }
 
 .top .aux-nav a {
   color: #ffffff; }

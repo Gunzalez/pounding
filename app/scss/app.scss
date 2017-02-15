@@ -216,13 +216,20 @@ body {
 
 .aux-nav {
 
+    float: right;
+    @extend %cleanUl;
+
+    li {
+        float: left;
+    }
+
     a {
         color: $clr-green-dark;
-        padding: 0 15px !important;
+        padding: 0 12px !important;
         cursor: pointer;
 
         span {
-            font-size: 1.8em;
+            font-size: 1.6em;
         }
 
         .text {
