@@ -121,7 +121,7 @@ body {
     .btn-menu {
         position: absolute;
         left: 0;
-        bottom: 20px;
+        bottom: 25px;
     }
 
     .hero-image,
@@ -412,17 +412,19 @@ body {
     background-color: $clr-grey-light;
     padding: 20px 0;
 
+    @media (max-width: $width-sm){
+        .form-control {
+            width: auto;
+            float: left;
+        }
 
-    .btn-find {
-        @include transitions(0.25s);
-        background: $clr-grey-dark;
-        color: $clr-green-light;
-
-        &:hover {
-            //background: $clr-green-dark;
-            color: #ffffff;
+        .form-group {
+            margin-bottom: 0;
         }
     }
+
+
+
 }
 
 .our-testimonials {

@@ -39,10 +39,10 @@ a {
   -moz-transition: all 0.25s;
   -o-transition: all 0.25s;
   transition: all 0.25s;
-  color: #1F8A70;
+  color: #004358;
   text-decoration: underline; }
   a:hover {
-    color: #004358;
+    color: #1F8A70;
     text-decoration: none; }
 
 .btn {
@@ -63,6 +63,17 @@ a {
       padding-left: 10px; }
     .btn.btn-menu:hover {
       color: #ffffff; }
+  .btn.btn-find {
+    -webkit-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    transition: all 0.25s;
+    color: #BEDB39;
+    background-color: #444444; }
+    .btn.btn-find:hover {
+      color: #ffffff; }
+  .btn:focus, .btn:active {
+    outline: none; }
 
 .btn-group .btn {
   border: none; }
@@ -163,7 +174,7 @@ body {
   .meal-hero .btn-menu {
     position: absolute;
     left: 0;
-    bottom: 20px; }
+    bottom: 25px; }
   .meal-hero .hero-image,
   .meal-hero .hero-video {
     background-size: cover;
@@ -388,17 +399,14 @@ body {
   border-top: 1px solid #e2e2e2;
   background-color: #f2f2f2;
   padding: 20px 0; }
-  .most-cooked .btn-find,
-  .shop-meal .btn-find {
-    -webkit-transition: all 0.25s;
-    -moz-transition: all 0.25s;
-    -o-transition: all 0.25s;
-    transition: all 0.25s;
-    background: #444444;
-    color: #BEDB39; }
-    .most-cooked .btn-find:hover,
-    .shop-meal .btn-find:hover {
-      color: #ffffff; }
+  @media (max-width: 768px) {
+    .most-cooked .form-control,
+    .shop-meal .form-control {
+      width: auto;
+      float: left; }
+    .most-cooked .form-group,
+    .shop-meal .form-group {
+      margin-bottom: 0; } }
 
 .our-testimonials {
   padding: 20px 0; }
