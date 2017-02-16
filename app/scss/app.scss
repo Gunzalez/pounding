@@ -276,11 +276,11 @@ body {
     }
 
     .introduction {
-        background-color: $clr-grey-light;
+        background-color: $clr-grey-dark;
         padding: 20px 0;
-        border-top: 1px solid #ffffff;
-        color: $clr-grey-dark;
-        border-bottom: 1px solid lighten($clr-grey-dark, 64%);
+        border-top: 1px solid lighten($clr-grey-dark, 20%);
+        color: #ffffff;
+        border-bottom: 1px solid $clr-green-light;
 
         p {
             line-height: 180%;

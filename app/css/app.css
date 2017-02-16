@@ -284,11 +284,11 @@ body {
 
 .detail-view .introduction,
 .list-view .introduction {
-  background-color: #f2f2f2;
+  background-color: #444444;
   padding: 20px 0;
-  border-top: 1px solid #ffffff;
-  color: #444444;
-  border-bottom: 1px solid #e7e7e7; }
+  border-top: 1px solid #777777;
+  color: #ffffff;
+  border-bottom: 1px solid #BEDB39; }
   .detail-view .introduction p,
   .list-view .introduction p {
     line-height: 180%;
