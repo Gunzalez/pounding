@@ -1,7 +1,7 @@
 
 angular
     .module('yamApp')
-    .controller('detailController', ['$scope', 'mealsService', '$routeParams', '$rootScope', '$interval', function ($scope, mealsService, $routeParams, $rootScope, $interval) {
+    .controller('detailController', ['$scope', '$location', 'anchorSmoothScroll', 'mealsService', '$routeParams', '$rootScope', '$interval', function ($scope, $location, anchorSmoothScroll, mealsService, $routeParams, $rootScope, $interval) {
 
         window.scroll(0,0);
 
@@ -23,6 +23,21 @@ angular
             $scope.totalTime = 0;
             $scope.videoDisplay.addEventListener("timeupdate", $scope.updateTime, true);
             $scope.videoDisplay.addEventListener("loadedmetadata", $scope.updateDate, true);
+            $scope.videoDisplay.addEventListener('play', function(){
+                var playBtn = document.getElementById('playBtn'),
+                        $playBtn = angular.element(playBtn);
+                $playBtn.find('span').toggleClass("glyphicon-play", false);
+                $playBtn.find('span').toggleClass("glyphicon-pause", true);
+
+            }, false);
+
+            $scope.videoDisplay.addEventListener('pause', function(){
+                var playBtn = document.getElementById('playBtn'),
+                        $playBtn = angular.element(playBtn);
+                $playBtn.find('span').toggleClass("glyphicon-play", true);
+                $playBtn.find('span').toggleClass("glyphicon-pause", false);
+
+            }, false);
         };
 
         $scope.updateLayout = function(){
@@ -105,19 +120,13 @@ angular
         };
 
         $scope.togglePlay  = function(){
-            var playBtn = document.getElementById('playBtn'),
-                $playBtn = angular.element(playBtn);
             if($scope.videoDisplay.paused){
                   $scope.showOptions = false;
                   $scope.videoDisplay.play();
                   $scope.videoPlaying = true;
-                  $playBtn.find('span').toggleClass("glyphicon-play", false);
-                  $playBtn.find('span').toggleClass("glyphicon-pause", true);
             } else {
                   $scope.videoDisplay.pause();
                   $scope.videoPlaying = false;
-                  $playBtn.find('span').toggleClass("glyphicon-play", true);
-                  $playBtn.find('span').toggleClass("glyphicon-pause", false);
             }
         };
         
@@ -188,6 +197,7 @@ angular
         $scope.showShopResults = false;
         $scope.findShops = function(){
             $scope.showShopResults = true;
+            anchorSmoothScroll.scrollTo('mapBox');
         };
 
         $scope.initPlayer();
