@@ -6,7 +6,6 @@ Complete mobile layout for header
 Work on scrolling to map
 Map/List show and hide feature
 Outline on input and button - damn Bootstrap
-Change select to global overlay, like action sheet
 Replay button on video
 
 
@@ -24,3 +23,4 @@ Cache videos when loaded
 fix social media navigation
 Fix button colors for Find Shop
 Return to chef video
+Change select to global overlay, like action sheet
