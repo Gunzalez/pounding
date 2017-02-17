@@ -4,7 +4,6 @@ angular
         'ui.bootstrap.modal'
     ])
 
-
     // Routing
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider
