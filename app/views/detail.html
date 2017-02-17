@@ -137,10 +137,10 @@
             <div class="btn-group-wrap">
 
                 <div class="btn-group" role="group" ng-show="showShopResults">
-                    <button type="button" class="btn btn-find" ng-click="listView()">
+                    <button type="button" class="btn btn-find" ng-click="setView('list')">
                         <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
                         List</button>
-                    <button type="button" class="btn btn-find" ng-click="mapView()">
+                    <button type="button" class="btn btn-find" ng-click="setView('map')">
                         <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
                         Map</button>
                     <button type="button" class="btn btn-find" ng-click="hideShopResults()">
@@ -150,7 +150,10 @@
 
             </div>
 
-            <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.4246071347784!2d-0.16072718422942775!3d51.52377147963778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761acf33628211%3A0x445d7677a88322e1!2s221B+Baker+St%2C+Marylebone%2C+London+NW1+6XE!5e0!3m2!1sen!2suk!4v1486732543097"
+            <div ng-show="listView">
+
+            </div>
+            <iframe ng-show="mapView" id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.4246071347784!2d-0.16072718422942775!3d51.52377147963778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761acf33628211%3A0x445d7677a88322e1!2s221B+Baker+St%2C+Marylebone%2C+London+NW1+6XE!5e0!3m2!1sen!2suk!4v1486732543097"
                     width="100%"
                     height="500"
                     frameborder="0"

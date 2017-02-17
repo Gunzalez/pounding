@@ -194,11 +194,32 @@ angular
             }
         });
 
+        $scope.listView = false;
+        $scope.mapView = false;
         $scope.showShopResults = false;
         $scope.findShops = function(){
             $scope.showShopResults = true;
             anchorSmoothScroll.scrollTo('mapBox');
+
+            $scope.listView = false;
+            $scope.mapView = true;
         };
+
+        $scope.hideShopResults = function(){
+            $scope.showShopResults = false;
+        };
+
+        $scope.setView = function(view){
+            if(view == 'map'){
+                $scope.mapView = true;
+                $scope.listView = false;
+            }
+            if(view == 'list'){
+                $scope.mapView = false;
+                $scope.listView = true;
+            }
+        };
+
 
         $scope.initPlayer();
 
