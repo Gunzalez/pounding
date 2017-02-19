@@ -17,6 +17,16 @@ angular
         $scope.looper = undefined;
         $scope.isDragging = false;
         $scope.showOptions = false;
+        $scope.videoControls = false;
+
+        $scope.$watch(function(){
+            return $scope.videoDisplay.controls;
+        },
+        function(){
+            $scope.videoControls = $scope.videoDisplay.controls;
+        });
+
+
 
         $scope.initPlayer = function(){
             $scope.currentTime = 0;

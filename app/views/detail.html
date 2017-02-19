@@ -92,16 +92,18 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="progressMeterFull" ng-click="videoSeek($event)">
-                                <div id="progressMeter" ng-click="videoSeek($event)" style="width:{{scrubLeft+7}}px;"></div>
-                            </div>
-                            <div id="thumbScrubber" style="top:{{scrubTop+2}}px;left:{{scrubLeft+3}}px;" ng-mousedown="dragStart($event)"></div>
-                            <div id="playToolBar">
-                                <a id="playBtn" class="btn btn-default" ng-click="togglePlay()"><span class="glyphicon glyphicon-play"></span></a><!--
+                            <div ng-show="!videoControls">
+                                <div id="progressMeterFull" ng-click="videoSeek($event)">
+                                    <div id="progressMeter" ng-click="videoSeek($event)" style="width:{{scrubLeft+7}}px;"></div>
+                                </div>
+                                <div id="thumbScrubber" style="top:{{scrubTop+2}}px;left:{{scrubLeft+3}}px;" ng-mousedown="dragStart($event)"></div>
+                                <div id="playToolBar">
+                                    <a id="playBtn" class="btn btn-default" ng-click="togglePlay()"><span class="glyphicon glyphicon-play"></span></a><!--
                                 --><a id="muteBtn" class="btn btn-default" ng-click="toggleMute()"><span class="glyphicon glyphicon-volume-up"></span></a><!--
                                 --><span id="videoTime">{{currentTime | time}} / {{totalTime | time}}</span><!--
                                 --><a id="fsBtn" class="btn btn-default pull-right" ng-click="toggleFullScreen()"><span class="glyphicon glyphicon-fullscreen"></span></a><!--
                                 --><a id="optionsBtn" class="btn btn-default pull-right" ng-click="toggleDetails()"><span class="glyphicon glyphicon-option-horizontal"></span></a>
+                                </div>
                             </div>
                         </div>
 
