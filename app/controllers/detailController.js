@@ -23,6 +23,19 @@ angular
             $scope.totalTime = 0;
             $scope.videoDisplay.addEventListener("timeupdate", $scope.updateTime, true);
             $scope.videoDisplay.addEventListener("loadedmetadata", $scope.updateDate, true);
+            $scope.videoDisplay.addEventListener("onvolumechange", function(){
+
+                var muteBtn = document.getElementById('muteBtn'),
+                        $muteBtn = angular.element(muteBtn);
+
+                if($scope.videoDisplay.volume == 0.0){
+                    $muteBtn.find('span').toggleClass("glyphicon-volume-up", true);
+                    $muteBtn.find('span').toggleClass("glyphicon-volume-off", false);
+                } else {
+                    $muteBtn.find('span').toggleClass("glyphicon-volume-up", false);
+                    $muteBtn.find('span').toggleClass("glyphicon-volume-off", true);
+                }
+            }, true);
             $scope.videoDisplay.addEventListener('play', function(){
                 var playBtn = document.getElementById('playBtn'),
                         $playBtn = angular.element(playBtn);
@@ -129,6 +142,14 @@ angular
                   $scope.videoDisplay.pause();
             }
         };
+
+        $scope.toggleMute  = function(){
+            if($scope.videoDisplay.volume == 0.0){
+                $scope.videoDisplay.volume = 1.0;
+            } else {
+                $scope.videoDisplay.volume = 0.0;
+            }
+        };
         
         $scope.videoSeek = function ($event) {
             var winWidth = window.innerWidth;
@@ -139,20 +160,6 @@ angular
             var d = $scope.videoDisplay.duration;
             var s = Math.round(adjustedDistance / w * d);
             $scope.videoDisplay.currentTime = s + 1;
-        };
-
-        $scope.toggleMute  = function(){
-            var muteBtn = document.getElementById('muteBtn'),
-                $muteBtn = angular.element(muteBtn);
-            if($scope.videoDisplay.volume == 0.0){
-                $scope.videoDisplay.volume = 1.0;
-                $muteBtn.find('span').toggleClass("glyphicon-volume-up", true);
-                $muteBtn.find('span').toggleClass("glyphicon-volume-off", false);
-            } else {
-                $scope.videoDisplay.volume = 0.0;
-                $muteBtn.find('span').toggleClass("glyphicon-volume-up", false);
-                $muteBtn.find('span').toggleClass("glyphicon-volume-off", true);
-            }
         };
 
         mealsService.getAMeal($routeParams.id)
