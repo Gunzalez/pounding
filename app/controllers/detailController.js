@@ -28,6 +28,8 @@ angular
                         $playBtn = angular.element(playBtn);
                 $playBtn.find('span').toggleClass("glyphicon-play", false);
                 $playBtn.find('span').toggleClass("glyphicon-pause", true);
+                $scope.videoPlaying = true;
+                $scope.showOptions = false;
 
             }, false);
 
@@ -36,6 +38,7 @@ angular
                         $playBtn = angular.element(playBtn);
                 $playBtn.find('span').toggleClass("glyphicon-play", true);
                 $playBtn.find('span').toggleClass("glyphicon-pause", false);
+                $scope.videoPlaying = false;
 
             }, false);
         };
@@ -121,12 +124,9 @@ angular
 
         $scope.togglePlay  = function(){
             if($scope.videoDisplay.paused){
-                  $scope.showOptions = false;
                   $scope.videoDisplay.play();
-                  $scope.videoPlaying = true;
             } else {
                   $scope.videoDisplay.pause();
-                  $scope.videoPlaying = false;
             }
         };
         
