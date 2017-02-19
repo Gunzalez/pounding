@@ -23,17 +23,17 @@ angular
             $scope.totalTime = 0;
             $scope.videoDisplay.addEventListener("timeupdate", $scope.updateTime, true);
             $scope.videoDisplay.addEventListener("loadedmetadata", $scope.updateDate, true);
-            $scope.videoDisplay.addEventListener("onvolumechange", function(){
+            $scope.videoDisplay.addEventListener("volumechange", function(){
 
                 var muteBtn = document.getElementById('muteBtn'),
                         $muteBtn = angular.element(muteBtn);
 
                 if($scope.videoDisplay.volume == 0.0){
-                    $muteBtn.find('span').toggleClass("glyphicon-volume-up", true);
-                    $muteBtn.find('span').toggleClass("glyphicon-volume-off", false);
-                } else {
                     $muteBtn.find('span').toggleClass("glyphicon-volume-up", false);
                     $muteBtn.find('span').toggleClass("glyphicon-volume-off", true);
+                } else {
+                    $muteBtn.find('span').toggleClass("glyphicon-volume-up", true);
+                    $muteBtn.find('span').toggleClass("glyphicon-volume-off", false);
                 }
             }, true);
             $scope.videoDisplay.addEventListener('play', function(){

@@ -107,7 +107,8 @@ body {
     position: relative;
     overflow: hidden; }
   .video #playToolBar #videoTime {
-    color: #004358 !important; }
+    color: #004358 !important;
+    font-size: 0.8em; }
   .video #playToolBar .btn {
     border-color: #f2f2f2;
     border-bottom: none !important; }
