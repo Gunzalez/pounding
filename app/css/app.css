@@ -604,3 +604,13 @@ body {
 .btn-group-wrap {
   text-align: center;
   border-bottom: 1px solid #004358; }
+
+/* ANIMATIONS */
+.video .ng-hide-remove {
+  -webkit-animation: fadeIn 0.50s;
+  animation: fadeIn 0.50s; }
+
+.video .ng-hide-add {
+  -webkit-animation: fadeOut 0.75s;
+  animation: fadeOut 0.75s;
+  display: block !important; }

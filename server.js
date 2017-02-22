@@ -59,7 +59,7 @@ var listOfMeals = [
         "strapline":"It's easier than you think",
         "time":"20 mins",
         "count":"16",
-        "video":"sample.mp4",
+        "video":"starlightscamper.mp4",
         "userVideos":[
             {
                 "submittedBy":"Keon Konibire",

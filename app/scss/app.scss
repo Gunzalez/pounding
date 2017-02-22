@@ -574,4 +574,20 @@ body {
     border-bottom: 1px solid $clr-green-dark;
 }
 
+/* ANIMATIONS */
+.video {
+
+    .ng-hide-remove {
+        -webkit-animation: fadeIn 0.50s;
+        animation: fadeIn 0.50s;
+    }
+
+    .ng-hide-add {
+        -webkit-animation: fadeOut 0.75s;
+        animation: fadeOut 0.75s;
+        display: block !important;
+    }
+}
+
+
 

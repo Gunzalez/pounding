@@ -1,7 +1,8 @@
 angular
     .module('yamApp', [
         'ngRoute',
-        'ui.bootstrap.modal'
+        'ui.bootstrap.modal',
+         'ngAnimate'
     ])
 
     // Routing

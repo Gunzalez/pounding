@@ -26,8 +26,6 @@ angular
             $scope.videoControls = $scope.videoDisplay.controls;
         });
 
-
-
         $scope.initPlayer = function(){
             $scope.currentTime = 0;
             $scope.totalTime = 0;
