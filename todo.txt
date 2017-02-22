@@ -8,6 +8,8 @@ Map/List show and hide feature
 Outline on input and button - damn Bootstrap
 Replay button on video
 
+New password after 2FA - 3f82a54ba6e1cb3e3a8756e5a0ee4127c3e889e7
+
 
 // DOING
 User submitted videos
