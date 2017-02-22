@@ -60,7 +60,7 @@
                         </div>
                         <div ng-cloak id="fullPlayer" class="unselectable" ng-mousemove="mouseMoving($event)" ng-mouseup="dragStop($event)">
                             <div class="embed-responsive embed-responsive-16by9">
-                                <video id="videoEl" ng-click="togglePlay()" width="100%" ng-src="{{videoSource}}"></video>
+                                <video id="videoEl" poster="images/video-poster.png" ng-click="togglePlay()" width="100%" ng-src="{{videoSource}}"></video>
                                 <div id="bigPlayButton"
                                      style="margin-top:{{vidHeightCenter}}px;margin-left:{{vidWidthCenter}}px;"
                                      ng-hide="videoPlaying"
