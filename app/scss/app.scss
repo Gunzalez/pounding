@@ -303,10 +303,20 @@ body {
             width: 25%;
 
             @media (max-width: $width-lg){
-                width: 50%;
+                width: 33.3337%;
+                &:last-child {
+                    display: none;
+                }
             }
 
             @media (max-width: $width-sm){
+                width: 50%;
+                &:nth-last-child(2) {
+                    display: none;
+                }
+            }
+
+            @media (max-width: $width-xs){
                 width: 100%;
             }
 
@@ -318,13 +328,14 @@ body {
                 img {
                     width: 100%;
                     margin-bottom: 10px;
+                    @include border-radius(2px);
                 }
 
                 .sub-title {
                     padding-bottom: 0;
                 }
 
-                @media (max-width: $width-md){
+                @media (max-width: $width-xs){
                     margin: 0;
                 }
             }
@@ -409,7 +420,7 @@ body {
 
 .most-cooked,
 .shop-meal {
-    border-top: 1px solid lighten($clr-grey-dark, 62%);
+    //border-top: 1px solid lighten($clr-grey-dark, 62%);
     background-color: $clr-grey-light;
     padding: 20px 0;
 
