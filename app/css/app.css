@@ -58,7 +58,7 @@ a {
     font-size: 1.4em;
     border: none;
     color: #BEDB39;
-    background-color: #141414; }
+    background-color: #222222; }
     .btn.btn-menu .text {
       padding-left: 10px; }
     .btn.btn-menu:hover {
@@ -69,7 +69,7 @@ a {
     -o-transition: all 0.25s;
     transition: all 0.25s;
     color: #BEDB39;
-    background-color: #141414; }
+    background-color: #222222; }
     .btn.btn-find:hover {
       color: #ffffff; }
   .btn:focus, .btn:active {
@@ -82,7 +82,7 @@ h2 span {
   display: inline-block;
   padding: 6px 10px;
   background-color: #f2f2f2;
-  color: #141414;
+  color: #222222;
   margin-bottom: 1px; }
 
 .panel {
@@ -116,11 +116,11 @@ body {
     background: #f2f2f2;
     border-left: none !important; }
     .video #playToolBar a span {
-      color: #141414; }
+      color: #222222; }
     .video #playToolBar a:nth-last-child(2) {
       border-right: none !important; }
     .video #playToolBar a:hover {
-      background: #141414; }
+      background: #222222; }
       .video #playToolBar a:hover span {
         color: #BEDB39; }
 
@@ -285,9 +285,9 @@ body {
 
 .detail-view .introduction,
 .list-view .introduction {
-  background-color: #141414;
+  background-color: #222222;
   padding: 20px 0;
-  border-top: 1px solid #474747;
+  border-top: 1px solid #555555;
   color: #ffffff;
   border-bottom: 1px solid #BEDB39; }
   .detail-view .introduction p,
@@ -307,14 +307,14 @@ body {
   .list-view .meals .meal {
     float: left;
     width: 25%; }
-    @media (max-width: 1200px) {
+    @media (max-width: 1200px) and (min-width: 480px) {
       .detail-view .meals .meal,
       .list-view .meals .meal {
         width: 33.3337%; }
         .detail-view .meals .meal:last-child,
         .list-view .meals .meal:last-child {
           display: none; } }
-    @media (max-width: 768px) {
+    @media (max-width: 768px) and (min-width: 480px) {
       .detail-view .meals .meal,
       .list-view .meals .meal {
         width: 50%; }
@@ -334,9 +334,9 @@ body {
       .list-view .meals .meal a img {
         width: 100%;
         margin-bottom: 10px;
-        -webkit-border-radius: 2px !important;
-        -moz-border-radius: 2px !important;
-        border-radius: 2px !important; }
+        -webkit-border-radius: 4px !important;
+        -moz-border-radius: 4px !important;
+        border-radius: 4px !important; }
       .detail-view .meals .meal a .sub-title,
       .list-view .meals .meal a .sub-title {
         padding-bottom: 0; }
@@ -405,11 +405,12 @@ body {
 .footer {
   border-top: 10px solid #BEDB39;
   padding: 30px;
-  background-color: #141414;
+  background-color: #222222;
   color: #ffffff; }
 
 .most-cooked,
 .shop-meal {
+  border-top: 1px solid #ccc;
   background-color: #f2f2f2;
   padding: 20px 0; }
   @media (max-width: 768px) {
@@ -459,7 +460,7 @@ body {
     text-align: center; }
     .media-links a:hover, .media-links a:focus {
       color: #ffffff;
-      background-color: #141414 !important;
+      background-color: #222222 !important;
       border-bottom: 1px solid #ffffff; }
   @media (max-width: 768px) {
     .media-links {
@@ -559,7 +560,7 @@ body {
   margin: 0; }
 
 #progressMeterFull {
-  background-color: #141414;
+  background-color: #222222;
   position: relative; }
 
 #progressMeter {

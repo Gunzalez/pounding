@@ -302,14 +302,14 @@ body {
             float: left;
             width: 25%;
 
-            @media (max-width: $width-lg){
+            @media (max-width: $width-lg) and (min-width: $width-xs) {
                 width: 33.3337%;
                 &:last-child {
                     display: none;
                 }
             }
 
-            @media (max-width: $width-sm){
+            @media (max-width: $width-sm) and (min-width: $width-xs){
                 width: 50%;
                 &:nth-last-child(2) {
                     display: none;
@@ -328,7 +328,7 @@ body {
                 img {
                     width: 100%;
                     margin-bottom: 10px;
-                    @include border-radius(2px);
+                    @include border-radius(4px);
                 }
 
                 .sub-title {
@@ -420,7 +420,7 @@ body {
 
 .most-cooked,
 .shop-meal {
-    //border-top: 1px solid lighten($clr-grey-dark, 62%);
+    border-top: 1px solid #ccc;
     background-color: $clr-grey-light;
     padding: 20px 0;
 
@@ -434,9 +434,6 @@ body {
             margin-bottom: 0;
         }
     }
-
-
-
 }
 
 .our-testimonials {

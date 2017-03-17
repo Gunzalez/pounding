@@ -18,9 +18,9 @@ app.get('/meals/:id', function (req, res) {
     var mealId = parseInt(req.params.id);
     var selectedMeal = undefined;
 
-    for(var x=0; x<listOfMeals.length; x++){
-        if(listOfMeals[x].id == mealId){
-            selectedMeal = listOfMeals[x];
+    for(var x=0; x<data.listOfMeals.length; x++){
+        if(data.listOfMeals[x].id == mealId){
+            selectedMeal = data.listOfMeals[x];
         }
     }
 
